@@ -10,6 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20181020052206) do
+
+  create_table "invitations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "type"
+    t.integer "desing_id"
+    t.string "title"
+    t.string "groom_msg"
+    t.string "bride_msg"
+    t.string "greeting"
+    t.datetime "date1"
+    t.datetime "opentime1"
+    t.datetime "starttime1"
+    t.string "plece1"
+    t.integer "phonenumber1"
+    t.string "place_url1"
+    t.string "note1"
+    t.datetime "date2"
+    t.datetime "opentime2"
+    t.datetime "starttime2"
+    t.string "plece2"
+    t.integer "phonenumber2"
+    t.string "place_url2"
+    t.string "note2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.string "remember_digest"
+    t.string "activation_digest"
+    t.boolean "activated"
+    t.datetime "activated_at"
+    t.string "user_image"
+    t.string "provider"
+    t.string "uid"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
+    t.string "groom_last"
+    t.string "groom_first"
+    t.string "bride_last"
+    t.string "bride_first"
+    t.string "groom_last_kana"
+    t.string "groom_first_kana"
+    t.string "bride_last_kana"
+    t.string "bride_first_kana"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
