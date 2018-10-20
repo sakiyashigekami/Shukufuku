@@ -1,0 +1,16 @@
+<%= form_for(@inv, url: invitation_path, method: "PATCH") do |f| %>
+<%= render 'shared/error_messages', model: @inv %>
+  <body>
+    <%= f.label "名前" %>
+    <%= f.text_field :groom_last %>
+    <%= f.text_field :groom_first %>
+    <%= f.text_area :groom_msg %>
+
+    <%= f.label "名前" %>
+    <%= f.text_field :bride_last %>
+    <%= f.text_field :bride_first %>
+    <%= f.text_area :bride_msg %>
+
+    <%= f.submit "保存" %>
+  </body>
+<% end %>

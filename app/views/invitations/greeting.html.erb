@@ -1,0 +1,9 @@
+<%= form_for(@inv, url: invitation_path, method: "PATCH") do |f| %>
+<%= render 'shared/error_messages', model: @inv %>
+  <body>
+    <%= f.label "挨拶文" %>
+    <%= f.text_area :greeting %>
+
+    <%= f.submit "保存" %>
+  </body>
+<% end %>

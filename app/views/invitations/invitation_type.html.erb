@@ -1,1 +1,5 @@
-<h1>結婚式のタイプ</h1>
+<h1>結婚式の種類</h1>
+<%= link_to "挙式・披露宴", couple_name_path, controller: "invitations", action: "couple_name", type: 1 %>
+<%= link_to "挙式のみ", couple_name_path, controller: "invitations", action: "couple_name", type: 2 %>
+<%= link_to "披露宴のみ", couple_name_path, controller: "invitations", action: "couple_name", type: 3 %>
+<%= link_to "二次会", couple_name_path, controller: "invitations", action: "couple_name", type: 4 %>
