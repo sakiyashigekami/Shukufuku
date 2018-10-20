@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   get  "signup" => "users#new"
   post  "signup" => "users#create"
-  get "send_email" => "users"
+  get "send_email" => "users#send_email"
+  get "invitation_type" => "invitations#invitation_type"
   resources :users, except: [:new, :create]
   resources :account_activations, only: [:edit]
 
