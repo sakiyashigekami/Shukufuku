@@ -1,5 +1,5 @@
-<%= form_for(@inv, url: invitation_path, method: "PATCH") do |f| %>
-<%= render 'shared/error_messages', model: @inv %>
+<%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
+<%= render 'shared/error_messages', model: @invitation %>
   <body>
     <%= f.label "挨拶文" %>
     <%= f.text_area :greeting %>

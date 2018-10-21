@@ -1,7 +1,6 @@
 class InvitationsController < ApplicationController
 
   def invitation_type
-    @user = current_user
   end
 
   def couple_name
@@ -9,6 +8,22 @@ class InvitationsController < ApplicationController
   end
 
   def design
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
+  def profile
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
+  def date_place
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
+  def greeting
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
+  def attendance
     @invitation = Invitation.find_by(id: params[:id])
   end
 
@@ -27,7 +42,7 @@ class InvitationsController < ApplicationController
 
   def update
     @invitation = Invitation.find_by(id: params[:id])
-    if @invitation.update_attribute(:design_id, params[:design_id])
+    if @invitation.update_attributes(invitation_params)
       redirect_to edit_invitation_url(@invitation)
     else
       render 'design'
@@ -38,9 +53,11 @@ class InvitationsController < ApplicationController
 
   def invitation_params
     params.require(:invitation).permit(
-      :type_id, :design_id,
-      :groom_last, :groom_first, :groom_last_kana, :groom_first_kana,
-      :bride_last, :bride_first, :bride_last_kana, :bride_first_kana
+      :type_id, :design_id, :title, :greeting,
+      :groom_last, :groom_first, :groom_last_kana, :groom_first_kana, :groom_msg,
+      :bride_last, :bride_first, :bride_last_kana, :bride_first_kana, :bride_msg,
+      :date1, :opentime1, :starttime1, :place1, :address1, :phonenumber1, :place_url1, :note1,
+      :date2, :opentime2, :starttime2, :place2, :address2, :phonenumber2, :place_url2, :note2
     )
   end
 end
