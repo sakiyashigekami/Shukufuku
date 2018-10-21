@@ -1,0 +1,6 @@
+<h1>招待状編集ページTOP</h1>
+
+<%= link_to "プロフィール", profile_path(id: @invitation) %>
+<%= link_to "会場・日付", date_place_path(id: @invitation) %>
+<%= link_to "挨拶文", greeting_path(id: @invitation) %>
+<%= link_to "出欠フォーム", attendance_path(id: @invitation) %>

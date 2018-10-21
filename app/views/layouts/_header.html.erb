@@ -1,0 +1,10 @@
+<% unless logged_in? %>
+  <%= link_to "登録", signup_path %>
+  <%= link_to "ログイン", login_path %>
+<% end %>
+
+<% if logged_in? %>
+  ログインユーザー(開発用): <%= current_user.id %>
+  <%= link_to "マイページ", mypage_path(current_user) %>
+  <%= link_to "ログアウト", logout_path, method: "DELETE" %>
+<% end %>
