@@ -5,6 +5,8 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+  has_many :invitations
+
 
   def self.from_omniauth(auth)
     user = User.where('email = ?', auth.info.email).first

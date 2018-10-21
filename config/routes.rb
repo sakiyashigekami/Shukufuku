@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get  "signup" => "users#new"
   post  "signup" => "users#create"
   get "send_email" => "users#send_email"
-  get "invitation_type" => "invitations#invitation_type"
-  get "couple_name/:user_id/:id" => "invitations#couple_name"
-  get "design/:user_id/:id" => "invitations#design"
+  get "invitation/type/:user_id" => "invitations#invitation_type", as: :invitation_type
+  get "invitation/couple_name/:user_id/:type_id" => "invitations#couple_name", as: :couple_name
+  get "invitation/design/:user_id/:type_id/:id" => "invitations#design", as: :design
   resources :users, except: [:new, :create]
   resources :invitations
   resources :account_activations, only: [:edit]

@@ -6,8 +6,7 @@
     <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>
   </head>
-  <body data-turbolinks="false">
-
+  <body>
     <%= render "layouts/header" %>
     <% flash.each do |msg_type, msg| %>
       <div class="alert alert-<%= msg_type %>">

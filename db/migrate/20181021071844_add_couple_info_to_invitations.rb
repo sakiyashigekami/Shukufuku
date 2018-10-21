@@ -1,4 +1,4 @@
-class AddCoupleinfoToInvitations < ActiveRecord::Migration[5.1]
+class AddCoupleInfoToInvitations < ActiveRecord::Migration[5.1]
   def change
     add_column :invitations, :groom_last, :string
     add_column :invitations, :groom_first, :string

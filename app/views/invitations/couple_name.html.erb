@@ -1,7 +1,7 @@
 <h1>新郎新婦の名前</h1>
 
-<%= form_for(@inv, url: signup_path) do |f| %>
-<%= render 'shared/error_messages', model: @inv %>
+<%= form_for(@invitation, url: invitations_path) do |f| %>
+<%= render 'shared/error_messages', model: @invitation %>
   <body>
     <%= f.label "新郎" %>
     <%= f.text_field :groom_last %>
@@ -15,7 +15,7 @@
     <%= f.text_field :bride_last_kana %>
     <%= f.text_field :bride_first_kana %>
 
-    <%= f.hidden_field :type, value: :tyoe %>
+    <%= f.hidden_field :type_id, value: params[:type_id] %>
 
     <%= f.submit "新規登録" %>
   </body>
