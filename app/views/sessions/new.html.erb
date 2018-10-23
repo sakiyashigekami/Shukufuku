@@ -1,17 +1,41 @@
 <%= form_for(:session, url: login_path) do |f| %>
 
-  <%= f.label :email, "メールアドレス" %>
-  <%= f.email_field :email %>
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="bg-login" style="height:1000px;">
+  <div class="container text-center">
 
-  <%= f.label :password, "パスワード" %>
-  <%= f.password_field :password %>
+    <div class="mt-9">
+      <img src="">
+      <h1>ロゴ</h1>
+    </div>
+  <!-- Input -->
+    <div class="mb-4">
+      <div class="u-form w-50" style="margin:auto;">
+        <%= f.label :email, "メールアドレス", class:"d-block small text-left" %>
+        <%= f.email_field :email, class:"w-100 p-2" %>
+      </div>
+    </div>
+  <!-- End Input -->
 
-  <%= f.label :remember_me do %>
-    <%= f.check_box :remember_me %>
-    <span>ログイン情報を記憶する</span>
-  <% end %>
+  <!-- Input -->
+    <div class="mb-4">
+      <div class="u-form w-50" style="margin:auto;">
+        <%= f.label :password, "パスワード", class:"d-block small text-left" %>
+        <%= f.password_field :password, placeholder:"英数字8文字以上", class:"w-100 p-2" %>
+      </div>
+    </div>
+  <!-- End Input -->
 
-  <%= link_to "アカウントをお持ちでない方はこちら", signup_path %>
+    <div class="d-block mb-4">
+      <%= f.label :remember_me do %>
+        <%= f.check_box :remember_me %>
+        <span>ログイン情報を記憶する</span>
+      <% end %>
+    </div>
 
-  <%= f.submit "ログイン" %>
+    <%= f.submit "ログイン", class:"btn btn-sm btn-secondary--air pl-7 pr-7" %>
+    <%= link_to "アカウントをお持ちでない方はこちら", signup_path, class:"d-block small mb-4" %>
+    <%= button_to "初めての方はこちら", signup_path, class:"btn btn-sm " %>
+  </div>
+</main>
 <% end %>

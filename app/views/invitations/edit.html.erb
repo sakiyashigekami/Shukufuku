@@ -1,6 +1,46 @@
-<h1>招待状編集ページTOP</h1>
 
-<%= link_to "プロフィール", profile_path(id: @invitation) %>
-<%= link_to "会場・日付", date_place_path(id: @invitation) %>
-<%= link_to "挨拶文", greeting_path(id: @invitation) %>
-<%= link_to "出欠フォーム", attendance_path(id: @invitation) %>
+
+
+
+
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h2 class="mb-0" style="">編集ページ</h2>
+        <div class="w-50 step-border mb-3" style=""></div>
+        <h6 class="mt-8">INVITATION01<span><img src="/icon/hane.png" class="w-15 p-2"></span></h6>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="inv-card p-4">
+      <h2 class="">テンプレート選択</h2>
+    </div>
+    <div class="mt-4 p-9 bg-light">
+      <h2 class="">画像</h2>
+    </div>
+    <div class="row mt-4 m-0">
+      <div class="inv-card w-45 p-4 m-3">
+        <h4 class="mb-0"><%= link_to "プロフィール", profile_path(id: @invitation) %></h4>
+      </div>
+      <div class="inv-card w-45 p-4 m-3">
+        <h4 class="mb-0"><%= link_to "会場・日付", date_place_path(id: @invitation) %></h4>
+      </div>
+    </div>
+    <div class="row m-0">
+      <div class="inv-card w-45 p-4 m-3">
+        <h4 class="mb-0"><%= link_to "挨拶文", greeting_path(id: @invitation) %></h4>
+      </div>
+      <div class="inv-card w-45 p-4 m-3">
+        <h4 class="mb-0"><%= link_to "出欠フォーム", attendance_path(id: @invitation) %></h4>
+      </div>
+    </div>
+    <div>
+      <%= link_to "プレビュー", invitations_path, class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>
+      <%= link_to "公開する", invitations_path, class:"btn btn-sm btn-secondary pl-8 pr-8" %>
+    </div>
+  </div>
+</main>

@@ -1,1 +1,24 @@
-<h1>確認メールを送信しました。</h1>
+<%= form_for(:session, url: login_path) do |f| %>
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="bg-login" style="height:1000px; color:#fcfccc;">
+  <div class="container text-center">
+
+    <div class="mt-9 mb-9">
+      <img src="">
+      <h1 class="">ロゴ</h1>
+    </div>
+  <!-- Input -->
+    <div>
+      <h4 class="mb-4">
+        登録メールアドレスに本登録のURLを送信しました。<br>
+        現在仮登録ですので本登録を済ませください。
+      </h4>
+      <h6 class="small">
+        ※メールが届かない場合、迷惑メールに分類されているか、ドメイン指定受信が許可されていない場合があります。<br>
+        その場合は「@○○○.com」のドメイン指定受信設定を行って下さい。
+      </h6>
+    </div>
+  </div>
+</main>
+<% end %>

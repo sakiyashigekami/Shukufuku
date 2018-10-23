@@ -1,10 +1,24 @@
-<% unless logged_in? %>
-  <%= link_to "登録", signup_path %>
-  <%= link_to "ログイン", login_path %>
-<% end %>
+<header class="mb-4">
+  <div class="row m-4 mt-0">
+    <div class="text-left col-2">
+      <img src="/icon/hane.png" class="w-15 mr-2 ml-4">
+      <img src="/icon/hane.png" class="w-15 mr-2">
+      <img src="/icon/hane.png" class="w-15 mr-2">
+    </div>
+    <div class="col-6"></div>
+    <% unless logged_in? %>
+      <div class="col-4 text-right" style="">
+        <%= link_to "登録", signup_path, class:"btn btn-sm btn-primary pt-1 pb-1" %>
+        <%= link_to "ログイン", login_path, class:"btn btn-sm btn-secondary pt-1 pb-1 mr-4" %>
+      </div>
+    <% end %>
 
-<% if logged_in? %>
-  ログインユーザー(開発用): <%= current_user.id %>
-  <%= link_to "マイページ", mypage_path(current_user) %>
-  <%= link_to "ログアウト", logout_path, method: "DELETE" %>
-<% end %>
+    <% if logged_in? %>
+      <div class="col-4 text-right">
+      ログインユーザー(開発用): <%= current_user.id %>
+      <%= link_to "マイページ", mypage_path(current_user) %>
+      <%= link_to "ログアウト", logout_path, method: "DELETE" %>
+      </div>
+    <% end %>
+  </div>
+</header>
