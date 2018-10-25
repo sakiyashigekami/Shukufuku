@@ -10,13 +10,15 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
+  get "invitaiton/start" => "invitations#start", as: :start
+  get "invitation/type" => "invitations#type", as: :type
   get "invitation/:id/profile" => "invitations#profile", as: :profile
   get "invitation/:id/date_place" => "invitations#date_place", as: :date_place
   get "invitation/:id/greeting" => "invitations#greeting", as: :greeting
   get "invitation/:id/attendance" => "invitations#attendance", as: :attendance
-  get "invitation/type/:user_id" => "invitations#invitation_type", as: :invitation_type
-  get "invitation/couple_name/:user_id/:type_id" => "invitations#couple_name", as: :couple_name
-  get "invitation/design/:user_id/:type_id/:id" => "invitations#design", as: :design
+  get "invitation/:id/preview" => "invitations#preview", as: :preview
+  get "invitation/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
+  get "invitation/design/:type_id/:id" => "invitations#design", as: :design
   resources :users, except: [:new, :show, :create]
   resources :invitations, only: [:edit, :update, :create, :destroy]
   resources :account_activations, only: [:edit]

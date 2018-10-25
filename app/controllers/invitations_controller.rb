@@ -1,6 +1,11 @@
 class InvitationsController < ApplicationController
 
-  def invitation_type
+  def start
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
+  def type
+    @invitation = Invitation.find_by(id: params[:id])
   end
 
   def couple_name
@@ -25,6 +30,9 @@ class InvitationsController < ApplicationController
 
   def attendance
     @invitation = Invitation.find_by(id: params[:id])
+  end
+
+  def preview
   end
 
   def edit

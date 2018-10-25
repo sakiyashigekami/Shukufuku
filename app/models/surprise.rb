@@ -1,0 +1,2 @@
+class Surprise < ApplicationRecord
+end
