@@ -1,4 +1,4 @@
-<%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
+<%= form_for(@attendance) do |f| %>
 <%= render 'shared/error_messages', model: @invitation %>
   <body>
     <%= f.label "姓" %>
@@ -10,7 +10,7 @@
     <%= f.label "ふりがな" %>
     <%= f.text_field :lastname_kana %>
 
-    <%= f.text_field :firstname_name %>
+    <%= f.text_field :firstname_kana %>
 
     <%= f.label "郵便番号" %>
     <%= f.text_field :postcode %>
