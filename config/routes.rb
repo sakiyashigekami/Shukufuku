@@ -21,8 +21,7 @@ Rails.application.routes.draw do
   get "invitations/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
   get "invitations/design/:type_id/:id" => "invitations#design", as: :design
 
-  resources :attendances, except: [:show]
-  get "invitations/:id/attendance" => "attendances#show", as: :attendance_show
+  resources :attendances
 
   resources :account_activations, only: [:edit]
 
