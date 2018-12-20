@@ -1,1 +1,97 @@
-<h1>マイページ</h1>
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="step-card p-4 m-6">
+          <img src="/step_icon/1.png" width="" class="w-50 mt-4">
+          <p class="mt-4">写真</p>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <h2 class="mt-8">挙式の日付</h2>
+        <p>新郎新婦の名前</p>
+        <div class="row mt-8">
+          <div class="col-6">
+            <div class="btn btn-lg btn-primary btn-outline-primary w-80">人数</div>
+          </div>
+          <div class="col-6">
+            <div class="btn btn-lg btn-primary btn-outline-primary w-80">金額</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <div class="row">
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 1) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/1.png" width="" class="w-50 mt-4">
+          <p class="mt-4">招待状編集TOP</p>
+        </div>
+        <% end %>
+      </div>
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 2) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/2.png" width="" class="w-50 mt-4">
+          <p class="mt-4">メッセージカード編集TOP</p>
+        </div>
+        <% end %>
+        </div>
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 3) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/3.png" width="" class="w-50 mt-4">
+          <p class="mt-4">WEB決済管理</p>
+        </div>
+        <% end %>
+      </div>
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 4) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/4.png" width="" class="w-50 mt-4">
+          <p class="mt-4">名簿管理</p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 1) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/1.png" width="" class="w-50 mt-4">
+          <p class="mt-4">写真管理</p>
+        </div>
+        <% end %>
+      </div>
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 2) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/2.png" width="" class="w-50 mt-4">
+          <p class="mt-4">オプションサービス</p>
+        </div>
+        <% end %>
+        </div>
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 3) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/3.png" width="" class="w-50 mt-4">
+          <p class="mt-4">？？？</p>
+        </div>
+        <% end %>
+      </div>
+      <div class="col-3">
+        <%= link_to couple_name_path(type_id: 4) do  %>
+        <div class="step-card p-4 m-6 mx-auto">
+          <img src="/step_icon/4.png" width="" class="w-50 mt-4">
+          <p class="mt-4">？？？</p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</main>
