@@ -1,13 +1,13 @@
 class AttendancesController < ApplicationController
 
   def show
-    @attendance = Attendance.find_by(invitation_id: params[:id])
+    @attendance = Attendance.new
     @invitation = Invitation.find_by(id: params[:id])
   end
 
   def create
     @invitation = Invitation.find_by(id: params[:id])
-    @attendance = @invitation.attendances.new(attendance_params)
+    @attendance = @invitation.attendance.new(attendance_params)
     if @attendance.save
       redirect_to attendance_url(@attendance)
     else
