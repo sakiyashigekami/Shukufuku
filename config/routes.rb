@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
-  resources :invitations, only: [:edit, :update, :create, :destroy]
+  resources :invitations, only: [:show, :update, :create, :destroy]
   get "invitaitons/start" => "invitations#start", as: :start
   get "invitations/type" => "invitations#type", as: :type
   get "invitations/:id/profile" => "invitations#profile", as: :profile
@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get "invitations/:id/attendance" => "attendances#show", as: :attendance_show
 
   resources :account_activations, only: [:edit]
+
+  resources :message_cards, only: [:show, :update, :create, :destroy]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

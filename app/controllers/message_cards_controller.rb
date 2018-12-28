@@ -1,0 +1,2 @@
+class MessageCardsController < ApplicationController
+end

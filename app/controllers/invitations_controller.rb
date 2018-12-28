@@ -31,7 +31,7 @@ class InvitationsController < ApplicationController
   def preview
   end
 
-  def edit
+  def show
     @invitation = Invitation.find_by(id: params[:id])
     @attendance = Attendance.find_by(invitation_id: params[:id])
   end
