@@ -1,0 +1,2 @@
+class MessageCard < ApplicationRecord
+end

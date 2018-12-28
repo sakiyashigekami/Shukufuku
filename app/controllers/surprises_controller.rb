@@ -1,3 +1,0 @@
-class SurprisesController < ApplicationController
-  
-end
