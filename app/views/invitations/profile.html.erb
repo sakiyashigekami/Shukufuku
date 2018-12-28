@@ -1,12 +1,14 @@
+<%= link_to "招待状編集TOPへ", edit_invitation_path(id: @invitation) %>
+
 <%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
 <%= render 'shared/error_messages', model: @invitation %>
   <body>
-    <%= f.label "名前" %>
+    <%= f.label "新郎" %>
     <%= f.text_field :groom_last %>
     <%= f.text_field :groom_first %>
     <%= f.text_area :groom_msg %>
 
-    <%= f.label "名前" %>
+    <%= f.label "新婦" %>
     <%= f.text_field :bride_last %>
     <%= f.text_field :bride_first %>
     <%= f.text_area :bride_msg %>

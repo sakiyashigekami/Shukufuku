@@ -33,6 +33,9 @@
     <%= f.label "メッセージ" %>
     <%= f.text_field :message %>
 
+    <%= f.hidden_field :invitation_id, value: params[:id] %>
+    <%= f.hidden_field :user_id, value: 1 %>
+
     <%= f.submit "保存" %>
   </body>
 <% end %>

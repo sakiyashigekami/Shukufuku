@@ -33,6 +33,7 @@ class InvitationsController < ApplicationController
 
   def edit
     @invitation = Invitation.find_by(id: params[:id])
+    @attendance = Attendance.find_by(invitation_id: params[:id])
   end
 
   def create

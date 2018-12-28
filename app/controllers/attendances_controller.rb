@@ -1,15 +1,19 @@
 class AttendancesController < ApplicationController
 
   def show
-    @attendance = Attendance.new
     @invitation = Invitation.find_by(id: params[:id])
+    if @attendance = Attendance.find_by(invitation_id: params[:id])
+      @attendance
+    else
+      @attendance = Attendance.new
+    end
   end
 
   def create
     @invitation = Invitation.find_by(id: params[:id])
-    @attendance = @invitation.attendance.new(attendance_params)
+    @attendance = Attendance.new(attendance_params)
     if @attendance.save
-      redirect_to attendance_url(@attendance)
+      redirect_to attendance_show_url(@attendance)
     else
       render "show"
     end
@@ -18,7 +22,7 @@ class AttendancesController < ApplicationController
   def update
     @attendance = Attendance.find_by(id: params[:id])
     if @attendance.update_attributes(attendance_params)
-      redirect_to edit_attendance_url(@attendance)
+      redirect_to attendance_show_url(@attendance)
     else
       render 'design'
     end
