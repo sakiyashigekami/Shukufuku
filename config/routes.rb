@@ -26,8 +26,7 @@ Rails.application.routes.draw do
 
   resources :account_activations, only: [:edit]
 
-  get "msg_cards/msgtype" => "message_cards#type", as: :msg_type
-  resources :message_cards, only: [:show, :update, :create, :destroy]
+  resources :message_cards, only: [:new, :show, :update, :create, :destroy]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

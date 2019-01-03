@@ -5,7 +5,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col-6">
-        <%= link_to invitation_path(@invitation, :invitation => {design_id: 1}), method: "PATCH" do %>
+        <%= link_to message_cards_path(@message_card, :message_card => {msg_design_id: 1}), method: "POST" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/1.png" width="" class="w-50 mt-4">
           <p class="mt-4">テンプレ１</p>
@@ -13,7 +13,7 @@
         <% end %>
       </div>
       <div class="col-6">
-        <%= link_to invitation_path(@invitation, :invitation => {design_id: 2}), method: "PATCH" do %>
+        <%= link_to message_cards_path(@message_card, :message_card => {msg_design_id: 2}), method: "POST" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/2.png" width="" class="w-50 mt-4">
           <p class="mt-4">テンプレ２</p>
@@ -23,7 +23,7 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <%= link_to invitation_path(@invitation, :invitation => {design_id: 3}), method: "PATCH" do %>
+        <%= link_to message_cards_path(@message_card, :message_card => {msg_design_id: 3}), method: "POST" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/3.png" width="" class="w-50 mt-4">
           <p class="mt-4">テンプレ３</p>
@@ -31,7 +31,7 @@
         <% end %>
       </div>
       <div class="col-6">
-        <%= link_to invitation_path(@invitation, :invitation => {design_id: 4}), method: "PATCH" do %>
+        <%= link_to message_cards_path(@message_card, :message_card => {msg_design_id: 4}), method: "POST" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/4.png" width="" class="w-50 mt-4">
           <p class="mt-4">テンプレ４</p>
