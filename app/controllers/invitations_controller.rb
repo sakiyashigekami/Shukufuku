@@ -48,7 +48,7 @@ class InvitationsController < ApplicationController
   def update
     @invitation = Invitation.find_by(id: params[:id])
     if @invitation.update_attributes(invitation_params)
-      redirect_to edit_invitation_url(@invitation)
+      redirect_to invitation_url(@invitation)
     else
       render 'design'
     end
