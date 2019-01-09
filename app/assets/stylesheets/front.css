@@ -185,6 +185,15 @@ a > .step-card:hover {
   padding: 10% 0;
 }
 
+.merit > .row {
+  margin: auto 5% !important;
+}
+
+.bg-merit-img{
+  min-height: inherit;/* レスポンシブ対応必須 */
+}
+
+
 /*------------------------------------
   bg-service
 ------------------------------------*/
