@@ -192,7 +192,11 @@ a > .step-card:hover {
 .bg-merit-img{
   min-height: inherit;/* レスポンシブ対応必須 */
 }
-
+@media (max-width: 1400px) {
+  .bg-merit-img{
+    min-height: 1800px;/* レスポンシブ対応必須 */
+  }
+}
 
 /*------------------------------------
   bg-service
