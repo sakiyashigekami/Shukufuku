@@ -1,4 +1,4 @@
-<%= link_to "招待状編集TOPへ", edit_invitation_path(id: @invitation) %>
+<%= link_to "招待状編集TOPへ", invitation_path(id: @invitation) %>
 
 <%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
 <%= render 'shared/error_messages', model: @invitation %>
