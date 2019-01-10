@@ -42,12 +42,21 @@
         <% end %>
       </div>
       <div class="col-3">
+        <% if MessageCard.find_by(user_id: current_user) %>
+          <%= link_to message_card_path(id: 1) do  %>
+            <div class="step-card p-4 m-6 mx-auto">
+              <img src="/step_icon/1.png" width="" class="w-50 mt-4">
+              <p class="mt-4">メッセージカード編集TOP</p>
+            </div>
+          <% end %>
+        <% else %>
           <%= link_to new_message_card_path do  %>
           <div class="step-card p-4 m-6 mx-auto">
             <img src="/step_icon/1.png" width="" class="w-50 mt-4">
             <p class="mt-4">メッセージカード新規作成</p>
           </div>
           <% end %>
+        <% end %>
       </div>
       <div class="col-3">
         <%= link_to couple_name_path(type_id: 3) do  %>
