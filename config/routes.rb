@@ -26,6 +26,9 @@ Rails.application.routes.draw do
 
   resources :account_activations, only: [:edit]
 
+  get "message_cards/:id/profile" => "message_cards#profile", as: :msg_profile
+  get "message_cards/:id/preview" => "message_cards#preview", as: :msg_preview
+  get "message_cards/:id/greeting" => "message_cards#greeting", as: :msg_greeting
   resources :message_cards, only: [:new, :show, :update, :create, :destroy]
 
   if Rails.env.development?

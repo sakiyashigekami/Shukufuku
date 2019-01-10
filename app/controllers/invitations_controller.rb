@@ -56,13 +56,13 @@ class InvitationsController < ApplicationController
 
   private
 
-  def invitation_params
-    params.require(:invitation).permit(
-      :type_id, :design_id, :title, :greeting,
-      :groom_last, :groom_first, :groom_last_kana, :groom_first_kana, :groom_msg,
-      :bride_last, :bride_first, :bride_last_kana, :bride_first_kana, :bride_msg,
-      :date1, :opentime1, :starttime1, :place1, :address1, :phonenumber1, :place_url1, :note1,
-      :date2, :opentime2, :starttime2, :place2, :address2, :phonenumber2, :place_url2, :note2
-    )
-  end
+    def invitation_params
+      params.require(:invitation).permit(
+        :type_id, :design_id, :title, :greeting,
+        :groom_last, :groom_first, :groom_last_kana, :groom_first_kana, :groom_msg,
+        :bride_last, :bride_first, :bride_last_kana, :bride_first_kana, :bride_msg,
+        :date1, :opentime1, :starttime1, :place1, :address1, :phonenumber1, :place_url1, :note1,
+        :date2, :opentime2, :starttime2, :place2, :address2, :phonenumber2, :place_url2, :note2
+      )
+    end
 end
