@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @invitation = Invitation.new
+    @invitation = Invitation.find_by(user_id: params[:user_id])
     @message_card = MessageCard.new
   end
 
