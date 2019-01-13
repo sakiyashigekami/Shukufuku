@@ -24,6 +24,13 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 
+# Bootstrap4デザイン
+gem 'bootstrap','~> 4.0.0.alpha3'
+# jquery
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
