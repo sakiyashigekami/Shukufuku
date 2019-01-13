@@ -2,10 +2,36 @@
 
 <%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
 <%= render 'shared/error_messages', model: @invitation %>
-  <body>
-    <%= f.label "挨拶文" %>
-    <%= f.text_area :greeting %>
 
-    <%= f.submit "保存" %>
-  </body>
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h2 class="mb-0" style="">挨拶文編集</h2>
+        <div class="w-50 step-border mb-3" style=""></div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+
+    <!-- <%= f.label "挨拶文" %> -->
+    <%= f.text_area :greeting, class:"w-50 p-2 mh-greet" %>
+
+    <div class="mt-2 w-50 mx-auto">
+      <div class="text-left">
+        <a class="btn btn-sm btn-dark text-white pl-8 pr-8">例文を選択する</a>
+      </div>
+    </div>
+
+    <div class="mt-9">
+      <%= f.submit "保存", class:"btn btn-sm btn-primary pl-8 pr-8" %><br>
+      <%= link_to "戻る", invitation_path(id: @invitation), class:"btn btn-sm btn-secondary pl-8 pr-8 mt-4" %>
+    </div>
+
+  </div>
+
+
+
+</main>
 <% end %>
