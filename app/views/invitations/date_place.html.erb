@@ -2,9 +2,18 @@
 
 <%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
 <%= render 'shared/error_messages', model: @invitation %>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript" language="javascript"></script>
+<script src="../common/js/bootstrap.js"></script>
+<link rel="stylesheet" href="../common/css/bootstrap.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+<script type="text/javascript" src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="bootstrap-datepicker/locales/bootstrap-datepicker.ja.min.js"></script>
+
   <body>
-    <%= f.label "日付" %>
-    <%= f.text_field :date1 %>
+
+
 
     <%= f.label "受付時間" %>
     <%= f.text_field :opentime1 %>
@@ -53,4 +62,70 @@
 
     <%= f.submit "保存" %>
   </body>
+
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h2 class="mb-0" style="">日付・会場編集</h2>
+        <div class="w-50 step-border mb-3" style=""></div>
+        <h3 class="mt-8 mb-0">挙式の詳細</h3>
+        <p>Wedding detales</p>
+      </div>
+      <div class="col-4"></div>
+    </div>
+
+    <div class="inv-date_place">
+      <div class="row mt-4">
+        <div class="col-sm-4">
+          <p class="text-primary"><%= f.label "日付" %></p>
+        </div>
+        <div class="groom-profile text-left col-sm-8">
+          <div class="" style="">
+            <%= f.text_field :date1, class:"w-50 p-2" %>
+            <div class="form-group" id="datepicker-default">
+              <label class="col-sm-3 control-label">Default</label>
+              <div class="col-sm-9 form-inline">
+                <div class="input-group date">
+                  <input type="text" class="form-control" value="20170621">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Datepicker -->
+            <!-- <div id="datepickerWrapper" class="u-datepicker input-group u-form">
+              <div class="input-group-prepend u-form__prepend">
+                <span class="input-group-text u-form__text">
+                  <span class="fa fa-calendar u-form__text-inner"></span>
+                    </span>
+              </div>
+              <input class="js-range-datepicker form-control u-form__input bg-white rounded-right" type="text" placeholder="On" aria-label="On"
+                                 data-rp-wrapper="#datepickerWrapper"
+                                 data-rp-date-format="Y/m/d">
+            </div> -->
+            <!-- End Datepicker -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+$(function(){
+    //Default
+    $('#datepicker-default .date').datepicker({
+        format: "yyyy年mm月dd日",
+        language: 'ja'
+    });
+
+});
+</script>
+
+
 <% end %>
