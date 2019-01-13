@@ -28,6 +28,10 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find_by(id: params[:id])
   end
 
+  def attendance
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
   def preview
   end
 

@@ -247,6 +247,11 @@ a > .step-card:hover {
     min-height: 400px;
   }
 }
+
+.rounded-pill{
+  border-color: blue !important;
+  color: blue;
+}
 /*------------------------------------
   box
 ------------------------------------*/
