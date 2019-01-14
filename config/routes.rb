@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "root#top"
 
+  get "money" => "users#money"
   get  "signup" => "users#new"
   post  "signup" => "users#create"
   get "send_email" => "users#send_email"
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get "invitations/:id/profile" => "invitations#profile", as: :profile
   get "invitations/:id/date_place" => "invitations#date_place", as: :date_place
   get "invitations/:id/greeting" => "invitations#greeting", as: :greeting
+  get "invitations/:id/attendance" => "invitations#attendance", as: :attendance
   get "invitations/:id/preview" => "invitations#preview", as: :preview
   get "invitations/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
   get "invitations/design/:id/:type_id" => "invitations#design", as: :design

@@ -18,6 +18,10 @@ class UsersController < ApplicationController
       end
   end
 
+  def money
+    @user = current_user
+  end
+
   def send_email
   end
 

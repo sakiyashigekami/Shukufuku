@@ -1,0 +1,53 @@
+<% provide(:title, "決済管理") %>
+
+<%= render 'shared/error_messages', model: @user %>
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main" class="" style="">
+    <div class="container text-center">
+      <h2>決済管理</h2>
+      <div class="type text-left">
+        <h3 class="mb-4" style="margin-left:15%;">挙式・披露宴</h3>
+        <div class="row w-80" style="margin-left:20%;">
+          <div class="col-sm-6">
+            <p class="btn-primary rounded-pill w-50 py-3 px-4" style="">出席<span class="ml-9">60名</span></p>
+            <p class="btn-primary rounded-pill w-50 py-3 px-4" style="">欠席<span class="ml-9">8名</span></p>
+            <div class="text-center">
+              <a class="btn btn-outline-primary text-primary">名簿一覧</a>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="mt-6">ご祝儀</label>
+            <p class="btn-primary rounded-pill w-50 py-3 px-4" style=""><span class="ml-9">¥100,000</span></p>
+            <div class="text-center">
+              <a class="btn btn-outline-primary text-primary">一覧</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="money" class="type text-left" style="margin-top:100px;">
+        <h3 class="mb-4" style="margin-left:15%;">二次会・パーティー</h3>
+        <div class="row w-80" style="margin-left:20%;">
+          <div class="col-sm-6">
+            <p class="btn-primary rounded-pill w-50 py-3 px-4" style="">出席<span class="ml-9">60名</span></p>
+            <p class="btn-primary rounded-pill w-50 py-3 px-4">欠席<span class="ml-9">7名</span></p>
+            <div class="text-center">
+              <a class="btn btn-outline-primary text-primary">名簿一覧</a>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label class="mt-6">会費</label>
+            <p class="btn-primary rounded-pill w-50 py-3 px-4" style=""><span class="ml-9">¥100,000</span></p>
+            <div class="text-center">
+              <a class="btn btn-outline-primary text-primary">一覧</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-9">
+        <%= link_to "戻る", users_path(id: @user), class:"btn btn-sm btn-secondary pl-8 pr-8 mt-4" %>
+      </div>
+    </div>
+  </main>
