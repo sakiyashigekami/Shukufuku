@@ -40,7 +40,8 @@
         </div>
         <div class="text-left col-sm-8">
           <div class="" style="">
-            <%= f.text_field :address1, value:"お手数ではございますが、出席情報のご記入をお願い申し上げます。", class:"w-80 p-2" %><!-- 送り先を編集してください！！！ to_立花さん -->
+            <%= f.text_field :address1, value:"お手数ではございますが、出席情報のご記入をお願い申し上げます。", class:"w-80 p-2" %>
+            <!-- 送り先を編集してください！！！ to_立花さん -->
           </div>
         </div>
       </div>
@@ -332,7 +333,6 @@
 
     <div class="mt-9">
       <%= f.submit "保存", class:"btn btn-sm btn-primary pl-8 pr-8" %><br>
-      <%= link_to "戻る", invitation_path(id: @invitation), class:"btn btn-sm btn-secondary pl-8 pr-8 mt-4" %>
     </div>
 
   </div>

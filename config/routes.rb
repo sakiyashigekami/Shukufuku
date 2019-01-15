@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root "root#top"
 
-  get "money" => "users#money"
   get  "signup" => "users#new"
   post  "signup" => "users#create"
   get "send_email" => "users#send_email"
   get "mypage/:user_id" => "users#show", as: :mypage
+  get "money" => "users#money"
   resources :users, except: [:new, :show, :create]
 
   get "login" => "sessions#new"
