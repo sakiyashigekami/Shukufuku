@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181228141930) do
+ActiveRecord::Schema.define(version: 20190115092920) do
+
+  create_table "attendance_forms", force: :cascade do |t|
+    t.integer "user_id"
+    t.boolean "name", default: true, null: false
+    t.integer "name_sel", default: 0
+    t.boolean "kana", default: false, null: false
+    t.integer "kana_sel", default: 1
+    t.boolean "postcode", default: false, null: false
+    t.integer "postcode_sel", default: 1
+    t.boolean "address", default: false, null: false
+    t.integer "address_sel", default: 1
+    t.boolean "phonenumber", default: false, null: false
+    t.integer "phonenumber_sel", default: 1
+    t.boolean "email", default: true, null: false
+    t.integer "email_sel", default: 0
+    t.boolean "allergy", default: false, null: false
+    t.integer "allergy_sel", default: 1
+    t.boolean "message", default: false, null: false
+    t.integer "message_sel", default: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "attendances", force: :cascade do |t|
     t.integer "user_id"
