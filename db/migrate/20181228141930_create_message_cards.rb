@@ -14,6 +14,7 @@ class CreateMessageCards < ActiveRecord::Migration[5.1]
       t.string :bride_first
       t.string :bride_last_kana
       t.string :bride_first_kana
+      t.boolean :public, default: false, null: false
 
       t.timestamps
     end

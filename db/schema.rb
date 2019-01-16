@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.integer "phonenumber2"
     t.string "place_url2"
     t.text "note2"
+    t.boolean "public", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address1"
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.string "bride_first"
     t.string "bride_last_kana"
     t.string "bride_first_kana"
+    t.boolean "public", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

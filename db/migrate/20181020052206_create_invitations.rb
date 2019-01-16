@@ -22,6 +22,7 @@ class CreateInvitations < ActiveRecord::Migration[5.1]
       t.integer :phonenumber2
       t.string :place_url2
       t.text :note2
+      t.boolean :public, default: false, null: false
 
       t.timestamps
     end
