@@ -6,7 +6,6 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   has_many :invitations
-  validate :invitations_size
   has_many :message_cards
   has_many :attendances
   has_many :attendance_forms
@@ -81,18 +80,12 @@ class User < ApplicationRecord
 
   private
 
-  def downcase_email
-    self.email = email.downcase
-  end
-
-  def create_activation_digest
-      self.activation_token  = User.new_token
-      self.activation_digest = User.digest(activation_token)
-  end
-
-  def invitations_size
-    if self.invitations.size > 4
-      errors.add(:invitations, "招待状をこれ以上作ることができません。")
+    def downcase_email
+      self.email = email.downcase
     end
-  end
+
+    def create_activation_digest
+        self.activation_token  = User.new_token
+        self.activation_digest = User.digest(activation_token)
+    end
 end
