@@ -1515,6 +1515,10 @@ pre code {
   }
 }
 
+.public {
+  color: #fff
+}
+
 .table {
   width: 100%;
   margin-bottom: 1rem;

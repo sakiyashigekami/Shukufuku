@@ -9,15 +9,14 @@
         <h6 class="mt-8">メッセージカード_1<span><img src="/icon/hane.png" class="w-15 p-2"></span></h6>
         <h6 class="mt-8">
           <% if @message_card.public == false %>
-            <%= link_to message_card_path(@message_card, :message_card => {public: true}), method: "PATCH" do %>
+            <%= link_to message_card_path(@message_card, :message_card => {public: true}), method: "PATCH", class:"btn btn-sm btn-secondary pl-8 pr-8" do %>
               公開
             <% end %>
           <% else %>
-            <%= link_to message_card_path(@message_card, :message_card => {public: false}), method: "PATCH" do %>
-            非公開
+            <%= link_to message_card_path(@message_card, :message_card => {public: false}), method: "PATCH", class:"btn btn-sm btn-secondary pl-8 pr-8" do %>
+              非公開
             <% end %>
           <% end %>
-
         </h6>
       </div>
       <div class="col-4"></div>
@@ -38,7 +37,6 @@
     </div>
     <div>
       <%= link_to "プレビュー", invitations_path, class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>
-      <%= link_to "公開する", invitations_path, class:"btn btn-sm btn-secondary pl-8 pr-8" %>
     </div>
     <div class="row mt-4 m-0">
       <div class="w-15 p-4 ">

@@ -2,8 +2,8 @@ class CreateInvitations < ActiveRecord::Migration[5.1]
   def change
     create_table :invitations do |t|
       t.integer :user_id
-      t.integer :type
-      t.integer :desing_id
+      t.integer :type_id
+      t.integer :design_id
       t.string :title
       t.string :groom_msg
       t.string :bride_msg
@@ -26,5 +26,6 @@ class CreateInvitations < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index  :invitations, [:user_id, :type_id], unique: true
   end
 end

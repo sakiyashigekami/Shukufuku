@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.string "groom_first_kana"
     t.string "bride_last_kana"
     t.string "bride_first_kana"
+    t.index ["user_id", "type_id"], name: "index_invitations_on_user_id_and_type_id", unique: true
   end
 
   create_table "message_cards", force: :cascade do |t|
@@ -124,6 +125,8 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.datetime "reset_sent_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["name"], name: "index_users_on_name"
   end
 
 end

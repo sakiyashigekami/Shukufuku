@@ -1,7 +1,7 @@
 class CreateMessageCards < ActiveRecord::Migration[5.1]
   def change
     create_table :message_cards do |t|
-      t.integer :user_id
+      t.integer :user_id, unique: true
       t.integer :msg_design_id
       t.string :title
       t.datetime :date
