@@ -25,11 +25,20 @@ class MessageCardsController < ApplicationController
     end
   end
 
+  def update
+    @message_card = MessageCard.find_by(id: params[:id])
+    if @message_card.update_attributes(message_card_params)
+      redirect_to message_card_url(@message_card)
+    else
+      render 'design'
+    end
+  end
+
   private
 
     def message_card_params
       params.require(:message_card).permit(
-        :msg_design_id, :title, :date, :greeting,
+        :msg_design_id, :title, :date, :greeting, :public,
         :groom_last, :groom_first, :groom_last_kana, :groom_first_kana,
         :bride_last, :bride_first, :bride_last_kana, :bride_first_kana,
       )

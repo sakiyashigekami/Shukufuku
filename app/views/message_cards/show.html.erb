@@ -7,6 +7,18 @@
         <h2 class="mb-0" style="">メッセージカード編集TOP</h2>
         <div class="w-50 step-border mb-3" style=""></div>
         <h6 class="mt-8">メッセージカード_1<span><img src="/icon/hane.png" class="w-15 p-2"></span></h6>
+        <h6 class="mt-8">
+          <% if @message_card.public == false %>
+            <%= link_to message_card_path(@message_card, :message_card => {public: true}), method: "PATCH" do %>
+              公開
+            <% end %>
+          <% else %>
+            <%= link_to message_card_path(@message_card, :message_card => {public: false}), method: "PATCH" do %>
+            非公開
+            <% end %>
+          <% end %>
+
+        </h6>
       </div>
       <div class="col-4"></div>
     </div>

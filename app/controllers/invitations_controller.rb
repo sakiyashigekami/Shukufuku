@@ -62,7 +62,7 @@ class InvitationsController < ApplicationController
 
     def invitation_params
       params.require(:invitation).permit(
-        :type_id, :design_id, :title, :greeting,
+        :type_id, :design_id, :title, :greeting, :public,
         :groom_last, :groom_first, :groom_last_kana, :groom_first_kana, :groom_msg,
         :bride_last, :bride_first, :bride_last_kana, :bride_first_kana, :bride_msg,
         :date1, :opentime1, :starttime1, :place1, :address1, :phonenumber1, :place_url1, :note1,
