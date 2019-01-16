@@ -31,7 +31,7 @@
         <h4 class="mb-0"><%= link_to "挨拶文", greeting_path(id: @invitation) %></h4>
       </div>
       <div class="inv-card w-45 p-4 m-3">
-        <h4 class="mb-0"><%= link_to "出欠フォーム", attendance_show_path(id: @invitation) %></h4>
+        <h4 class="mb-0"><%= link_to "出欠フォーム", attendance_form_show_path(id: params[:id], atdform_id: @attendance_form) %></h4>
       </div>
     </div>
     <div>

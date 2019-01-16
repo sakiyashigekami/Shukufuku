@@ -1,5 +1,6 @@
 class AttendanceForm < ApplicationRecord
   has_many :attendances
+  belongs_to :user
 
   enum name_sel: { 名前を必須にする: 0, 名前を必須にしない: 1 }
   enum kana_sel: { かなを必須にする: 0, かなを必須にしない: 1 }

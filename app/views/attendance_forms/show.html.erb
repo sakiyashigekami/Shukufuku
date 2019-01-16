@@ -1,0 +1,259 @@
+<%= link_to "招待状編集TOPへ", invitation_path(id: @invitation) %>
+
+<%= form_for(@attendance_form, url: attendance_form_update_path) do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h2 class="mb-0" style="">出欠フォーム編集</h2>
+        <div class="w-50 step-border mb-3" style=""></div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+
+    <div class="inv-date_place">
+      <div class="row mt-4">
+        <div class="col-sm-4">
+          <p class="text-primary">
+            <%= f.label :due_date, "回答期限" %>
+          </p>
+        </div>
+        <div class="text-left col-sm-8">
+          <div class="" style="">
+            <%= f.text_field :due_date, class: "w-80 p-2", id: "date_sample" %>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck_expire">
+              <label class="form-check-label" for="defaultCheck_expire">
+                回答期限を設定しない
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row mt-4">
+        <div class="col-sm-4">
+          <p class="text-primary">
+            <%= f.label :greeting, "フォーム用挨拶文" %>
+          </p>
+        </div>
+        <div class="text-left col-sm-8">
+          <div class="" style="">
+            <%= f.text_field :greeting, value: "お手数ではございますが、出席情報のご記入をお願い申し上げます。", class: "w-80 p-2" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-sm-4">
+          <p class="text-primary mb-0">
+            <%= f.label "フォーム回答項目", class: "mb-0" %>
+          </p>
+        </div>
+        <div class="text-left col-sm-8">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :name %>
+                  <%= f.label :name, "お名前" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :name_sel, :名前を必須にする %>
+                  <%= f.label :name_sel, "必須にする" %>
+                  <%= f.radio_button :name_sel, :名前を必須にしない %>
+                  <%= f.label :name_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :kana %>
+                  <%= f.label :kana, "かな" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :kana_sel, :かなを必須にする %>
+                  <%= f.label :kana_sel, "必須にする" %>
+                  <%= f.radio_button :kana_sel, :かなを必須にしない %>
+                  <%= f.label :kana_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :postcode %>
+                  <%= f.label :postcode, "郵便番号" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :postcode_sel, :郵便番号を必須にする %>
+                  <%= f.label :postcode_sel, "必須にする" %>
+                  <%= f.radio_button :postcode_sel, :郵便番号を必須にしない %>
+                  <%= f.label :postcode_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :address %>
+                  <%= f.label :address, "住所" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :address_sel, :住所を必須にする %>
+                  <%= f.label :address_sel, "必須にする" %>
+                  <%= f.radio_button :address_sel, :住所を必須にしない %>
+                  <%= f.label :address_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :phonenumber %>
+                  <%= f.label :phonenumber, "電話番号" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :phonenumber_sel, :電話番号を必須にする %>
+                  <%= f.label :phonenumber_sel, "必須にする" %>
+                  <%= f.radio_button :phonenumber_sel, :電話番号を必須にしない %>
+                  <%= f.label :phonenumber_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :email %>
+                  <%= f.label :email, "メールアドレス" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :email_sel, :メールアドレスを必須にする %>
+                  <%= f.label :email_sel, "必須にする" %>
+                  <%= f.radio_button :email_sel, :メールアドレスを必須にしない %>
+                  <%= f.label :email_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :allergy %>
+                  <%= f.label :allergy, "アレルギー" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :allergy_sel, :アレルギーを必須にする %>
+                  <%= f.label :allergy_sel, "必須にする" %>
+                  <%= f.radio_button :allergy_sel, :アレルギーを必須にしない %>
+                  <%= f.label :allergy_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+        </div>
+        <div class="text-left col-sm-8 mt-2">
+          <div class="" style="">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <%= f.check_box :message %>
+                  <%= f.label :message, "メッセージ" %>
+                </div>
+              </div>
+              <div class="col-sm-8 row">
+                <div class="form-check mr-4">
+                  <%= f.radio_button :message_sel, :メッセージを必須にする %>
+                  <%= f.label :message_sel, "必須にする" %>
+                  <%= f.radio_button :message_sel, :メッセージを必須にしない %>
+                  <%= f.label :message_sel, "必須にしない" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-9">
+      <%= f.submit "保存", class:"btn btn-sm btn-primary pl-8 pr-8" %><br>
+    </div>
+
+  </div>
+</main>
+
+
+<!-- bootstrap-datepickerのjavascriptコード -->
+<script>
+    $('#date_sample').datepicker({
+        language:'ja',
+        format: 'yyyy/mm/dd'
+    });
+</script>
+
+
+<% end %>

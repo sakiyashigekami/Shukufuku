@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validate :invitations_size
   has_many :message_cards
   has_many :attendances
+  has_many :attendance_forms
 
 
   def self.from_omniauth(auth)

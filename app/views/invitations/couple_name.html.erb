@@ -1,5 +1,5 @@
 <%= form_for(@invitation, url: invitations_path) do |f| %>
-<%= render 'shared/error_messages', model: @invitation %>
+<%= render 'shared/error_messages', model: f.object %>
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="" style="">
   <div class="container text-center">
@@ -33,8 +33,12 @@
         <%= f.text_field :bride_first,placeholder:"名（First Name）", class:"col-5" %>
       </div>
     </div>
-    <%= f.hidden_field :type_id, value: params[:type_id] %>
+      <%= f.hidden_field :type_id, value: params[:type_id] %>
     <div class="mt-8">
+      <%= f.fields_for(@attendance_form) do |atdf| %>
+        <%= atdf.hidden_field :user_id, value: current_user.id %>
+        <%= atdf.hidden_field :type_id, value: params[:type_id] %>
+      <% end %>
       <%= f.submit "OK", class:"btn btn-sm btn-primary pl-8 pr-8" %>
     </div>
   </div>

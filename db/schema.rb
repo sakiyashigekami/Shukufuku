@@ -14,6 +14,10 @@ ActiveRecord::Schema.define(version: 20190115092920) do
 
   create_table "attendance_forms", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "invitation_id"
+    t.integer "type_id"
+    t.datetime "due_date"
+    t.text "greeting"
     t.boolean "name", default: true, null: false
     t.integer "name_sel", default: 0
     t.boolean "kana", default: false, null: false
