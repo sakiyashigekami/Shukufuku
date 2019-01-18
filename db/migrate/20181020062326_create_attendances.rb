@@ -5,9 +5,9 @@ class CreateAttendances < ActiveRecord::Migration[5.1]
       t.integer :invitation_id
       t.string :name
       t.string :kana
-      t.integer :postcode
+      t.string :postcode
       t.string :address
-      t.integer :phonenumber
+      t.string :phonenumber
       t.string :email
       t.string :allergy
       t.text :message

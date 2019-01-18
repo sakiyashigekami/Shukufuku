@@ -9,11 +9,11 @@
         <h6 class="mt-8">招待状_1<span><img src="/icon/hane.png" class="w-15 p-2"></span></h6>
         <h6 class="mt-8">
           <% if @invitation.public == false %>
-            <%= link_to invitation_path(@invitation, :invitation => {public: true}), method: "PATCH", class:"btn btn-sm btn-secondary pl-8 pr-8" do %>
+            <%= link_to invitation_path(@invitation, :invitation => {public: true}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
               公開
             <% end %>
           <% else %>
-            <%= link_to invitation_path(@invitation, :invitation => {public: false}), method: "PATCH", class:"btn btn-sm btn-secondary pl-8 pr-8" do %>
+            <%= link_to invitation_path(@invitation, :invitation => {public: false}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
               非公開
             <% end %>
           <% end %>

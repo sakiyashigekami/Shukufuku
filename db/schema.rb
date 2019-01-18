@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.integer "invitation_id"
     t.string "name"
     t.string "kana"
-    t.integer "postcode"
+    t.string "postcode"
     t.string "address"
-    t.integer "phonenumber"
+    t.string "phonenumber"
     t.string "email"
     t.string "allergy"
     t.text "message"
@@ -65,21 +65,18 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.datetime "opentime1"
     t.datetime "starttime1"
     t.string "place1"
-    t.integer "phonenumber1"
+    t.string "address1"
+    t.string "phonenumber1"
     t.string "place_url1"
     t.text "note1"
     t.datetime "date2"
     t.datetime "opentime2"
     t.datetime "starttime2"
     t.string "place2"
-    t.integer "phonenumber2"
+    t.string "address2"
+    t.string "phonenumber2"
     t.string "place_url2"
     t.text "note2"
-    t.boolean "public", default: false, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "address1"
-    t.string "address2"
     t.string "groom_last"
     t.string "groom_first"
     t.string "bride_last"
@@ -88,6 +85,9 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.string "groom_first_kana"
     t.string "bride_last_kana"
     t.string "bride_first_kana"
+    t.boolean "public", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "message_cards", force: :cascade do |t|
