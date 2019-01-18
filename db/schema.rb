@@ -88,7 +88,6 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.string "groom_first_kana"
     t.string "bride_last_kana"
     t.string "bride_first_kana"
-    t.index ["user_id", "type_id"], name: "index_invitations_on_user_id_and_type_id", unique: true
   end
 
   create_table "message_cards", force: :cascade do |t|
