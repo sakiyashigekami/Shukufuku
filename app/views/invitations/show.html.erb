@@ -19,29 +19,39 @@
         <% end %>
       <% end %>
     </div>
-    <div class="inv-card p-4">
-      <h2 class="">
-        <%= link_to "テンプレート選択", design_path(id: @invitation, type_id: @invitation.type_id) %>
-      </h2>
+    <div class="mt-4 bg-img img-fit">
+      <%= link_to design_path(id: @invitation, type_id: @invitation.type_id),class:"bg-img-padding w-100 my-auto" do %>
+      <div class="amikake" style="height: 300px;background-color: rgba(0,0,0,.5);">
+        <p class="text-white" style="padding-top:140px;">画像を選択する</p>
+      </div>
     </div>
-    <div class="mt-4 p-9 bg-light">
-      <h2 class="">画像</h2>
-    </div>
+    <% end %>
     <div class="mt-4 m-0" style="overflow:hidden;">
+      <%= link_to profile_path(id: @invitation) do %>
       <div class="inv-card w-49 p-4" style="float:left;">
-        <h4 class="mb-0"><%= link_to "プロフィール", profile_path(id: @invitation) %></h4>
+        <h4 class="mb-0">プロフィール</h4>
       </div>
+      <% end %>
+
+      <%= link_to date_place_path(id: @invitation) do %>
       <div class="inv-card w-49 p-4" style="float:right;">
-        <h4 class="mb-0"><%= link_to "会場・日付", date_place_path(id: @invitation) %></h4>
+        <h4 class="mb-0">会場・日付</h4>
       </div>
+      <% end %>
     </div>
+
     <div class="mt-4 m-0">
+      <%= link_to greeting_path(id: @invitation) do %>
       <div class="inv-card w-49 p-4" style="float:left;">
-        <h4 class="mb-0"><%= link_to "挨拶文", greeting_path(id: @invitation) %></h4>
+        <h4 class="mb-0">挨拶文</h4>
       </div>
+      <% end %>
+
+      <%= link_to attendance_form_show_path(id: params[:id], atdform_id: @attendance_form) do %>
       <div class="inv-card w-49 p-4" style="float:right;">
-        <h4 class="mb-0"><%= link_to "出欠フォーム", attendance_form_show_path(id: params[:id], atdform_id: @attendance_form) %></h4>
+        <h4 class="mb-0">出欠フォーム</h4>
       </div>
+      <% end %>
     </div>
     <div>
       <%= link_to "プレビュー", invitations_path, class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>

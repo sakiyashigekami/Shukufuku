@@ -87,12 +87,12 @@ ul {
   inv-card
 ------------------------------------*/
 .inv-card {
-  border:3px solid #a0cccc;
+  border:3px solid #82D8D5;
   width: 100%;
-  color: #a0cccc;
+  color: #82D8D5;
 }
 .inv-card > h4 > a {
-  color: #a0cccc;
+  color: #82D8D5;
 }
 
 /*------------------------------------
@@ -105,8 +105,8 @@ ul {
 }
 
 a > .step-card:hover {
-  border:3px solid #a0cccc;
-  color: #a0cccc !important
+  border:3px solid #82D8D5;
+  color: #82D8D5 !important
 }
 
 /*------------------------------------
@@ -252,6 +252,27 @@ a > .step-card:hover {
   border-color: blue !important;
   color: blue;
 }
+
+.bg-img{
+  background-image: url('/default.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-img-padding{
+  padding:140px 0 !important;
+}
+
+input[type="radio" i], input[type="checkbox" i],input[type="hidden" i], input[type="image" i], input[type="file" i]{
+  background-color: #82D8D5 !important;
+  border: #82D8D5 !important;
+  color: #82D8D5 !important;
+}
+
+/* .custom-control.custom-checkbox.ml-4{
+  margin-left: 10%;
+} */
 /*------------------------------------
   box
 ------------------------------------*/

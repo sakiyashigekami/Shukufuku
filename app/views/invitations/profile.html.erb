@@ -17,26 +17,26 @@
       <h6 class="mt-8" style="font-size:2.0rem; line-height: 0.5;">新郎<br><span style="font-size:1rem;">groom</span></h6>
       <div class="row mt-4">
         <div class="groom-img col-sm-4">
-          <img src="/top/merit-img-2.png" class="w-50">
-          <p>写真を選択する</p>
+          <img src="/icon/groom.png" class="w-70">
+          <p class="mt-2">写真を選択する</p>
         </div>
         <div class="groom-profile text-left col-sm-8">
-          <label class="">名前</label>
+          <label class="ml-2">名前</label>
           <!-- <%= f.label "新郎", class:"d-block small text-left" %> -->
           <div class="overflow-hidden" style="margin:0px !important;">
-            <%= f.text_field :groom_last, class:"w-49 p-2 float-left" %>
-            <%= f.text_field :groom_first, class:"w-49 p-2 float-right" %>
+            <%= f.text_field :groom_last, class:"w-49 p-2 float-left inv-card",placeholder:"  性    Last" %>
+            <%= f.text_field :groom_first, class:"w-49 p-2 float-right inv-card",placeholder:"  名    First" %>
           </div>
-          <label class="">かな</label>
+          <label class="ml-2">かな</label>
           <!-- <%= f.label "新郎", class:"d-block small text-left" %> -->
           <div class="overflow-hidden" style="margin:0px !important;">
-            <%= f.text_field :groom_last_kana, class:"w-49 p-2 float-left" %>
-            <%= f.text_field :groom_first_kana, class:"w-49 p-2 float-right" %>
+            <%= f.text_field :groom_last_kana, class:"w-49 p-2 float-left inv-card",placeholder:"  せい" %>
+            <%= f.text_field :groom_first_kana, class:"w-49 p-2 float-right inv-card",placeholder:"  めい" %>
           </div>
 
           <div class="mt-4">
-            <label class="">自己紹介・メッセージ</label>
-            <%= f.text_area :groom_msg, class:"w-100 p-2" %>
+            <label class="ml-2">自己紹介・メッセージ</label>
+            <%= f.text_area :groom_msg, class:"w-100 p-2 inv-card",placeholder:"  自己紹介や一言メッセージなどを記入して下さい" %>
           </div>
         </div>
       </div>
@@ -46,26 +46,26 @@
       <h6 class="mt-8" style="font-size:2.0rem; line-height: 0.5;">新婦<br><span style="font-size:1rem;">bride</span></h6>
       <div class="row mt-4">
         <div class="groom-img col-sm-4">
-          <img src="/top/merit-img-2.png" class="w-50">
-          <p>写真を選択する</p>
+          <img src="/icon/bride.png" class="w-70">
+          <p class="mt-2">写真を選択する</p>
         </div>
         <div class="groom-profile text-left col-sm-8">
-          <label class="">名前</label>
+          <label class="ml-2">名前</label>
           <!-- <%= f.label "新婦", class:"d-block small text-left" %> -->
           <div class="overflow-hidden" style="margin:0px !important;">
-            <%= f.text_field :bride_last, class:"w-49 p-2 float-left" %>
-            <%= f.text_field :bride_first, class:"w-49 p-2 float-right" %>
+            <%= f.text_field :bride_last, class:"w-49 p-2 float-left inv-card",placeholder:"  性    Last" %>
+            <%= f.text_field :bride_first, class:"w-49 p-2 float-right inv-card",placeholder:"  名    First" %>
           </div>
-          <label class="">かな</label>
+          <label class="ml-2">かな</label>
           <!-- <%= f.label "新婦", class:"d-block small text-left" %> -->
           <div class="overflow-hidden" style="margin:0px !important;">
-            <%= f.text_field :bride_last_kana, class:"w-49 p-2 float-left" %>
-            <%= f.text_field :bride_first_kana, class:"w-49 p-2 float-right" %>
+            <%= f.text_field :bride_last_kana, class:"w-49 p-2 float-left inv-card",placeholder:"  せい" %>
+            <%= f.text_field :bride_first_kana, class:"w-49 p-2 float-right inv-card",placeholder:"  めい" %>
           </div>
 
           <div class="mt-4">
-            <label class="">自己紹介・メッセージ</label>
-            <%= f.text_area :bride_msg, class:"w-100 p-2" %>
+            <label class="ml-2">自己紹介・メッセージ</label>
+            <%= f.text_area :bride_msg, class:"w-100 p-2 inv-card",placeholder:"  自己紹介や一言メッセージなどを記入して下さい" %>
           </div>
         </div>
       </div>

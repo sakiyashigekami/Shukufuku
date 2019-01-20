@@ -7,7 +7,9 @@
     <%= render "layouts/shim" %>
   </head>
   <body>
-    <%= render "layouts/header" %>
+    <% unless controller_name == "root_controller.rb" then %>
+      <%= render "layouts/header" %>
+    <% end %>
     <% flash.each do |msg_type, msg| %>
       <div class="alert alert-<%= msg_type %>">
         <%= msg %>
