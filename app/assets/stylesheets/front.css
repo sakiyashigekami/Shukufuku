@@ -25,7 +25,7 @@ main {
 }
 
 p {
-  color: #77838f;
+  color: #000;
   line-height: 1.7;
 }
 
@@ -41,7 +41,7 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a,
 
 h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover,
 .h1 > a:hover, .h2 > a:hover, .h3 > a:hover, .h4 > a:hover, .h5 > a:hover, .h6 > a:hover {
-  color: #1164ff;
+  color: #82D8D5;
 }
 
 h1.text-white > a, h2.text-white > a, h3.text-white > a, h4.text-white > a, h5.text-white > a, h6.text-white > a,
@@ -202,20 +202,20 @@ a > .step-card:hover {
     position: relative;
     margin: 2em 0;
     padding: 0.5em 1em;
-    border: solid 3px #95ccff;
+    border: solid 3px #82D8D5;
     border-radius: 8px;
 }
 .box26 .box-title {
-    position: absolute;
-    display: inline-block;
-    top: -13px;
-    left: 40%;
-    padding: 0 9px;
-    line-height: 1;
-    font-size: 19px;
-    background: #FFF;
-    color: #95ccff;
-    font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  top: -1.5%;
+  left: 23.5%;
+  padding: 0 1% 0 3%;
+  line-height: 1;
+  font-size: 3rem;
+  background: #FFF;
+  color: #82D8D5;
+  font-weight: bold;
 }
 .box26 p {
     margin: 0;
@@ -772,7 +772,7 @@ a > .step-card:hover {
 
 .u-list__link {
   display: block;
-  color: #828286;
+  color: #82D8D5;
   font-size: 0.875rem;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
@@ -812,7 +812,7 @@ a > .step-card:hover {
 
 /* Light */
 .u-list--light .u-list__link {
-  color: #77838f;
+  color: #000;
 }
 
 .u-list--light .u-list__link:hover {
@@ -864,7 +864,7 @@ a > .step-card:hover {
 
 /* Topbar Nav Link */
 .u-header__topbar-nav-link {
-  color: #77838f;
+  color: #000;
   font-weight: 300;
   font-size: 0.875rem;
   padding-left: 0.5rem;
@@ -3084,7 +3084,7 @@ a > .step-card:hover {
 /* secondary badge */
 .u-badge-secondary {
   color: #fff;
-  background: #77838f;
+  background: #000;
 }
 
 /* success badge */
@@ -3139,7 +3139,7 @@ a > .step-card:hover {
 /* secondary badge */
 .u-badge-border-secondary {
   color: #fff;
-  background: #77838f;
+  background: #000;
   border-color: #fff;
 }
 
@@ -3496,14 +3496,14 @@ a > .step-card:hover {
 
 /* secondary air */
 .u-btn-secondary--air {
-  color: #77838f;
+  color: #000;
   background: rgba(119, 131, 143, 0.1);
   border-color: transparent;
 }
 
 .u-btn-secondary--air:hover, .u-btn-secondary--air:focus, .u-btn-secondary--air:active, .u-btn-secondary--air.active {
   color: #fff;
-  background: #77838f;
+  background: #000;
   box-shadow: 0 4px 17px rgba(119, 131, 143, 0.35);
 }
 
@@ -3726,7 +3726,7 @@ a > .step-card:hover {
 
 /* secondary text button */
 .u-btn-text-secondary {
-  color: #77838f;
+  color: #000;
   background: transparent;
 }
 
@@ -3971,7 +3971,7 @@ a > .step-card:hover {
 .u-sidebar--account__list-link {
   display: block;
   font-size: 0.875rem;
-  color: #828286;
+  color: #82D8D5;
   border-radius: 0.25rem;
   padding: 0.625rem;
   transition: 0.2s ease-in-out;
@@ -4081,7 +4081,7 @@ a > .step-card:hover {
 }
 
 .u-unfold-wrapper {
-  color: #77838f;
+  color: #000;
   font-weight: 300;
   font-size: 0.875rem;
 }
@@ -4503,7 +4503,7 @@ a > .step-card:hover {
 
 .u-cubeportfolio .cbp-l-loadMore-stop {
   pointer-events: none;
-  color: #77838f;
+  color: #000;
 }
 
 .u-cubeportfolio .cbp-caption-zoom .cbp-caption-activeWrap {
@@ -4565,7 +4565,7 @@ a > .step-card:hover {
 
 .u-icon-primary[href]:hover {
   color: #fff;
-  background-color: #1164ff;
+  background-color: #82D8D5;
   border-color: #045cff;
 }
 
@@ -4577,8 +4577,8 @@ a > .step-card:hover {
 /* secondary */
 .u-icon-secondary {
   color: #fff;
-  background-color: #77838f;
-  border-color: #77838f;
+  background-color: #000;
+  border-color: #000;
 }
 
 .u-icon-secondary[href]:hover {
@@ -4588,8 +4588,8 @@ a > .step-card:hover {
 }
 
 .u-icon-secondary.disabled, .u-icon-secondary:disabled {
-  background-color: #77838f;
-  border-color: #77838f;
+  background-color: #000;
+  border-color: #000;
 }
 
 /* success */
@@ -4824,13 +4824,13 @@ a > .step-card:hover {
 
 /* secondary air */
 .u-icon-secondary--air {
-  color: #77838f;
+  color: #000;
   background: rgba(119, 131, 143, 0.1);
 }
 
 .u-icon-secondary--air[href]:hover, .u-icon-secondary--air[href]:focus, .u-icon-secondary--air[href]:active {
   color: #fff;
-  background: #77838f;
+  background: #000;
 }
 
 /* success air */
@@ -4977,15 +4977,15 @@ a > .step-card:hover {
 
 /* secondary */
 .u-icon-brd-secondary {
-  color: #77838f;
+  color: #000;
   background: transparent;
-  border-color: #77838f;
+  border-color: #000;
 }
 
 .u-icon-brd-secondary[href]:hover, .u-icon-brd-secondary[href]:focus, .u-icon-brd-secondary[href]:active {
   color: #fff;
-  background: #77838f;
-  border-color: #77838f;
+  background: #000;
+  border-color: #000;
 }
 
 /* success */
@@ -5519,7 +5519,7 @@ a > .step-card:hover {
   position: relative;
   display: inline-block;
   font-size: 0.875rem;
-  color: #77838f;
+  color: #000;
   background-color: rgba(119, 131, 143, 0.1);
   border-radius: 0.25rem;
   padding: 0.25rem 1.875rem 0.25rem 0.75rem;
@@ -5531,7 +5531,7 @@ a > .step-card:hover {
   position: absolute;
   right: 0.5rem;
   top: 50%;
-  color: #77838f;
+  color: #000;
   font-size: 1.25rem;
   outline: none;
   -webkit-transform: translateY(-50%);
@@ -6254,13 +6254,13 @@ a > .step-card:hover {
 
 /* label secondary */
 .u-label--secondary {
-  color: #77838f;
+  color: #000;
   background-color: rgba(119, 131, 143, 0.1);
 }
 
 .u-label--secondary[href]:hover, .u-label--secondary[href]:focus {
   color: #fff;
-  background-color: #77838f;
+  background-color: #000;
 }
 
 /* label success */
@@ -6371,7 +6371,7 @@ a > .step-card:hover {
 }
 
 .u-link:hover .u-link__icon {
-  background-color: #1164ff;
+  background-color: #82D8D5;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -6385,8 +6385,8 @@ a > .step-card:hover {
 }
 
 .u-link-muted:hover {
-  color: #1164ff;
-  border-color: #1164ff;
+  color: #82D8D5;
+  border-color: #82D8D5;
 }
 
 /*------------------------------------
@@ -6684,7 +6684,7 @@ a > .step-card:hover {
   Nav
 ------------------------------------*/
 .nav-link {
-  color: #77838f;
+  color: #000;
 }
 
 /*------------------------------------
@@ -6837,7 +6837,7 @@ a > .step-card:hover {
 }
 
 .u-pricing-v1__content .disabled .u-icon {
-  color: #77838f;
+  color: #000;
   background-color: rgba(119, 131, 143, 0.1);
 }
 
@@ -6846,7 +6846,7 @@ a > .step-card:hover {
 }
 
 .u-pricing-v1 .disabled {
-  color: #77838f;
+  color: #000;
 }
 
 /*------------------------------------
@@ -6916,7 +6916,7 @@ a > .step-card:hover {
 
 .u-quantity__arrows-inner {
   display: block;
-  color: #77838f;
+  color: #000;
   cursor: pointer;
 }
 
@@ -7348,7 +7348,7 @@ a > .step-card:hover {
 }
 
 .u-slick--pagination-testimonials-v1 .slick-center .u-slick--pagination-testimonials-v1__text {
-  color: #77838f;
+  color: #000;
 }
 
 /*------------------------------------
@@ -7393,7 +7393,7 @@ a > .step-card:hover {
 }
 
 .u-stats-v2__tooltip {
-  color: #77838f;
+  color: #000;
   background-color: #fff;
   border-radius: 0.25rem;
   box-shadow: 0 6px 15px 1px rgba(140, 152, 164, 0.2);
@@ -7462,7 +7462,7 @@ a > .step-card:hover {
 }
 
 .u-shopping-cart-item-other-info {
-  color: #828286;
+  color: #82D8D5;
   font-size: 0.75rem;
 }
 
@@ -8361,7 +8361,7 @@ a > .step-card:hover {
 }
 
 .u-card-body {
-  color: #77838f;
+  color: #000;
 }
 
 /* Card Collapse */

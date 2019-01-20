@@ -3,7 +3,7 @@
 <%= form_for(@user, url: signup_path) do |f| %>
 <%= render 'shared/error_messages', model: f.object %>
   <!-- ========== MAIN ========== -->
-  <main id="content" role="main" class="bg-login" style="height:1000px;">
+  <main id="content" role="main" class="" style="">
     <div class="container text-center">
 
       <div class="mt-9">
@@ -53,7 +53,7 @@
       </div>
         <!-- End Checkbox -->
 
-      <%= f.submit "登録する", class:"btn btn-sm btn-secondary--air pl-7 pr-7" %>
+      <%= f.submit "登録する", class:"btn btn-sm btn-primary pl-7 pr-7" %>
     </div>
   </main>
 <% end %>

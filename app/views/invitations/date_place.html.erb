@@ -18,158 +18,174 @@
     </div>
 
     <div class="inv-date_place">
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "日付" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <%= f.text_field :date1, class:"w-50 p-2", id:"date_sample" %>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "日付" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <%= f.text_field :date1, class:"w-80 p-2", id:"date_sample" %>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "受付時間" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <!-- <%= f.text_field :opentime1, class:"w-50 p-2" %> -->
-            <select class="custom-select w-20">
-              <option selected>0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-            </select>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "受付時間" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <!-- <%= f.text_field :opentime1, class:"w-80 p-2" %> -->
+              <select class="custom-select w-20">
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+              </select>
 
-            <select class="custom-select w-20">
-              <option selected>00</option>
-              <option value="15">15</option>
-              <option value="30">30</option>
-              <option value="45">45</option>
-            </select>
+              <select class="custom-select w-20">
+                <option selected>00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "開始時間" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <!-- <%= f.text_field :starttime1, class:"w-50 p-2" %> -->
-            <select class="custom-select w-20">
-              <option selected>0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-            </select>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "開始時間" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <!-- <%= f.text_field :starttime1, class:"w-80 p-2" %> -->
+              <select class="custom-select w-20">
+                <option selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+              </select>
 
-            <select class="custom-select w-20">
-              <option selected>00</option>
-              <option value="15">15</option>
-              <option value="30">30</option>
-              <option value="45">45</option>
-            </select>
+              <select class="custom-select w-20">
+                <option selected>00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "会場名" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <%= f.text_field :place1, class:"w-50 p-2" %>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "会場名" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <%= f.text_field :place1, class:"w-80 p-2" %>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "住所" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <%= f.text_field :address1, class:"w-50 p-2" %>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "住所" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <%= f.text_field :address1, class:"w-80 p-2" %>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "電話番号" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <%= f.text_field :phonenumber1, class:"w-50 p-2" %>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "電話番号" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <%= f.text_field :phonenumber1, class:"w-80 p-2" %>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "会場URL" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <%= f.text_field :place_url1, class:"w-50 p-2" %>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "会場URL" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <%= f.text_field :place_url1, class:"w-80 p-2" %>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col-sm-4">
-          <p class="text-primary"><%= f.label "備考" %></p>
-        </div>
-        <div class="text-left col-sm-8">
-          <div class="" style="">
-            <%= f.text_field :note1, class:"w-50 p-2" %>
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row mt-4">
+          <div class="col-sm-4">
+            <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "備考" %></p>
+          </div>
+          <div class="text-left col-sm-8">
+            <div class="" style="">
+              <%= f.text_field :note1, class:"w-80 p-2" %>
+            </div>
           </div>
         </div>
       </div>
@@ -179,96 +195,112 @@
     <div class="text-center">
       <h3 class="mt-8 mb-0">披露宴の詳細</h3>
       <p>Reception detales</p>
-      <p>
-        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        </button>挙式とは異なる
-      </p>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <label class="custom-control-label" for="customCheck1">挙式とは異なる</label>
+      </div>
       <div class="collapse" id="collapseExample">
         <div class="inv-date_place">
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "日付" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :date2, class:"w-50 p-2", id:"date_sample2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "日付" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :date2, class:"w-80 p-2", id:"date_sample2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "受付時間" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :opentime2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "受付時間" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :opentime2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "開始時間" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :starttime2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "開始時間" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :starttime2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "会場名" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :place2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "会場名" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :place2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "住所" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :address2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "住所" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :address2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "電話番号" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :phonenumber2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "電話番号" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :phonenumber2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "会場URL" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :place_url2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "会場URL" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :place_url2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-4">
-            <div class="col-sm-4">
-              <p class="text-primary"><%= f.label "備考" %></p>
-            </div>
-            <div class="text-left col-sm-8">
-              <div class="" style="">
-                <%= f.text_field :note2, class:"w-50 p-2" %>
+          <div class="col-sm-8 offset-sm-2">
+            <div class="row mt-4">
+              <div class="col-sm-4">
+                <p class="text-primary w-40 text-left" style="margin-left:60%;"><%= f.label "備考" %></p>
+              </div>
+              <div class="text-left col-sm-8">
+                <div class="" style="">
+                  <%= f.text_field :note2, class:"w-80 p-2" %>
+                </div>
               </div>
             </div>
           </div>

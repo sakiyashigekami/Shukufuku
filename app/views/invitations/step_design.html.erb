@@ -4,7 +4,20 @@
 <main id="content" role="main" class="" style="">
   <div class="container text-center">
     <div class="row">
-      <div class="col-3">
+      <div class="col-4">
+        <h2 class="mb-0" style="">STEP1</h2>
+        <p class="">デザインの種類</p>
+      </div>
+      <div class="col-4">
+        <h2 class="">STEP2</h2>
+      </div>
+      <div class="col-4">
+        <h2 class="">STEP3</h2>
+        <div class="w-25 step-border mb-3" style=""></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
         <%= link_to invitation_path(@invitation, :invitation => {design_id: 1}), method: "PATCH" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/1.png" width="" class="w-50 mt-4">
@@ -12,7 +25,7 @@
         </div>
         <% end %>
       </div>
-      <div class="col-3">
+      <div class="col-6">
         <%= link_to invitation_path(@invitation, :invitation => {design_id: 2}), method: "PATCH" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/2.png" width="" class="w-50 mt-4">
@@ -20,9 +33,9 @@
         </div>
         <% end %>
       </div>
-    <!-- </div>
-    <div class="row"> -->
-      <div class="col-3">
+    </div>
+    <div class="row">
+      <div class="col-6">
         <%= link_to invitation_path(@invitation, :invitation => {design_id: 3}), method: "PATCH" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/3.png" width="" class="w-50 mt-4">
@@ -30,7 +43,7 @@
         </div>
         <% end %>
       </div>
-      <div class="col-3">
+      <div class="col-6">
         <%= link_to invitation_path(@invitation, :invitation => {design_id: 4}), method: "PATCH" do %>
         <div class="step-card p-4 m-6 mx-auto">
           <img src="/step_icon/4.png" width="" class="w-50 mt-4">
