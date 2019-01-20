@@ -36,8 +36,18 @@
           </div>
           <div class="text-left col-sm-8">
             <div class="" style="">
-              <!-- <%= f.text_field :opentime1, class:"w-80 p-2" %> -->
-              <select class="custom-select w-20">
+              <%= f.select :opentime1, [[1, "one"], [2, "two"], [3, "three"]],{}, class:"custom-select w-20" %>
+              <%= f.select :opentime1, [[1, "one"], [2, "two"], [3, "three"]],{}, class:"custom-select w-20" %>
+              <!-- f.selectのhtml化 -->
+              <!-- <select id="invitation_opentime1" name="invitation[opentime1]">
+                <option value="one">1</option>
+                <option value="two" selected="selected">2</option>
+                <option value="three">3</option>
+              </select> -->
+              <!-- f.selectにhtml化  end  -->
+
+
+              <!-- <select class="custom-select w-20">
                 <option selected>0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -70,7 +80,7 @@
                 <option value="15">15</option>
                 <option value="30">30</option>
                 <option value="45">45</option>
-              </select>
+              </select> -->
             </div>
           </div>
         </div>
