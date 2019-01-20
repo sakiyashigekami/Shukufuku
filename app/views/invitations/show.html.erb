@@ -1,25 +1,23 @@
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="" style="">
   <div class="container text-center w-60">
-    <div class="row">
-      <div class="col-4"></div>
-      <div class="col-4">
-        <h2 class="mb-0" style="">招待状編集TOP</h2>
-        <div class="w-50 step-border mb-3" style=""></div>
-        <h6 class="mt-8">招待状_1<span><img src="/icon/hane.png" class="w-15 p-2"></span></h6>
-        <h6 class="mt-4">
-          <% if @invitation.public == false %>
-            <%= link_to invitation_path(@invitation, :invitation => {public: true}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
-              公開
-            <% end %>
-          <% else %>
-            <%= link_to invitation_path(@invitation, :invitation => {public: false}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
-              非公開
-            <% end %>
-          <% end %>
-        </h6>
+    <div class="">
+      <div class="text-center">
+        <h2 class="mb-0" style="">出欠フォーム編集</h2>
+        <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-10"></div>
+        <h6 class="mt-8">招待状_1<span class=""><img src="/icon/hane.png" class="w-5 p-2"></span></h6>
       </div>
-      <div class="col-4"></div>
+    </div>
+    <div class="my-4 text-left">
+      <% if @invitation.public == false %>
+        <%= link_to invitation_path(@invitation, :invitation => {public: true}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
+          公開
+        <% end %>
+      <% else %>
+        <%= link_to invitation_path(@invitation, :invitation => {public: false}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
+          非公開
+        <% end %>
+      <% end %>
     </div>
     <div class="inv-card p-4">
       <h2 class="">
