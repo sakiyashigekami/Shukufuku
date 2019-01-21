@@ -9,16 +9,20 @@ class CreateInvitations < ActiveRecord::Migration[5.1]
       t.string :bride_msg
       t.text :greeting
       t.datetime :date1
-      t.datetime :opentime1
-      t.datetime :starttime1
+      t.string :openhour1
+      t.string :openminute1
+      t.string :starthour1
+      t.string :startminute1
       t.string :place1
       t.string :address1
       t.string :phonenumber1
       t.string :place_url1
       t.text :note1
       t.datetime :date2
-      t.datetime :opentime2
-      t.datetime :starttime2
+      t.string :openhour2
+      t.string :openminute2
+      t.string :starthour2
+      t.string :startminute2
       t.string :place2
       t.string :address2
       t.string :phonenumber2
