@@ -15,7 +15,6 @@
           <%= link_to "ログイン", login_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1 mr-4" %>
         </div>
       <% end %>
-
       <% if logged_in? %>
         <div class="col-4 text-right float-left">
         <p>ログインユーザー(開発用): <%= current_user.id %></p>

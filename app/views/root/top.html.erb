@@ -18,8 +18,15 @@
             <div class="type text-center">
               <!-- <a href="#" class="btn btn-lg btn-outline-primary text-gray d-block" style="margin:auto 5% auto 45%;">新郎新婦・幹事様</a>
               <a href="#" class="btn btn-lg btn-outline-primary d-block" style="margin:3% 5% auto 45%;">ご友人・参列者様</a> -->
-              <%= link_to "無料で招待状をつくる", signup_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1" %>
-              <%= link_to "ログイン", login_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1 mr-0" %>
+              <% unless logged_in? %>
+                  <%= link_to "無料で招待状をつくる", signup_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1" %>
+                  <%= link_to "ログイン", login_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1 mr-4" %>
+              <% end %>
+              <% if logged_in? %>
+                <p>ログインユーザー(開発用): <%= current_user.id %></p>
+                <%= link_to "マイページ", mypage_path(current_user), class:"btn btn-sm btn-outline-primary pt-1 pb-1" %>
+                <%= link_to "ログアウト", logout_path, method: "DELETE", class:"btn btn-sm btn-outline-primary pt-1 pb-1 mr-4" %>
+              <% end %>
             </div>
           </div>
         </div>
