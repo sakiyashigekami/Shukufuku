@@ -45,16 +45,18 @@
       <div class="col-3">
         <% if Invitation.find_by(user_id: current_user) %>
         <%= link_to invitation_path(id: @invitation) do  %>
-          <div class="step-card p-4 m-6 mx-auto">
-            <img src="/step_icon/1.png" width="" class="w-50 mt-4">
-            <p class="mt-4">招待状編集TOP</p>
+          <div class="step-card mypage-card p-4 m-6 mx-auto">
+            <img src="/mypage/message.png" width="" class="w-100  step-icon">
+            <img src="/mypage/message2.png" width="" class="w-100  step-icon-hover">
+            <p class="">招待状編集TOP</p>
           </div>
         <% end %>
       <% else %>
         <%= link_to type_path do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/1.png" width="" class="w-50 mt-4">
-          <p class="mt-4">招待状新規作成</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <img src="/mypage/message.png" width="" class="w-100  step-icon">
+          <img src="/mypage/message2.png" width="" class="w-100  step-icon-hover">
+          <p class="">招待状新規作成</p>
         </div>
         <% end %>
       <% end %>
@@ -63,33 +65,37 @@
       <div class="col-3">
         <% if MessageCard.find_by(user_id: current_user) %>
           <%= link_to message_card_path(id: 1) do  %>
-            <div class="step-card p-4 m-6 mx-auto">
-              <img src="/step_icon/1.png" width="" class="w-50 mt-4">
-              <p class="mt-4">メッセージカード編集TOP</p>
+            <div class="step-card mypage-card p-4 m-6 mx-auto">
+              <img src="/mypage/card.png" width="" class="w-100  step-icon">
+              <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">
+              <p class="">メッセージカード編集TOP</p>
             </div>
           <% end %>
         <% else %>
           <%= link_to new_message_card_path do  %>
-          <div class="step-card p-4 m-6 mx-auto">
-            <img src="/step_icon/1.png" width="" class="w-50 mt-4">
-            <p class="mt-4">メッセージカード新規作成</p>
+          <div class="step-card mypage-card p-4 m-6 mx-auto">
+            <img src="/mypage/card.png" width="" class="w-100  step-icon">
+            <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">
+            <p class="">メッセージカード新規作成</p>
           </div>
           <% end %>
         <% end %>
       </div>
       <div class="col-3">
         <%= link_to payment_path do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/3.png" width="" class="w-50 mt-4">
-          <p class="mt-4">受取会費確認</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <img src="/mypage/bank.png" width="" class="w-100  step-icon">
+          <img src="/mypage/bank2.png" width="" class="w-100  step-icon-hover">
+          <p class="">受取会費確認</p>
         </div>
         <% end %>
       </div>
       <div class="col-3">
         <%= link_to couple_name_path(type_id: 4) do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/4.png" width="" class="w-50 mt-4">
-          <p class="mt-4">名簿管理</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <img src="/mypage/meibo.png" width="" class="w-100  step-icon">
+          <img src="/mypage/meibo2.png" width="" class="w-100  step-icon-hover">
+          <p class="">名簿管理</p>
         </div>
         <% end %>
       </div>
@@ -98,33 +104,35 @@
     <div class="row">
       <div class="col-3">
         <%= link_to couple_name_path(type_id: 1) do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/1.png" width="" class="w-50 mt-4">
-          <p class="mt-4">写真管理</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <img src="/mypage/camera.png" width="" class="w-100  step-icon">
+          <img src="/mypage/camera2.png" width="" class="w-100  step-icon-hover">
+          <p class="">写真管理</p>
         </div>
         <% end %>
       </div>
       <div class="col-3">
         <%= link_to couple_name_path(type_id: 2) do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/2.png" width="" class="w-50 mt-4">
-          <p class="mt-4">オプションサービス</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto ">
+          <img src="/mypage/goshugi-bukuro.png" width="" class="w-100  step-icon">
+          <img src="/mypage/goshugi-bukuro2.png" width="" class="w-100  step-icon-hover">
+          <p class="">オプションサービス</p>
         </div>
         <% end %>
         </div>
       <div class="col-3">
         <%= link_to couple_name_path(type_id: 3) do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/3.png" width="" class="w-50 mt-4">
-          <p class="mt-4">？？？</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <img src="/step_icon/3.png" width="" class="w-50 ">
+          <p class="">？？？</p>
         </div>
         <% end %>
       </div>
       <div class="col-3">
         <%= link_to couple_name_path(type_id: 4) do  %>
-        <div class="step-card p-4 m-6 mx-auto">
-          <img src="/step_icon/4.png" width="" class="w-50 mt-4">
-          <p class="mt-4">？？？</p>
+        <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <img src="/step_icon/4.png" width="" class="w-50 ">
+          <p class="">？？？</p>
         </div>
         <% end %>
       </div>

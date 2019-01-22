@@ -36,51 +36,95 @@
           </div>
           <div class="text-left col-sm-8">
             <div class="" style="">
-              <%= f.select :opentime1, [[1, "one"], [2, "two"], [3, "three"]],{}, class:"custom-select w-20" %>
-              <%= f.select :opentime1, [[1, "one"], [2, "two"], [3, "three"]],{}, class:"custom-select w-20" %>
-              <!-- f.selectのhtml化 -->
-              <!-- <select id="invitation_opentime1" name="invitation[opentime1]">
-                <option value="one">1</option>
-                <option value="two" selected="selected">2</option>
-                <option value="three">3</option>
-              </select> -->
-              <!-- f.selectにhtml化  end  -->
-
-
-              <!-- <select class="custom-select w-20">
-                <option selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-              </select>
-
-              <select class="custom-select w-20">
-                <option selected>00</option>
-                <option value="15">15</option>
-                <option value="30">30</option>
-                <option value="45">45</option>
-              </select> -->
+              <%= f.select :openhour1, [
+                [1, "one"],
+                [2, "two"],
+                [3, "three"],
+                [4, "four"],
+                [5, "five"],
+                [6, "six"],
+                [7, "seven"],
+                [8, "eight"],
+                [9, "nine"],
+                [10, "ten"],
+                [11, "eleven"],
+                [12, "twelve"],
+                [13, "thirteen"],
+                [14, "fourteen"],
+                [15, "fifteen"],
+                [16, "sixteen"],
+                [17, "seventeen"],
+                [18, "eighteen"],
+                [19, "nineteen"],
+                [20, "twenty"],
+                [21, "twenty-one"],
+                [22, "twenty-two"],
+                [23, "twenty-three"],
+                [24, "twenty-four"]
+                ],{}, class:"custom-select w-20" %>
+              <%= f.select :openminute1, [
+                [0, "zero"],
+                [1, "one"],
+                [2, "two"],
+                [3, "three"],
+                [4, "four"],
+                [5, "five"],
+                [6, "six"],
+                [7, "seven"],
+                [8, "eight"],
+                [9, "nine"],
+                [10, "ten"],
+                [11, "eleven"],
+                [12, "twelve"],
+                [13, "thirteen"],
+                [14, "fourteen"],
+                [15, "fifteen"],
+                [16, "sixteen"],
+                [17, "seventeen"],
+                [18, "eighteen"],
+                [19, "nineteen"],
+                [20, "twenty"],
+                [21, "twenty-one"],
+                [22, "twenty-two"],
+                [23, "twenty-three"],
+                [24, "twenty-four"],
+                [25, "twenty-five"],
+                [26, "twenty-six"],
+                [27, "twenty-seven"],
+                [28, "twenty-eight"],
+                [29, "twenty-nine"],
+                [30, "thirty"],
+                [31, "thirty-one"],
+                [32, "thirty-two"],
+                [33, "thirty-three"],
+                [34, "thirty-four"],
+                [35, "thirty-five"],
+                [36, "thirty-six"],
+                [37, "thirty-seven"],
+                [38, "thirty-eight"],
+                [39, "thirty-nine"],
+                [40, "fourty"],
+                [41, "fourty-one"],
+                [42, "fourty-two"],
+                [43, "fourty-three"],
+                [44, "fourty-four"],
+                [45, "fourty-five"],
+                [46, "fourty-six"],
+                [47, "fourty-seven"],
+                [48, "fourty-eight"],
+                [49, "fourty-nine"],
+                [50, "fifty"],
+                [51, "fifty-one"],
+                [52, "fifty-two"],
+                [53, "fifty-three"],
+                [54, "fifty-four"],
+                [55, "fifty-five"],
+                [56, "fifty-six"],
+                [57, "fifty-seven"],
+                [58, "fifty-eight"],
+                [59, "fifty-nine"],
+                [60, "sixty"],
+                ],{}, class:"custom-select w-20" %>
             </div>
           </div>
         </div>
@@ -93,41 +137,95 @@
           </div>
           <div class="text-left col-sm-8">
             <div class="" style="">
-              <!-- <%= f.text_field :starttime1, class:"w-80 p-2" %> -->
-              <select class="custom-select w-20">
-                <option selected>0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-              </select>
-
-              <select class="custom-select w-20">
-                <option selected>00</option>
-                <option value="15">15</option>
-                <option value="30">30</option>
-                <option value="45">45</option>
-              </select>
+              <%= f.select :starthour1, [
+                [1, "one"],
+                [2, "two"],
+                [3, "three"],
+                [4, "four"],
+                [5, "five"],
+                [6, "six"],
+                [7, "seven"],
+                [8, "eight"],
+                [9, "nine"],
+                [10, "ten"],
+                [11, "eleven"],
+                [12, "twelve"],
+                [13, "thirteen"],
+                [14, "fourteen"],
+                [15, "fifteen"],
+                [16, "sixteen"],
+                [17, "seventeen"],
+                [18, "eighteen"],
+                [19, "nineteen"],
+                [20, "twenty"],
+                [21, "twenty-one"],
+                [22, "twenty-two"],
+                [23, "twenty-three"],
+                [24, "twenty-four"]
+                ],{}, class:"custom-select w-20" %>
+              <%= f.select :startminute1, [
+                [0, "zero"],
+                [1, "one"],
+                [2, "two"],
+                [3, "three"],
+                [4, "four"],
+                [5, "five"],
+                [6, "six"],
+                [7, "seven"],
+                [8, "eight"],
+                [9, "nine"],
+                [10, "ten"],
+                [11, "eleven"],
+                [12, "twelve"],
+                [13, "thirteen"],
+                [14, "fourteen"],
+                [15, "fifteen"],
+                [16, "sixteen"],
+                [17, "seventeen"],
+                [18, "eighteen"],
+                [19, "nineteen"],
+                [20, "twenty"],
+                [21, "twenty-one"],
+                [22, "twenty-two"],
+                [23, "twenty-three"],
+                [24, "twenty-four"],
+                [25, "twenty-five"],
+                [26, "twenty-six"],
+                [27, "twenty-seven"],
+                [28, "twenty-eight"],
+                [29, "twenty-nine"],
+                [30, "thirty"],
+                [31, "thirty-one"],
+                [32, "thirty-two"],
+                [33, "thirty-three"],
+                [34, "thirty-four"],
+                [35, "thirty-five"],
+                [36, "thirty-six"],
+                [37, "thirty-seven"],
+                [38, "thirty-eight"],
+                [39, "thirty-nine"],
+                [40, "fourty"],
+                [41, "fourty-one"],
+                [42, "fourty-two"],
+                [43, "fourty-three"],
+                [44, "fourty-four"],
+                [45, "fourty-five"],
+                [46, "fourty-six"],
+                [47, "fourty-seven"],
+                [48, "fourty-eight"],
+                [49, "fourty-nine"],
+                [50, "fifty"],
+                [51, "fifty-one"],
+                [52, "fifty-two"],
+                [53, "fifty-three"],
+                [54, "fifty-four"],
+                [55, "fifty-five"],
+                [56, "fifty-six"],
+                [57, "fifty-seven"],
+                [58, "fifty-eight"],
+                [59, "fifty-nine"],
+                [60, "sixty"],
+                ],{}, class:"custom-select w-20" %>
             </div>
           </div>
         </div>
@@ -229,7 +327,95 @@
               </div>
               <div class="text-left col-sm-8">
                 <div class="" style="">
-                  <%= f.text_field :opentime2, class:"w-80 p-2" %>
+                  <%= f.select :openhour2, [
+                    [1, "one"],
+                    [2, "two"],
+                    [3, "three"],
+                    [4, "four"],
+                    [5, "five"],
+                    [6, "six"],
+                    [7, "seven"],
+                    [8, "eight"],
+                    [9, "nine"],
+                    [10, "ten"],
+                    [11, "eleven"],
+                    [12, "twelve"],
+                    [13, "thirteen"],
+                    [14, "fourteen"],
+                    [15, "fifteen"],
+                    [16, "sixteen"],
+                    [17, "seventeen"],
+                    [18, "eighteen"],
+                    [19, "nineteen"],
+                    [20, "twenty"],
+                    [21, "twenty-one"],
+                    [22, "twenty-two"],
+                    [23, "twenty-three"],
+                    [24, "twenty-four"]
+                    ],{}, class:"custom-select w-20" %>
+                  <%= f.select :openminute2, [
+                    [0, "zero"],
+                    [1, "one"],
+                    [2, "two"],
+                    [3, "three"],
+                    [4, "four"],
+                    [5, "five"],
+                    [6, "six"],
+                    [7, "seven"],
+                    [8, "eight"],
+                    [9, "nine"],
+                    [10, "ten"],
+                    [11, "eleven"],
+                    [12, "twelve"],
+                    [13, "thirteen"],
+                    [14, "fourteen"],
+                    [15, "fifteen"],
+                    [16, "sixteen"],
+                    [17, "seventeen"],
+                    [18, "eighteen"],
+                    [19, "nineteen"],
+                    [20, "twenty"],
+                    [21, "twenty-one"],
+                    [22, "twenty-two"],
+                    [23, "twenty-three"],
+                    [24, "twenty-four"],
+                    [25, "twenty-five"],
+                    [26, "twenty-six"],
+                    [27, "twenty-seven"],
+                    [28, "twenty-eight"],
+                    [29, "twenty-nine"],
+                    [30, "thirty"],
+                    [31, "thirty-one"],
+                    [32, "thirty-two"],
+                    [33, "thirty-three"],
+                    [34, "thirty-four"],
+                    [35, "thirty-five"],
+                    [36, "thirty-six"],
+                    [37, "thirty-seven"],
+                    [38, "thirty-eight"],
+                    [39, "thirty-nine"],
+                    [40, "fourty"],
+                    [41, "fourty-one"],
+                    [42, "fourty-two"],
+                    [43, "fourty-three"],
+                    [44, "fourty-four"],
+                    [45, "fourty-five"],
+                    [46, "fourty-six"],
+                    [47, "fourty-seven"],
+                    [48, "fourty-eight"],
+                    [49, "fourty-nine"],
+                    [50, "fifty"],
+                    [51, "fifty-one"],
+                    [52, "fifty-two"],
+                    [53, "fifty-three"],
+                    [54, "fifty-four"],
+                    [55, "fifty-five"],
+                    [56, "fifty-six"],
+                    [57, "fifty-seven"],
+                    [58, "fifty-eight"],
+                    [59, "fifty-nine"],
+                    [60, "sixty"],
+                    ],{}, class:"custom-select w-20" %>
                 </div>
               </div>
             </div>
@@ -242,7 +428,95 @@
               </div>
               <div class="text-left col-sm-8">
                 <div class="" style="">
-                  <%= f.text_field :starttime2, class:"w-80 p-2" %>
+                  <%= f.select :starthour2, [
+                    [1, "one"],
+                    [2, "two"],
+                    [3, "three"],
+                    [4, "four"],
+                    [5, "five"],
+                    [6, "six"],
+                    [7, "seven"],
+                    [8, "eight"],
+                    [9, "nine"],
+                    [10, "ten"],
+                    [11, "eleven"],
+                    [12, "twelve"],
+                    [13, "thirteen"],
+                    [14, "fourteen"],
+                    [15, "fifteen"],
+                    [16, "sixteen"],
+                    [17, "seventeen"],
+                    [18, "eighteen"],
+                    [19, "nineteen"],
+                    [20, "twenty"],
+                    [21, "twenty-one"],
+                    [22, "twenty-two"],
+                    [23, "twenty-three"],
+                    [24, "twenty-four"]
+                    ],{}, class:"custom-select w-20" %>
+                  <%= f.select :startminute2, [
+                    [0, "zero"],
+                    [1, "one"],
+                    [2, "two"],
+                    [3, "three"],
+                    [4, "four"],
+                    [5, "five"],
+                    [6, "six"],
+                    [7, "seven"],
+                    [8, "eight"],
+                    [9, "nine"],
+                    [10, "ten"],
+                    [11, "eleven"],
+                    [12, "twelve"],
+                    [13, "thirteen"],
+                    [14, "fourteen"],
+                    [15, "fifteen"],
+                    [16, "sixteen"],
+                    [17, "seventeen"],
+                    [18, "eighteen"],
+                    [19, "nineteen"],
+                    [20, "twenty"],
+                    [21, "twenty-one"],
+                    [22, "twenty-two"],
+                    [23, "twenty-three"],
+                    [24, "twenty-four"],
+                    [25, "twenty-five"],
+                    [26, "twenty-six"],
+                    [27, "twenty-seven"],
+                    [28, "twenty-eight"],
+                    [29, "twenty-nine"],
+                    [30, "thirty"],
+                    [31, "thirty-one"],
+                    [32, "thirty-two"],
+                    [33, "thirty-three"],
+                    [34, "thirty-four"],
+                    [35, "thirty-five"],
+                    [36, "thirty-six"],
+                    [37, "thirty-seven"],
+                    [38, "thirty-eight"],
+                    [39, "thirty-nine"],
+                    [40, "fourty"],
+                    [41, "fourty-one"],
+                    [42, "fourty-two"],
+                    [43, "fourty-three"],
+                    [44, "fourty-four"],
+                    [45, "fourty-five"],
+                    [46, "fourty-six"],
+                    [47, "fourty-seven"],
+                    [48, "fourty-eight"],
+                    [49, "fourty-nine"],
+                    [50, "fifty"],
+                    [51, "fifty-one"],
+                    [52, "fifty-two"],
+                    [53, "fifty-three"],
+                    [54, "fifty-four"],
+                    [55, "fifty-five"],
+                    [56, "fifty-six"],
+                    [57, "fifty-seven"],
+                    [58, "fifty-eight"],
+                    [59, "fifty-nine"],
+                    [60, "sixty"],
+                    ],{}, class:"custom-select w-20" %>
                 </div>
               </div>
             </div>

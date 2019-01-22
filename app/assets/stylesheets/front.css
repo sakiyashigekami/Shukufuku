@@ -101,13 +101,37 @@ ul {
 .step-card {
   border:3px solid #555;
   width: 250px;
-  height:250px;
+  height:400px;
+}
+
+.step-card.mypage-card {
+  border:3px solid #82D8D5;
+  width: 250px;
+  height:300px;
 }
 
 a > .step-card:hover {
   border:3px solid #82D8D5;
   color: #82D8D5 !important
 }
+
+a > .step-card:hover > p {
+  color: #82D8D5 !important
+}
+
+.step-icon {
+  display: block;
+}
+.step-icon-hover {
+  display: none;
+}
+a > .step-card:hover > .step-icon {
+  display: none;
+}
+a > .step-card:hover > .step-icon-hover {
+  display: block;
+}
+
 
 /*------------------------------------
   footer-border
@@ -277,7 +301,7 @@ input[type="radio" i], input[type="checkbox" i],input[type="hidden" i], input[ty
   box
 ------------------------------------*/
 .box{
-  border: 1px solid gold;
+  border: 3px solid #D6AF61;
   height: 100%;
   padding:5%;
 }

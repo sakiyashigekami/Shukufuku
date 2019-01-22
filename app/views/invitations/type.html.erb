@@ -17,40 +17,45 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6">
+      <div class="col-sm-3 col-6">
         <%= link_to couple_name_path(type_id: 1) do  %>
           <div class="step-card p-4 m-6 mx-auto">
-            <img src="/step_icon/1.png" width="" class="w-50 mt-4">
+            <img src="/step_icon/couple.png" width="" class="w-100 mt-4 step-icon">
+            <img src="/step_icon/couple-blue.png" width="" class="w-100 mt-4 step-icon-hover">
             <p class="mt-4">挙式・披露宴</p>
           </div>
         <% end %>
       </div>
-      <div class="col-6">
+      <div class="col-sm-3 col-6">
         <%= link_to couple_name_path(type_id: 2) do  %>
           <div class="step-card p-4 m-6 mx-auto">
-            <img src="/step_icon/2.png" width="" class="w-50 mt-4">
+            <img src="/step_icon/flower.png" width="" class="w-100 mt-4 step-icon">
+            <img src="/step_icon/flower-blue.png" width="" class="w-100 mt-4 step-icon-hover">
             <p class="mt-4">挙式のみ</p>
           </div>
         <% end %>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6">
+      <div class="col-sm-3 col-6">
         <%= link_to couple_name_path(type_id: 3) do  %>
           <div class="step-card p-4 m-6 mx-auto">
-            <img src="/step_icon/3.png" width="" class="w-50 mt-4">
+            <img src="/step_icon/cake.png" width="" class="w-100 mt-4 step-icon">
+            <img src="/step_icon/cake-blue.png" width="" class="w-100 mt-4 step-icon-hover">
             <p class="mt-4">披露宴のみ</p>
           </div>
         <% end %>
       </div>
-      <div class="col-6">
+      <div class="col-sm-3 col-6">
         <%= link_to couple_name_path(type_id: 4) do  %>
           <div class="step-card p-4 m-6 mx-auto">
-            <img src="/step_icon/4.png" width="" class="w-50 mt-4">
+            <img src="/step_icon/champagne.png" width="" class="w-100 mt-4 step-icon">
+            <img src="/step_icon/champagne-blue.png" width="" class="w-100 mt-4 step-icon-hover">
             <p class="mt-4">二次会</p>
           </div>
         <% end %>
       </div>
+    </div>
+    <div>
+      <%= link_to "SKIP", mypage_path(current_user), class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>
     </div>
   </div>
 </main>
