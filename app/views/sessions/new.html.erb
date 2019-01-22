@@ -4,9 +4,8 @@
 <main id="content" role="main" class="" style="">
   <div class="container text-center">
 
-    <div class="mt-9">
-      <img src="">
-      <h1>ロゴ</h1>
+    <div class="my-4">
+      <h1>ログイン</h1>
     </div>
   <!-- Input -->
     <div class="mb-4">
@@ -33,9 +32,9 @@
       <% end %>
     </div>
 
-    <%= f.submit "ログイン", class:"btn btn-sm btn-secondary--air pl-7 pr-7" %>
-    <%= link_to "アカウントをお持ちでない方はこちら", signup_path, class:"d-block small mb-4" %>
-    <%= button_to "初めての方はこちら", signup_path, class:"btn btn-sm " %>
+    <%= f.submit "ログイン", class:"btn btn-sm btn-outline-primary pl-7 pr-7" %>
+    <%= link_to "アカウントをお持ちでない方はこちら", signup_path, class:"d-block small mb-4 mt-1" %>
+    <%= button_to "初めての方はこちら", signup_path, class:"btn btn-sm btn-secondary" %>
   </div>
 </main>
 <% end %>

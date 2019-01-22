@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"
 
   get "invitations/type" => "invitations#type", as: :type
+  get "invitations/index" => "invitations#index", as: :index
   get "invitations/:id/profile" => "invitations#profile", as: :profile
   get "invitations/:id/date_place" => "invitations#date_place", as: :date_place
   get "invitations/:id/greeting" => "invitations#greeting", as: :greeting

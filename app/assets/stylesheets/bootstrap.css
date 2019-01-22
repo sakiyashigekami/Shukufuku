@@ -162,7 +162,7 @@ sup {
 }
 
 a {
-  color: #82D8D5;
+  color: black;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -2382,14 +2382,14 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #fcfccc;
-  border-color: #fcfccc;
+  background-color: #D6AF61;
+  border-color: #D6AF61;
 }
 
 .btn-secondary:hover {
-  color: #fff;
-  background-color: #65707b;
-  border-color: #5f6a74;
+  color: #D6AF61;
+  background-color: #fff;
+  border-color: #D6AF61;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {

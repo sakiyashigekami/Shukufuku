@@ -4,6 +4,10 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find_by(id: params[:id])
   end
 
+  def index
+    @invitation = Invitation.find_by(id: params[:id])
+  end
+
   def type
     @invitation = Invitation.find_by(id: params[:id])
   end
