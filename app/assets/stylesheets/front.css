@@ -109,6 +109,11 @@ ul {
   width: 250px;
   height:300px;
 }
+.step-card.invitations{
+  border: 3px solid #D6AF61;
+  height: auto;
+  padding:5%;
+}
 
 a > .step-card:hover {
   border:3px solid #82D8D5;
