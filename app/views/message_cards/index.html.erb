@@ -3,23 +3,23 @@
   <div class="container text-center">
     <div class="">
       <div class="text-center">
-        <h2 class="mb-0" style="">招待状一覧</h2>
+        <h2 class="mb-0" style="">メッセージカード一覧</h2>
         <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-10"></div>
       </div>
     </div>
     <div class="row">
-      <% @invitations.each do |inv| %>
+      <% @message_cards.each do |msg| %>
       <div class="col-3">
-        <%= link_to invitation_path(id: inv.id) do %>
+        <%= link_to message_card_path(id: msg.id) do %>
         <div class="m-4 mx-auto">
           <img src="/default.jpg" width="" class="w-80 mt-4">
-          <p class="mt-4"><%= inv.id %></p>
+          <p class="mt-4"><%= msg.id %></p>
         </div>
       </div>
       <% end %>
       <% end %>
       <div class="col-3">
-        <%= link_to type_path do %>
+        <%= link_to new_message_card_path do %>
         <div class="step-card invitations p-4 m-6 mx-auto">
           <img src="/mypage/card.png" width="" class="w-100  step-icon">
           <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">

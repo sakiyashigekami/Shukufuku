@@ -73,7 +73,7 @@
       </div>
       <div class="col-3">
         <% if MessageCard.find_by(user_id: current_user) %>
-          <%= link_to message_card_path(id: 1) do  %>
+          <%= link_to msg_index_path(user_id: params[:user_id]) do  %>
             <div class="step-card mypage-card p-4 m-6 mx-auto">
               <img src="/mypage/card.png" width="" class="w-100  step-icon">
               <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">
