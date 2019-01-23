@@ -126,8 +126,26 @@
         <% end %>
       </div>
       <div class="inv-card w-49 p-4 float-right">
-        <h4 class="mb-0">URLを発行する</h4>
+        <!-- コピー対象要素とコピーボタン -->
+        <input id="copyTarget" type="text" value="<%= @url %>" readonly class="invisible p-0 m-0" style="height:0; width: 0;border:none;">
+        <a onclick="copyToClipboard()" class="h4">URLを発行する</a>
       </div>
+
     </div>
   </div>
 </main>
+
+
+    <!-- テキストをコピーするjs -->
+    <script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("copyTarget");
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+            // コピーをお知らせする
+            alert("コピーできました！ : " + copyTarget.value);
+        }
+    </script>
