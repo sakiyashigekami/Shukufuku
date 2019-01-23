@@ -109,15 +109,21 @@
     </div>
     <div class="w-80 mt-4 m-0 overflow-hidden" style="margin-left:10% !important;">
       <div class="inv-card w-49 p-4 float-left">
-        <h4 class="mb-0">LINEで送る</h4>
+        <%= link_to "https://social-plugins.line.me/lineit/share?url=#{@url}" do %>
+          <h4 class="mb-0">LINEで送る</h4>
+        <% end %>
       </div>
       <div class="inv-card w-49 p-4 float-right">
-        <h4 class="mb-0">FBでシェア</h4>
+        <%= link_to "http://www.facebook.com/share.php?u=#{@url}" do %>
+          <h4 class="mb-0">FBでシェア</h4>
+        <% end %>
       </div>
     </div>
     <div class="w-80 mt-4 m-0 overflow-hidden" style="margin-left:10% !important;">
       <div class="inv-card w-49 p-4 float-left">
-        <h4 class="mb-0">Twitterでシェア</h4>
+        <%= link_to "http://twitter.com/share?url=#{@url}" do %>
+          <h4 class="mb-0">Twitterでシェア</h4>
+        <% end %>
       </div>
       <div class="inv-card w-49 p-4 float-right">
         <h4 class="mb-0">URLを発行する</h4>

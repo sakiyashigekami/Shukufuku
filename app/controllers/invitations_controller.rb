@@ -39,6 +39,8 @@ class InvitationsController < ApplicationController
   def show
     @invitation = Invitation.find_by(id: params[:id])
     @attendance_form = AttendanceForm.find_by(invitation_id: params[:id])
+    @url = request.url
+    @url_encode = CGI.escape(@url)
   end
 
   def create
