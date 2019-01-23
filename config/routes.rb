@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   resources :attendances
 
+  get "lists/:user_id" => "lists#show", as: :list
+
   resources :account_activations, only: [:edit]
 
   get "message_cards/:id/profile" => "message_cards#profile", as: :msg_profile
