@@ -4,6 +4,8 @@ class CreateMessageCards < ActiveRecord::Migration[5.1]
       t.integer :user_id, unique: true
       t.integer :msg_design_id
       t.string :title
+      t.string :groom_msg
+      t.string :bride_msg
       t.datetime :date
       t.text :greeting
       t.string :groom_last

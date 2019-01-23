@@ -98,6 +98,8 @@ ActiveRecord::Schema.define(version: 20190115092920) do
     t.integer "user_id"
     t.integer "msg_design_id"
     t.string "title"
+    t.string "groom_msg"
+    t.string "bride_msg"
     t.datetime "date"
     t.text "greeting"
     t.string "groom_last"
