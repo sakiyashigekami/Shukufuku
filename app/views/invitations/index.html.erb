@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="row">
-      <% @message_cards.each do |inv| %>
+      <% @invitations.each do |inv| %>
       <div class="col-3">
         <%= link_to invitation_path(id: inv.id) do %>
         <div class="m-4 mx-auto">
