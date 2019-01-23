@@ -1,0 +1,25 @@
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center w-60">
+    <div class="mt-4 m-0" style="overflow:hidden;">
+      <%= link_to signup_path do %>
+      <div class="box goal w-100 p-4" style="">
+        <h4 class="mb-0 text-primary">ご祝儀・会費のweb決済をする</h4>
+      </div>
+      <% end %>
+      <p class="mt-4">近年の結婚式では、参列者様のことを考え事前決済が主流になりつつあります。<br>
+      あらゆる面倒を事前に簡易に解決できます。</p>
+
+      <%= link_to signup_path do %>
+      <div class="box confirm w-100 p-4" style="">
+        <h4 class="mb-0">会費のみweb決済を利用する</h4>
+      </div>
+      <% end %>
+      <%= link_to signup_path do %>
+      <div class="box confirm w-100 p-4 mt-4" style="">
+        <h4 class="mb-0">今回は利用しない</h4>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</main>

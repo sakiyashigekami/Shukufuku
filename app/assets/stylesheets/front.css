@@ -310,6 +310,26 @@ input[type="radio" i], input[type="checkbox" i],input[type="hidden" i], input[ty
   height: 100%;
   padding:5%;
 }
+.box.goal{
+  border: 3px solid #82D8D5;
+  width: 100%;
+  padding:5%;
+}
+a > .box.goal:hover{
+  border: 3px solid #82D8D5;
+  background-color: #82D8D5;
+  width: 100%;
+  padding:5%;
+}
+a > .box.goal:hover > .text-primary{
+  color: #fff !important;
+}
+
+.box.confirm{
+  border: 3px solid gray;
+  width: 100%;
+  padding:5%;
+}
 
 
 /*------------------------------------
