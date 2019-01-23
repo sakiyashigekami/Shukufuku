@@ -7,18 +7,26 @@
         <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-10"></div>
         <h6 class="mt-8">
           <% if @invitation.title.nil? %>
-          <div class="modal-body">
-            <p>招待状_<%= @invitation.id %></p>
+          <div class="">
+            <p>
+              招待状_<%= @invitation.id %>
+              <!-- 切り替えボタンの設定 -->
+              <a type="" class="" data-toggle="modal" data-target="#exampleModalCenter">
+                <img src="/icon/pencil.png" class="w-5 p-2">
+              </a>
+            </p>
           </div>
           <% else %>
-          <div class="modal-body">
-            <p><%= @invitation.title %></p>
+          <div class="">
+            <p>
+              <%= @invitation.title %>
+              <!-- 切り替えボタンの設定 -->
+              <a type="" class="" data-toggle="modal" data-target="#exampleModalCenter">
+                <img src="/icon/pencil.png" class="w-5 p-2">
+              </a>
+            </p>
           </div>
           <% end %>
-        <!-- 切り替えボタンの設定 -->
-          <a type="" class="" data-toggle="modal" data-target="#exampleModalCenter">
-            <img src="/icon/pencil.png" class="w-5 p-2">
-          </a>
         </h6>
 
         <!-- モーダルの設定 -->

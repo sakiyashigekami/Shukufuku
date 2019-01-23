@@ -1,0 +1,64 @@
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center w-60">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h2 class="mb-0" style="">メッセージカード編集TOP</h2>
+        <div class="w-50 step-border mb-3" style=""></div>
+        <h6 class="mt-8">メッセージカード_1<span><img src="/icon/hane.png" class="w-15 p-2"></span></h6>
+        <h6 class="mt-8">
+          <% if @message_card.public == false %>
+            <%= link_to message_card_path(@message_card, :message_card => {public: true}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
+              公開
+            <% end %>
+          <% else %>
+            <%= link_to message_card_path(@message_card, :message_card => {public: false}), method: "PATCH", class:"btn btn-sm btn-primary pl-8 pr-8" do %>
+              非公開
+            <% end %>
+          <% end %>
+        </h6>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="inv-card p-4">
+      <h2 class="">テンプレート選択</h2>
+    </div>
+    <div class="mt-4 p-9 bg-light">
+      <h2 class="">画像</h2>
+    </div>
+    <div class="row mt-4 m-0">
+      <div class="inv-card w-45 p-4 m-3">
+        <h4 class="mb-0"><%= link_to "プロフィール", msg_profile_path(id: @message_card) %></h4>
+      </div>
+      <div class="inv-card w-45 p-4 m-3">
+        <h4 class="mb-0"><%= link_to "挨拶文", msg_greeting_path(id: @message_card) %></h4>
+      </div>
+    </div>
+    <div>
+      <%= link_to "プレビュー", invitations_path, class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>
+    </div>
+    <div class="row mt-4 m-0">
+      <div class="w-15 p-4 ">
+        <h4 class="mb-0"></h4>
+      </div>
+      <div class="inv-card w-30 p-4 m-3">
+        <h4 class="mb-0">LINEで送る</h4>
+      </div>
+      <div class="inv-card w-30 p-4 m-3">
+        <h4 class="mb-0">FBでシェア</h4>
+      </div>
+    </div>
+    <div class="row m-0">
+      <div class="w-15 p-4">
+        <h4 class="mb-0"></h4>
+      </div>
+      <div class="inv-card w-30 p-4 m-3">
+        <h4 class="mb-0">Twitterでシェア</h4>
+      </div>
+      <div class="inv-card w-30 p-4 m-3">
+        <h4 class="mb-0">URLを発行する</h4>
+      </div>
+    </div>
+  </div>
+</main>

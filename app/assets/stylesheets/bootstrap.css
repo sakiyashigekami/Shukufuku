@@ -6157,6 +6157,16 @@ button.bg-warning:focus {
   background-color: #d39e00 !important;
 }
 
+.bg-gold {
+  background-color: #D6AF61 !important;
+}
+
+a.bg-gold:hover, a.bg-gold:focus,
+button.bg-gold:hover,
+button.bg-gold:focus {
+  background-color: red !important;
+}
+
 .bg-danger {
   background-color: #de4437 !important;
 }

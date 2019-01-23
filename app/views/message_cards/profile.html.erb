@@ -1,14 +1,74 @@
 <%= form_for(@message_card, url: message_card_path, method: "PATCH") do |f| %>
 <%= render 'shared/error_messages', model: f.object %>
-  <body>
-    <%= f.label "名前" %>
-    <%= f.text_field :groom_last %>
-    <%= f.text_field :groom_first %>
 
-    <%= f.label "名前" %>
-    <%= f.text_field :bride_last %>
-    <%= f.text_field :bride_first %>
 
-    <%= f.submit "保存" %>
-  </body>
-<% end %>
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="" style="">
+  <div class="container text-center">
+    <div class="">
+      <div class="text-center">
+        <h2 class="mb-0" style="">プロフィール編集</h2>
+        <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-10"></div>
+      </div>
+    </div>
+
+    <div class="inv-profile">
+      <h6 class="mt-8" style="font-size:2.0rem; line-height: 0.5;">新郎<br><span style="font-size:1rem;">groom</span></h6>
+      <div class="row mt-4">
+        <div class="groom-img col-sm-4">
+          <img src="/icon/groom.png" class="w-70">
+          <p class="mt-2">写真を選択する</p>
+        </div>
+        <div class="groom-profile text-left col-sm-8">
+          <label class="ml-2">名前</label>
+          <!-- <%= f.label "新郎", class:"d-block small text-left" %> -->
+          <div class="overflow-hidden" style="margin:0px !important;">
+            <%= f.text_field :groom_last, class:"w-49 p-2 float-left inv-card",placeholder:"  性    Last" %>
+            <%= f.text_field :groom_first, class:"w-49 p-2 float-right inv-card",placeholder:"  名    First" %>
+          </div>
+          <label class="ml-2">かな</label>
+          <!-- <%= f.label "新郎", class:"d-block small text-left" %> -->
+          <div class="overflow-hidden" style="margin:0px !important;">
+            <%= f.text_field :groom_last_kana, class:"w-49 p-2 float-left inv-card",placeholder:"  せい" %>
+            <%= f.text_field :groom_first_kana, class:"w-49 p-2 float-right inv-card",placeholder:"  めい" %>
+          </div>
+
+          <!-- 自己紹介・メッセージ -->
+        </div>
+      </div>
+    </div>
+
+    <div class="inv-profile">
+      <h6 class="mt-8" style="font-size:2.0rem; line-height: 0.5;">新婦<br><span style="font-size:1rem;">bride</span></h6>
+      <div class="row mt-4">
+        <div class="groom-img col-sm-4">
+          <img src="/icon/bride.png" class="w-70">
+          <p class="mt-2">写真を選択する</p>
+        </div>
+        <div class="groom-profile text-left col-sm-8">
+          <label class="ml-2">名前</label>
+          <!-- <%= f.label "新婦", class:"d-block small text-left" %> -->
+          <div class="overflow-hidden" style="margin:0px !important;">
+            <%= f.text_field :bride_last, class:"w-49 p-2 float-left inv-card",placeholder:"  性    Last" %>
+            <%= f.text_field :bride_first, class:"w-49 p-2 float-right inv-card",placeholder:"  名    First" %>
+          </div>
+          <label class="ml-2">かな</label>
+          <!-- <%= f.label "新婦", class:"d-block small text-left" %> -->
+          <div class="overflow-hidden" style="margin:0px !important;">
+            <%= f.text_field :bride_last_kana, class:"w-49 p-2 float-left inv-card",placeholder:"  せい" %>
+            <%= f.text_field :bride_first_kana, class:"w-49 p-2 float-right inv-card",placeholder:"  めい" %>
+          </div>
+
+          <!-- 自己紹介・メッセージ -->
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-9">
+      <%= f.submit "保存", class:"btn btn-sm btn-primary pl-8 pr-8" %><br>
+      <%= link_to "戻る", message_card_path(id: @message_card), class:"btn btn-sm btn-secondary pl-8 pr-8 mt-4" %>
+    </div>
+
+    <% end %>
+  </div>
+</main>
