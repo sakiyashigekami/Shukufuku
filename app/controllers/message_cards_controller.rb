@@ -1,5 +1,9 @@
 class MessageCardsController < ApplicationController
 
+  def index
+    @message_cards = MessageCard.where(user_id: params[:user_id]).order("created_at ASC")
+  end
+
   def new
     @message_card = MessageCard.new
   end
