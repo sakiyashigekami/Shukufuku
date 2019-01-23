@@ -13,13 +13,13 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"
 
   get "invitations/type" => "invitations#type", as: :type
-  get "invitations/index" => "invitations#index", as: :index
   get "invitations/:id/profile" => "invitations#profile", as: :profile
   get "invitations/:id/date_place" => "invitations#date_place", as: :date_place
   get "invitations/:id/greeting" => "invitations#greeting", as: :greeting
   get "invitations/:id/preview" => "invitations#preview", as: :preview
   get "invitations/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
   get "invitations/design/:id/:type_id" => "invitations#design", as: :design
+  get "invitations/:user_id/index" => "invitations#index", as: :index
   resources :invitations, only: [:show, :update, :create, :destroy]
 
   get "invitations/:id/attendance_form/:atdform_id" => "attendance_forms#show", as: :attendance_form_show

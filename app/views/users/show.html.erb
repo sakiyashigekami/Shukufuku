@@ -8,9 +8,8 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <p>2019/7/14</p>
         <h2 class="mt-8">新郎名 & 新婦名</h2>
-        <div class="" style="border:3px solid gray;">
+        <!-- <div class="" style="border:3px solid gray;">
           <ul class="row" style="margin:0 15px !important;">
             <li class="col">出席：23人</li>
             <li class="col">欠席：3人</li>
@@ -27,16 +26,16 @@
               <h3 class="w-100 mb-0 text-primary">目標金額　¥1,000,000</h3>
             </li>
           </ul>
-        </div>
+        </div> -->
 
-        <div class="row mt-8">
+        <!-- <div class="row mt-8">
           <div class="col-6">
             <div class="btn btn-lg btn-primary btn-outline-primary w-80">人数</div>
           </div>
           <div class="col-6">
             <div class="btn btn-lg btn-primary btn-outline-primary w-80">金額</div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -44,7 +43,7 @@
     <div class="row">
       <div class="col-3">
         <% if Invitation.find_by(user_id: current_user) %>
-        <%= link_to invitation_path(id: @invitation) do  %>
+        <%= link_to index_path(user_id: params[:user_id]) do  %>
           <div class="step-card mypage-card p-4 m-6 mx-auto">
             <img src="/mypage/message.png" width="" class="w-100  step-icon">
             <img src="/mypage/message2.png" width="" class="w-100  step-icon-hover">

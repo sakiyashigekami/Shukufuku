@@ -5,7 +5,7 @@ class InvitationsController < ApplicationController
   end
 
   def index
-    @invitation = Invitation.find_by(id: params[:id])
+    @invitations = Invitation.where(user_id: params[:user_id]).order("created_at ASC")
   end
 
   def type

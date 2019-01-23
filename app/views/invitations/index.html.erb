@@ -8,34 +8,18 @@
       </div>
     </div>
     <div class="row">
+      <% @invitations.each do |inv| %>
       <div class="col-3">
-        <%= link_to invitations_path, method: "PATCH" do %>
+        <%= link_to invitation_path(id: inv.id) do %>
         <div class="m-4 mx-auto">
           <img src="/default.jpg" width="" class="w-80 mt-4">
-          <p class="mt-4">テンプレ１</p>
+          <p class="mt-4"><%= inv.id %></p>
         </div>
-        <% end %>
       </div>
+      <% end %>
+      <% end %>
       <div class="col-3">
-        <%= link_to invitations_path, method: "PATCH" do %>
-        <div class="m-4 mx-auto">
-          <img src="/default.jpg" width="" class="w-80 mt-4">
-          <p class="mt-4">テンプレ２</p>
-        </div>
-        <% end %>
-      </div>
-    <!-- </div>
-    <div class="row"> -->
-      <div class="col-3">
-        <%= link_to invitations_path, method: "PATCH" do %>
-        <div class="m-4 mx-auto">
-          <img src="/default.jpg" width="" class="w-80 mt-4">
-          <p class="mt-4">テンプレ３</p>
-        </div>
-        <% end %>
-      </div>
-      <div class="col-3">
-        <%= link_to invitations_path, method: "PATCH" do %>
+        <%= link_to type_path do %>
         <div class="step-card invitations p-4 m-6 mx-auto">
           <img src="/mypage/card.png" width="" class="w-100  step-icon">
           <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">
