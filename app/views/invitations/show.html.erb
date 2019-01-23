@@ -5,7 +5,16 @@
       <div class="text-center">
         <h2 class="mb-0" style="">招待状編集TOP</h2>
         <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-10"></div>
-        <h6 class="mt-8">招待状_1
+        <h6 class="mt-8">
+          <% if @invitation.title.nil? %>
+          <div class="modal-body">
+            <p>招待状_<%= @invitation.id %></p>
+          </div>
+          <% else %>
+          <div class="modal-body">
+            <p><%= @invitation.title %></p>
+          </div>
+          <% end %>
         <!-- 切り替えボタンの設定 -->
           <a type="" class="" data-toggle="modal" data-target="#exampleModalCenter">
             <img src="/icon/pencil.png" class="w-5 p-2">
@@ -22,13 +31,21 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
-                <p>招待状_1</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">閉じる</button>
-                <button type="button" class="btn btn-sm btn-primary">変更を保存</button>
-              </div>
+              <%= form_for(@invitation, url: invitation_path, method: "PATCH") do |f| %>
+                <% if @invitation.title.nil? %>
+                <div class="modal-body">
+                  <p><%= f.text_field :title, value: "招待状_#{@invitation.id}" %></p>
+                </div>
+                <% else %>
+                <div class="modal-body">
+                  <p><%= f.text_field :title, value: @invitation.title %></p>
+                </div>
+                <% end %>
+                <div class="modal-footer">
+                  <%= f.submit "変更を保存", class: "btn btn-sm btn-primary" %>
+                  <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal">閉じる</button>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
