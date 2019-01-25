@@ -1,5 +1,6 @@
 class AttendancesController < ApplicationController
   before_action :logged_in_user
+  before_action :ensure_atd_correct_user
 
   def show
     @invitation = Invitation.find_by(id: params[:id])
@@ -29,11 +30,13 @@ class AttendancesController < ApplicationController
     end
   end
 
-  def attendance_params
-    params.require(:attendance).permit(
-      :user_id, :invitation_id,
-      :lastname, :firstname, :lastname_kana, :firstname_kana,
-      :postcode, :address, :building_name, :phonenumber, :email, :allergy, :message
-    )
-  end
+  private
+
+    def attendance_params
+      params.require(:attendance).permit(
+        :user_id, :invitation_id,
+        :lastname, :firstname, :lastname_kana, :firstname_kana,
+        :postcode, :address, :building_name, :phonenumber, :email, :allergy, :message
+      )
+    end
 end

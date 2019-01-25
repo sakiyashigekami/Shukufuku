@@ -3,21 +3,21 @@ Rails.application.routes.draw do
 
   get  "signup" => "users#new"
   post  "signup" => "users#create"
-  get "send_email" => "users#send_email"
+  get "send_email/:user_id" => "users#send_email"
   get "mypage/:user_id" => "users#show", as: :mypage
-  get "payment" => "users#payment"
-  resources :users, except: [:new, :show, :create]
+  get "wedding_gift/:user_id" => "users#wedding_gift", as: :wedding_gift
+  resources :users, only: [:edit, :update, :destroy]
 
   get "login" => "sessions#new"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
-  get "invitations/type" => "invitations#type", as: :type
+  get ":user_id/invitations/type" => "invitations#type", as: :type
   get "invitations/:id/profile" => "invitations#profile", as: :profile
   get "invitations/:id/date_place" => "invitations#date_place", as: :date_place
   get "invitations/:id/greeting" => "invitations#greeting", as: :greeting
   get "invitations/:id/preview" => "invitations#preview", as: :preview
-  get "invitations/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
+  get ":user_id/invitations/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
   get "invitations/design/:id/:type_id" => "invitations#design", as: :design
   get "invitations/:user_id/index" => "invitations#index", as: :index
   resources :invitations, only: [:show, :update, :create, :destroy]
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get "invitations/:id/attendance_form/:atdform_id" => "attendance_forms#show", as: :attendance_form_show
   patch "invitations/:id/attendance_form/:atdform_id" => "attendance_forms#update", as: :attendance_form_update
 
-  resources :attendances
+  resources :attendances, only: [:show, :create, :update]
 
   get "lists/:user_id" => "lists#show", as: :list
 

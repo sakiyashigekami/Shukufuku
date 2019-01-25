@@ -1,5 +1,7 @@
 class MessageCardsController < ApplicationController
   before_action :logged_in_user
+  before_action :ensure_correct_user, only: [:index]
+  before_action :ensure_msg_card_correct_user, except: [:index]
 
   def index
     @message_cards = MessageCard.where(user_id: params[:user_id]).order("created_at ASC")

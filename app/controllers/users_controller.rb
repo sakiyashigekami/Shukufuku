@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user
+  before_action :ensure_correct_user, only: [:show, :wedding_gift, :send_email]
 
   def new
     @user = User.new
@@ -19,8 +20,7 @@ class UsersController < ApplicationController
       end
   end
 
-  def payment
-    @user = current_user
+  def wedding_gift
   end
 
   def send_email

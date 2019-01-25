@@ -1,5 +1,7 @@
 class InvitationsController < ApplicationController
   before_action :logged_in_user
+  before_action :ensure_correct_user, only: [:index, :type, :couple_name]
+  before_action :ensure_inv_correct_user, except: [:index, :type, :couple_name]
 
   def start
     @invitation = Invitation.find_by(id: params[:id])
@@ -51,7 +53,7 @@ class InvitationsController < ApplicationController
     if @invitation.save && @attendance_form.save
       redirect_to design_url(user_id: current_user, type_id: @invitation, id: @invitation)
     else
-      render "couple_name"
+      render "show"
     end
   end
 
@@ -61,7 +63,7 @@ class InvitationsController < ApplicationController
     if @invitation.update_attributes(invitation_params) && @attendance_form.update_attributes(invitation_id: @invitation.id)
       redirect_to invitation_url(@invitation)
     else
-      render 'design'
+      render 'show'
     end
   end
 
