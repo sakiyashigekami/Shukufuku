@@ -71,6 +71,10 @@ ul {
   list-style: none;
 }
 
+.yubi {
+  cursor : pointer;
+}
+
 .font-b {
   font-weight: bold;
 }
