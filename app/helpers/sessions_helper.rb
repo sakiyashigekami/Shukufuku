@@ -37,4 +37,11 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "ログインしてください。"
+      redirect_to root_url
+    end
+  end
 end

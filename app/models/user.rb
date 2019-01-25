@@ -4,7 +4,7 @@ class User < ApplicationRecord
   before_create :create_activation_digest
   validates :email, presence: true, length: { maximum: 255 }, uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 8 }
   has_many :invitations
   has_many :message_cards
   has_many :attendances

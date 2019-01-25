@@ -1,4 +1,5 @@
 class MessageCardsController < ApplicationController
+  before_action :logged_in_user
 
   def index
     @message_cards = MessageCard.where(user_id: params[:user_id]).order("created_at ASC")

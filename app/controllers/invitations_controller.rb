@@ -1,4 +1,5 @@
 class InvitationsController < ApplicationController
+  before_action :logged_in_user
 
   def start
     @invitation = Invitation.find_by(id: params[:id])

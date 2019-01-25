@@ -1,4 +1,6 @@
 class AttendanceFormsController < ApplicationController
+  before_action :logged_in_user
+  
   def show
     @invitation = Invitation.find_by(id: params[:id])
     @attendance_form = AttendanceForm.find_by(id: params[:atdform_id])
