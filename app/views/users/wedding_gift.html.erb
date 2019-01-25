@@ -1,6 +1,4 @@
 <% provide(:title, "受取会費確認") %>
-
-<%= render 'shared/error_messages', model: @user %>
   <!-- ========== MAIN ========== -->
   <main id="content" role="main" class="" style="">
     <div class="container text-center">
@@ -44,10 +42,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="mt-9">
-        <%= link_to "戻る", users_path(id: @user), class:"btn btn-sm btn-secondary pl-8 pr-8 mt-4" %>
       </div>
     </div>
   </main>
