@@ -1,7 +1,7 @@
 class InvitationsController < ApplicationController
   before_action :logged_in_user
-  before_action :ensure_correct_user, only: [:index, :type, :couple_name]
-  before_action :ensure_inv_correct_user, except: [:index, :type, :couple_name]
+  before_action :ensure_correct_user, only: [:index, :couple_name]
+  before_action :ensure_inv_correct_user, except: [:index, :couple_name, :create, :update]
 
   def start
     @invitation = Invitation.find_by(id: params[:id])
