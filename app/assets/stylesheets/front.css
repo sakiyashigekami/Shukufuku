@@ -83,6 +83,41 @@ ul {
   font-size: 4rem !important;
 }
 
+/*----- WEB上のラジオボタン装飾css --------*/
+.select-must input {
+  display: none;
+}
+.select-must input[type="radio"]:checked.windows + label {
+  color: #3275bc;
+  border: 2px solid #3275bc;
+  background-color: #d0e6fd;
+}
+.select-must input[type="radio"]:checked.osx + label {
+  color: #000;
+  border: 2px solid #000;
+  background-color: #eaeaea;
+}
+.select-must label {
+  color: #ddd;
+  border: 2px solid #ddd;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 0px;
+  width: 120px;
+  margin-bottom: 0px;
+}
+.select-must label:hover {
+    color: #aaa;
+    border: 2px solid #aaa;
+    cursor: pointer;
+}
+
+.custom-control{
+  margin-top: 7px;
+}
+
+
+
 /* .fv-size{
   min-height: 60vh;
 } */

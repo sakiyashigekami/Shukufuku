@@ -62,12 +62,12 @@
                   <%= f.label :name, "お名前",class:"custom-control-label", for:"customCheck_name" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :name_sel, :名前を必須にする,class:"" %>
-                  <%= f.label :name_sel, "必須にする" %>
-                  <%= f.radio_button :name_sel, :名前を必須にしない %>
-                  <%= f.label :name_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :name_sel, :名前を必須にする,id:"name1", value:"必須にする", class:"windows" %>
+                  <%= f.label :name_sel, for:"name1", value:"必須にする" %>
+                  <%= f.radio_button :name_sel, :名前を必須にする,id:"name2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :name_sel, for:"name2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
@@ -85,12 +85,12 @@
                   <%= f.label :kana, "かな",class:"custom-control-label", for:"customCheck_kana" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :kana_sel, :かなを必須にする %>
-                  <%= f.label :kana_sel, "必須にする" %>
-                  <%= f.radio_button :kana_sel, :かなを必須にしない %>
-                  <%= f.label :kana_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :kana_sel, :かなを必須にする,id:"kana1", value:"必須にする", class:"windows" %>
+                  <%= f.label :kana_sel, for:"kana1", value:"必須にする" %>
+                  <%= f.radio_button :kana_sel, :かなを必須にする,id:"kana2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :kana_sel, for:"kana2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
@@ -108,13 +108,19 @@
                   <%= f.label :postcode, "郵便番号",class:"custom-control-label", for:"customCheck_postcode" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :postcode_sel, :かなを必須にする,id:"postcode1", value:"必須にする", class:"windows" %>
+                  <%= f.label :postcode_sel, for:"postcode1", value:"必須にする" %>
+                  <%= f.radio_button :postcode_sel, :かなを必須にする,id:"postcode2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :postcode_sel, for:"postcode2", value:"必須にしない" %>
+                </div>
+                <!-- <div class="form-check mr-4">
                   <%= f.radio_button :postcode_sel, :郵便番号を必須にする %>
                   <%= f.label :postcode_sel, "必須にする" %>
                   <%= f.radio_button :postcode_sel, :郵便番号を必須にしない %>
                   <%= f.label :postcode_sel, "必須にしない" %>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -131,12 +137,12 @@
                   <%= f.label :address, "住所",class:"custom-control-label", for:"customCheck_address" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :address_sel, :住所を必須にする %>
-                  <%= f.label :address_sel, "必須にする" %>
-                  <%= f.radio_button :address_sel, :住所を必須にしない %>
-                  <%= f.label :address_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :address_sel, :かなを必須にする,id:"address1", value:"必須にする", class:"windows" %>
+                  <%= f.label :address_sel, for:"address1", value:"必須にする" %>
+                  <%= f.radio_button :address_sel, :かなを必須にする,id:"address2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :address_sel, for:"address2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
@@ -151,15 +157,15 @@
               <div class="col-sm-4">
                 <div class="custom-control custom-checkbox ml-4">
                   <%= f.check_box :phonenumber,class:"custom-control-input", id:"customCheck_phonenumber" %>
-                  <%= f.label :phonenumber, "かな",class:"custom-control-label", for:"customCheck_phonenumber" %>
+                  <%= f.label :phonenumber, "電話番号",class:"custom-control-label", for:"customCheck_phonenumber" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :phonenumber_sel, :電話番号を必須にする %>
-                  <%= f.label :phonenumber_sel, "必須にする" %>
-                  <%= f.radio_button :phonenumber_sel, :電話番号を必須にしない %>
-                  <%= f.label :phonenumber_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :phonenumber_sel, :かなを必須にする,id:"phonenumber1", value:"必須にする", class:"windows" %>
+                  <%= f.label :phonenumber_sel, for:"phonenumber1", value:"必須にする" %>
+                  <%= f.radio_button :phonenumber_sel, :かなを必須にする,id:"phonenumber2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :phonenumber_sel, for:"phonenumber2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
@@ -177,12 +183,12 @@
                   <%= f.label :email, "メールアドレス",class:"custom-control-label", for:"customCheck_email" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :email_sel, :メールアドレスを必須にする %>
-                  <%= f.label :email_sel, "必須にする" %>
-                  <%= f.radio_button :email_sel, :メールアドレスを必須にしない %>
-                  <%= f.label :email_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :email_sel, :かなを必須にする,id:"email1", value:"必須にする", class:"windows" %>
+                  <%= f.label :email_sel, for:"email1", value:"必須にする" %>
+                  <%= f.radio_button :email_sel, :かなを必須にする,id:"email2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :email_sel, for:"email2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
@@ -197,15 +203,15 @@
               <div class="col-sm-4">
                 <div class="custom-control custom-checkbox ml-4">
                   <%= f.check_box :allergy,class:"custom-control-input", id:"customCheck_allergy" %>
-                  <%= f.label :allergy, "かな",class:"custom-control-label", for:"customCheck_allergy" %>
+                  <%= f.label :allergy, "アレルギー",class:"custom-control-label", for:"customCheck_allergy" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :allergy_sel, :アレルギーを必須にする %>
-                  <%= f.label :allergy_sel, "必須にする" %>
-                  <%= f.radio_button :allergy_sel, :アレルギーを必須にしない %>
-                  <%= f.label :allergy_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :allergy_sel, :かなを必須にする,id:"allergy1", value:"必須にする", class:"windows" %>
+                  <%= f.label :allergy_sel, for:"allergy1", value:"必須にする" %>
+                  <%= f.radio_button :allergy_sel, :かなを必須にする,id:"allergy2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :allergy_sel, for:"allergy2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
@@ -223,12 +229,12 @@
                   <%= f.label :message, "メッセージ",class:"custom-control-label", for:"customCheck_message" %>
                 </div>
               </div>
-              <div class="col-sm-8 row">
-                <div class="form-check mr-4">
-                  <%= f.radio_button :message_sel, :メッセージを必須にする %>
-                  <%= f.label :message_sel, "必須にする" %>
-                  <%= f.radio_button :message_sel, :メッセージを必須にしない %>
-                  <%= f.label :message_sel, "必須にしない" %>
+              <div class="col-sm-8">
+                <div class="select-must">
+                  <%= f.radio_button :message_sel, :かなを必須にする,id:"message1", value:"必須にする", class:"windows" %>
+                  <%= f.label :message_sel, for:"message1", value:"必須にする" %>
+                  <%= f.radio_button :message_sel, :かなを必須にする,id:"message2", value:"必須にしない", class:"osx" %>
+                  <%= f.label :message_sel, for:"message2", value:"必須にしない" %>
                 </div>
               </div>
             </div>
