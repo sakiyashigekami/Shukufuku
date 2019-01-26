@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user
-  before_action :ensure_correct_user, only: [:show, :wedding_gift, :send_email]
+  before_action :logged_in_user, only: [:show, :wedding_gift]
+  before_action :ensure_correct_user, only: [:show, :wedding_gift]
 
   def new
     @user = User.new

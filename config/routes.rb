@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get  "signup" => "users#new"
   post  "signup" => "users#create"
-  get "send_email/:user_id" => "users#send_email"
+  get "send_email" => "users#send_email", as: :send_email
   get "mypage/:user_id" => "users#show", as: :mypage
   get "wedding_gift/:user_id" => "users#wedding_gift", as: :wedding_gift
   resources :users, only: [:edit, :update, :destroy]
