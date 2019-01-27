@@ -115,16 +115,7 @@
       <div class="bg-form">
         <img src="/preview/form_logo.png" class="w-10 d-block mx-auto mt-form">
         <h2 class="mt-8 pt-4 title">Presence or Absence</h2>
-        <%= form_for(@attendance, url: attendance_path) do |f| %>
-        <div class="col-sm-8 offset-sm-2">
-          <div class="select-must">
-            <%= f.radio_button :message_sel, :かなを必須にする,id:"message1", value:"必須にする", class:"windows" %>
-            <%= f.label :message_sel, for:"message1", value:"必須にする" %>
-            <%= f.radio_button :message_sel, :かなを必須にする,id:"message2", value:"必須にしない", class:"osx" %>
-            <%= f.label :message_sel, for:"message2", value:"必須にしない" %>
-          </div>
-        </div>
-        <% end %>
+      
       </div>
     </div>
   </div>
