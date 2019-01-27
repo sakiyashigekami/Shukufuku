@@ -1,6 +1,5 @@
 class AttendancesController < ApplicationController
   before_action :logged_in_user
-  before_action :ensure_atd_correct_user
 
   def show
     @invitation = Invitation.find_by(id: params[:id])
@@ -11,13 +10,22 @@ class AttendancesController < ApplicationController
     end
   end
 
+  def preview
+    @invitation = Invitation.find_by(id: params[:id])
+    @attendance = Attendance.new
+  end
+
+  def confirm
+  end
+
   def create
     @invitation = Invitation.find_by(id: params[:id])
-    @attendance = Attendance.new(attendance_params)
+    @attendance = current_user.attendances.new(attendance_params)
     if @attendance.save
-      redirect_to attendance_show_url(@attendance)
+      redirect_to confirm_url(@attendance)
     else
       render "show"
+      flash[:danger] = "登録できませんでした"
     end
   end
 
@@ -35,8 +43,8 @@ class AttendancesController < ApplicationController
     def attendance_params
       params.require(:attendance).permit(
         :user_id, :invitation_id,
-        :lastname, :firstname, :lastname_kana, :firstname_kana,
-        :postcode, :address, :building_name, :phonenumber, :email, :allergy, :message
+        :name, :kana,
+        :postcode, :address, :phonenumber, :email, :allergy, :message
       )
     end
 end

@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "invitations/:id/attendance_form/:atdform_id" => "attendance_forms#show", as: :attendance_form_show
   patch "invitations/:id/attendance_form/:atdform_id" => "attendance_forms#update", as: :attendance_form_update
 
+  get "attendances/:id/confirm" => "attendances#confirm", as: :confirm
   resources :attendances, only: [:show, :create, :update]
 
   get "lists/:user_id" => "lists#show", as: :list

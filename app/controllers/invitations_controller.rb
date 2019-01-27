@@ -1,7 +1,7 @@
 class InvitationsController < ApplicationController
   before_action :logged_in_user
   before_action :ensure_correct_user, only: [:index, :couple_name, :type]
-  before_action :ensure_inv_correct_user, except: [:index, :couple_name, :type, :create, :update]
+  before_action :ensure_inv_correct_user, except: [:index, :couple_name, :type, :preview, :create, :update]
 
   def start
     @invitation = Invitation.find_by(id: params[:id])
@@ -37,6 +37,7 @@ class InvitationsController < ApplicationController
   end
 
   def preview
+    @attendance = Attendance.new
   end
 
   def show
@@ -53,7 +54,7 @@ class InvitationsController < ApplicationController
     if @invitation.save && @attendance_form.save
       redirect_to design_url(user_id: current_user, type_id: @invitation, id: @invitation)
     else
-      
+
     end
   end
 

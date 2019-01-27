@@ -1,27 +1,18 @@
-<%= link_to "招待状編集TOPへ", invitation_path(id: @invitation) %>
 
 <%= form_for(@attendance) do |f| %>
 <%= render 'shared/error_messages', model: @attendance %>
   <body>
-    <%= f.label "姓" %>
-    <%= f.text_field :lastname %>
+    <%= f.label "名前" %>
+    <%= f.text_field :name %>
 
-    <%= f.label "名" %>
-    <%= f.text_field :firstname %>
-
-    <%= f.label "ふりがな" %>
-    <%= f.text_field :lastname_kana %>
-
-    <%= f.text_field :firstname_kana %>
+    <%= f.label "かな" %>
+    <%= f.text_field :kana %>
 
     <%= f.label "郵便番号" %>
     <%= f.text_field :postcode %>
 
     <%= f.label "住所" %>
     <%= f.text_field :address %>
-
-    <%= f.label "建物名" %>
-    <%= f.text_field :building_name %>
 
     <%= f.label "電話番号" %>
     <%= f.text_field :phonenumber %>
@@ -34,9 +25,6 @@
 
     <%= f.label "メッセージ" %>
     <%= f.text_field :message %>
-
-    <%= f.hidden_field :invitation_id, value: params[:id] %>
-    <%= f.hidden_field :user_id, value: 1 %>
 
     <%= f.submit "保存" %>
   </body>

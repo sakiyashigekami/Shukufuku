@@ -115,7 +115,26 @@
       <div class="bg-form">
         <img src="/preview/form_logo.png" class="w-10 d-block mx-auto mt-form">
         <h2 class="mt-8 pt-4 title">Presence or Absence</h2>
-      
+          <%= form_for(@attendance, url: attendances_path, method: "POST") do |f| %>
+            <%= f.label "名前" %>
+            <%= f.text_field :name, placeholder:"名前(Name)" %>
+            <%= f.label "かな" %>
+            <%= f.text_field :kana, placeholder:"かな(Kana)" %>
+            <%= f.label "郵便番号" %>
+            <%= f.text_field :postcode, placeholder:"郵便番号(Postcode)" %>
+            <%= f.label "住所" %>
+            <%= f.text_field :address, placeholder:"住所(Address)" %>
+            <%= f.label "電話番号" %>
+            <%= f.text_field :phonenumber, placeholder:"電話番号(Phonenumber)" %>
+            <%= f.label "メールアドレス" %>
+            <%= f.email_field :email, placeholder:"メールアドレス(Email)" %>
+            <%= f.label "アレルギー" %>
+            <%= f.text_field :allergy, placeholder:"アレルギー(Allergy)" %>
+            <%= f.label "メッセージ" %>
+            <%= f.text_area :message, placeholder:"メッセージ(Message)" %>
+
+            <%= f.submit "送信する" %>
+          <% end %>
       </div>
     </div>
   </div>
