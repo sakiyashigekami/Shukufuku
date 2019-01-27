@@ -1,3 +1,164 @@
 // Place all the styles related to the Invitations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.preview{
+  p{
+    margin-bottom: 0 !important;
+  }
+  .w-150{
+    width: 150%;
+    margin-left: -25%;
+  }
+  .w-47{
+    width: 47%;
+  }
+  .text-primary{
+    color: pink !important;
+  }
+  .groom{
+    .name::before{
+      content: 'groom';
+      position: absolute;
+      top: 0;
+      left:0;
+    }
+    .name::after{
+      content: '';
+      background-image: url('../../preview/header_message.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      position: absolute;
+      top: 20px;
+      left:0;
+      display: inline-block;/*忘れずに！*/
+      width: 100px;/*画像の幅*/
+      height: 20px;/*画像の高さ*/
+    }
+  }
+  .bride{
+    .name::before{
+      content: 'bride';
+      position: absolute;
+      top: 0;
+      right:0;
+    }
+    .name::after{
+      content: '';
+      background-image: url('../../preview/header_message.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      position: absolute;
+      top: 20px;
+      right:0;
+      display: inline-block;/*忘れずに！*/
+      width: 100px;/*画像の幅*/
+      height: 20px;/*画像の高さ*/
+    }
+  }
+  .party{
+    .title{
+    position: relative;
+    display: inline-block;
+    }
+    .title::before{
+      content: '';
+      background-image: url('../../preview/header_message.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      position: absolute;
+      top: 20px;
+      left:100px;
+      display: inline-block;/*忘れずに！*/
+      width: 100px;/*画像の幅*/
+      height: 20px;/*画像の高さ*/
+    }
+    .title::after{
+      content: '';
+      background-image: url('../../preview/header_message.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      position: absolute;
+      top: 20px;
+      right:100px;
+      display: inline-block;/*忘れずに！*/
+      width: 100px;/*画像の幅*/
+      height: 20px;/*画像の高さ*/
+    }
+    .subtitle{
+      background-image: url(../../preview/flame_place.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center;
+      display: inline-block;
+    }
+    .subtitle::after{
+      content: '会場';
+      font-size: .5rem;
+      display: block;
+    }
+  }
+  table, tbody, tr, td{
+    border-color: transparent !important;
+  }
+  .bg-info{
+    background-color: orange !important;
+  }
+  .text-wc{
+  }
+  .text-wc::before{
+    content: 'wedding ceremony';
+    font-size: 2rem;
+    display:block;
+  }
+  .text-wr{
+  }
+  .text-wr::before{
+    content: 'wedding recepution';
+    font-size: 2rem;
+    display:block;
+  }
+  .form{
+    .bg-form-img{
+      background-image: url(../../default.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center;
+    }
+    .bg-form{
+      background-color: purple;
+      background-position:center;
+      position: relative;
+    }
+    .mt-form{
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+    .title{
+    display: block;
+    }
+    .title::before{
+      display: none;
+    }
+    .title::after{
+      background-image: none;
+      content: '出欠フォーム';
+      font-size: .5rem;
+      position:relative;
+      top: auto;
+      right: auto;
+      height: auto;
+      width: auto;    
+      display:block;
+    }
+  }
+}

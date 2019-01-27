@@ -1,0 +1,131 @@
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="preview text-center" style="">
+  <div>
+    <img src="/preview/firstview.png">
+  </div>
+
+  <div class="container mt-9">
+    <img src="/preview/header_message.png" class="w-50">
+    <h2 class="text-primary">Message</h2>
+    <p>
+      謹啓 早春の候<br>
+      皆様におかれましては<br>
+      益々ご清祥のこととお慶び申し上げます
+    </p>
+    <p>
+      このたび私たちは結婚式を挙げることになりました
+    </p>
+    <p>
+      つきましては 皆様により一層のご指導を賜りたく<br>
+      ささやかではございますが 披露宴を催したく存じます<br>
+      ご多用中 誠に恐縮ではございますが<br>
+      ぜひご出席をお願いいたしたく ご案内申し上げます
+    </p>
+    <img src="/preview/footer_message.png" class="w-50">
+  </div>
+  <div class="container mt-9">
+    <div class="row">
+      <div class="col-sm-4 offset-sm-2">
+        <div class="groom">
+          <div class="name text-center">
+            <h3 class="">新郎</h3>
+            <img src="/default.jpg" class="w-80 rounded-circle">
+            <p class="mt-4">新郎名</p>
+            <span>sinroumei</span><br>
+            <img src="/preview/under_name.png" class="w-40 mt-2 mb-4">
+            <p>自己紹介文</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="bride">
+          <div class="name text-center">
+            <h3 class="">新婦</h3>
+            <img src="/default.jpg" class="w-80 rounded-circle">
+            <p class="mt-4">新婦名</p>
+            <span>sinroumei</span><br>
+            <img src="/preview/under_name.png" class="w-40 mt-2 mb-4">
+            <p>自己紹介文</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container party mt-9">
+    <img src="/preview/header_party.png" class="w-30 d-block mx-auto mb-4">
+    <div class="d-block">
+      <h2 class="text-primary title mb-9">Party</h2>
+    </div>
+    <div class="d-block">
+      <!-- <h3 class="subtitle">place</h3> -->
+      <img src="/preview/header_party.png" class="w-30 d-block mx-auto mb-4">
+    </div>
+    <div class="w-70 mx-auto">
+      <h3 class="my-4">会場名</h3>
+      <table class="table table-hover text-left">
+        <!-- <thead class="" style="background-color:#82D8D5; color:#fff;">
+          <tr>
+            <th scope="col">名前</th>
+            <th scope="col">住所</th>
+          </tr>
+        </thead> -->
+        <tbody>
+          <tr>
+            <td>会場住所</td>
+            <td>京都市中京区池元町395</td>
+          </tr>
+          <tr>
+            <td>会場 TEL</td>
+            <td>09012345679</td>
+          </tr>
+          <tr>
+            <td>会場 URL</td>
+            <td>https://st-avenir.com</td>
+          </tr>
+        </tbody>
+      </table>
+      <img src="/preview/header_party.png">
+    </div>
+    <img src="/preview/middle_party.png" class="">
+    <div class="mt-4 overflow-hidden">
+      <div class="bg-info w-47 float-left">
+        <div class="info">
+          <h6 class="text-wc mt-4">結婚式</h6>
+          <img src="/preview/header_party.png" class="">
+          <h5 class="mt-4">2019/12/27 Fri</h5>
+          <h3 class="">11:00</h3>
+          <p class="" style="margin-bottom:2rem !important;">受付開始　10:00</p>
+        </div>
+      </div>
+      <div class="bg-info w-47 float-right">
+        <div class="info">
+          <h6 class="text-wr mt-4">披露宴</h6>
+          <img src="/preview/header_party.png" class="">
+          <h5 class="mt-4">2019/12/27 Fri</h5>
+          <h3 class="">11:00</h3>
+          <p class="" style="margin-bottom:2rem !important;">受付開始　10:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-block">
+      <!-- <h3 class="subtitle">place</h3> -->
+      <img src="/preview/footer_party.png" class="w-30 d-block mx-auto mt-8">
+    </div>
+    <div class="form bg-form-img mt-8">
+      <div class="bg-form">
+        <img src="/preview/form_logo.png" class="w-10 d-block mx-auto mt-form">
+        <h2 class="mt-8 pt-4 title">Presence or Absence</h2>
+        <%= form_for(@attendance, url: attendance_path) do |f| %>
+        <div class="col-sm-8 offset-sm-2">
+          <div class="select-must">
+            <%= f.radio_button :message_sel, :かなを必須にする,id:"message1", value:"必須にする", class:"windows" %>
+            <%= f.label :message_sel, for:"message1", value:"必須にする" %>
+            <%= f.radio_button :message_sel, :かなを必須にする,id:"message2", value:"必須にしない", class:"osx" %>
+            <%= f.label :message_sel, for:"message2", value:"必須にしない" %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
