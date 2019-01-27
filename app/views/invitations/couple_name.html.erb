@@ -38,8 +38,8 @@
       <%= f.fields_for(@attendance_form) do |atdf| %>
         <%= atdf.hidden_field :user_id, value: current_user.id %>
         <%= atdf.hidden_field :type_id, value: params[:type_id] %>
-      <% end %>
       <%= f.submit "OK", class:"btn btn-sm btn-primary pl-8 pr-8" %>
+      <% end %>
     </div>
   </div>
 </main>
