@@ -25,12 +25,12 @@
     }
     .name::after{
       content: '';
-      background-image: url('../../preview/header_message.png');
+      background-image: url('../../preview/under_groom_name.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
       position: absolute;
-      top: 20px;
+      top: 30px;
       left:0;
       display: inline-block;/*忘れずに！*/
       width: 100px;/*画像の幅*/
@@ -46,12 +46,12 @@
     }
     .name::after{
       content: '';
-      background-image: url('../../preview/header_message.png');
+      background-image: url('../../preview/under_bride_name.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
       position: absolute;
-      top: 20px;
+      top: 30px;
       right:0;
       display: inline-block;/*忘れずに！*/
       width: 100px;/*画像の幅*/
@@ -65,29 +65,29 @@
     }
     .title::before{
       content: '';
-      background-image: url('../../preview/header_message.png');
+      background-image: url('../../preview/right_party_title.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
       position: absolute;
-      top: 20px;
+      top: 0px;
       left:100px;
       display: inline-block;/*忘れずに！*/
-      width: 100px;/*画像の幅*/
-      height: 20px;/*画像の高さ*/
+      width: 50px;/*画像の幅*/
+      height: 50px;/*画像の高さ*/
     }
     .title::after{
       content: '';
-      background-image: url('../../preview/header_message.png');
+      background-image: url('../../preview/left_party_title.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: bottom;
       position: absolute;
-      top: 20px;
+      top: 0px;
       right:100px;
       display: inline-block;/*忘れずに！*/
-      width: 100px;/*画像の幅*/
-      height: 20px;/*画像の高さ*/
+      width: 50px;/*画像の幅*/
+      height: 50px;/*画像の高さ*/
     }
     .subtitle{
       background-image: url(../../preview/flame_place.png);
@@ -122,15 +122,15 @@
     font-size: 2rem;
     display:block;
   }
+  .bg-form-img{
+    background-image: url(../../default.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  }
   .form{
-    .bg-form-img{
-      background-image: url(../../default.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position:center;
-    }
     .bg-form{
-      background-color: purple;
+      background-color: rgba(255,100,100,.5);
       background-position:center;
       position: relative;
     }
@@ -157,8 +157,48 @@
       top: auto;
       right: auto;
       height: auto;
-      width: auto;    
+      width: auto;
       display:block;
+    }
+    /*----- WEB上のラジオボタン装飾css --------*/
+    .select-must input {
+      display: none;
+    }
+    .select-must input[type="radio"]:checked.windows + label {
+      color: #3275bc;
+      // border: 2px solid #3275bc;
+      border: none;
+      background-color: transparent;
+      background-image: url(../../preview/bg_answer.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position:50% 50%;
+      padding:20% 0% 10%;
+    }
+    .select-must input[type="radio"]:checked.osx + label {
+      color: #000;
+      border: none;
+      background-color: transparent;
+      background-image: url(../../preview/bg_answer.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position:50% 50%;
+      padding:20% 0 10%;
+    }
+    .select-must label {
+      color: #ddd;
+      // border: 2px solid #3275bc;
+      border: none;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 0px;
+      padding:20% 0 10%;
+    }
+    .select-must label:hover {
+      color: #aaa;
+      cursor: pointer;
+      width: 100%;
     }
   }
 }

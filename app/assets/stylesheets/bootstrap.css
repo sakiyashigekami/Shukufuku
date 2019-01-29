@@ -7486,6 +7486,10 @@ button.bg-dark:focus {
 .w-60 {
   width: 60% !important;
 }
+.w-60.mx-10 {
+  width: 60% !important;
+  margin:0 10% !important;
+}
 
 .w-65 {
   width: 65% !important;

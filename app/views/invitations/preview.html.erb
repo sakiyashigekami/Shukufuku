@@ -58,7 +58,7 @@
     </div>
     <div class="d-block">
       <!-- <h3 class="subtitle">place</h3> -->
-      <img src="/preview/header_party.png" class="w-30 d-block mx-auto mb-4">
+      <img src="/preview/subtitle_place.png" class="w-30 d-block mx-auto mb-4">
     </div>
     <div class="w-70 mx-auto">
       <h3 class="my-4">会場名</h3>
@@ -91,7 +91,7 @@
       <div class="bg-info w-47 float-left">
         <div class="info">
           <h6 class="text-wc mt-4">結婚式</h6>
-          <img src="/preview/header_party.png" class="">
+          <img src="/preview/center_detail.png" class="w-40">
           <h5 class="mt-4">2019/12/27 Fri</h5>
           <h3 class="">11:00</h3>
           <p class="" style="margin-bottom:2rem !important;">受付開始　10:00</p>
@@ -100,41 +100,139 @@
       <div class="bg-info w-47 float-right">
         <div class="info">
           <h6 class="text-wr mt-4">披露宴</h6>
-          <img src="/preview/header_party.png" class="">
+          <img src="/preview/center_detail.png" class="w-40">
           <h5 class="mt-4">2019/12/27 Fri</h5>
           <h3 class="">11:00</h3>
           <p class="" style="margin-bottom:2rem !important;">受付開始　10:00</p>
         </div>
       </div>
     </div>
-    <div class="d-block">
+    <div class="d-block pb-8">
       <!-- <h3 class="subtitle">place</h3> -->
       <img src="/preview/footer_party.png" class="w-30 d-block mx-auto mt-8">
     </div>
-    <div class="form bg-form-img mt-8">
-      <div class="bg-form">
+  </div>
+  <div class="form bg-form-img mt-8 py-8">
+    <div class="container">
+      <div class="bg-form pb-4">
         <img src="/preview/form_logo.png" class="w-10 d-block mx-auto mt-form">
         <h2 class="mt-8 pt-4 title">Presence or Absence</h2>
-          <%= form_for(@attendance, url: attendances_path, method: "POST") do |f| %>
-            <%= f.label "名前" %>
-            <%= f.text_field :name, placeholder:"名前(Name)" %>
-            <%= f.label "かな" %>
-            <%= f.text_field :kana, placeholder:"かな(Kana)" %>
-            <%= f.label "郵便番号" %>
-            <%= f.text_field :postcode, placeholder:"郵便番号(Postcode)" %>
-            <%= f.label "住所" %>
-            <%= f.text_field :address, placeholder:"住所(Address)" %>
-            <%= f.label "電話番号" %>
-            <%= f.text_field :phonenumber, placeholder:"電話番号(Phonenumber)" %>
-            <%= f.label "メールアドレス" %>
-            <%= f.email_field :email, placeholder:"メールアドレス(Email)" %>
-            <%= f.label "アレルギー" %>
-            <%= f.text_field :allergy, placeholder:"アレルギー(Allergy)" %>
-            <%= f.label "メッセージ" %>
-            <%= f.text_area :message, placeholder:"メッセージ(Message)" %>
+        <div class="overflow-hidden">
+        <%= form_for(@attendance, url: attendances_path, method: "POST") do |f| %>
+          <div class="col-sm-6 mb-4 float-left">
+            <div class="select-must">
+              <%= f.radio_button :name, :アレルギーを必須にする,id:"allergy1", value:"出席", class:"windows" %>
+              <%= f.label :name, for:"allergy1", value:"出席" %>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4 float-left">
+            <div class="select-must">
+            <%= f.radio_button :name, :アレルギーを必須にする,id:"allergy2", value:"欠席", class:"osx" %>
+            <%= f.label :name, for:"allergy2", value:"欠席" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 offset-sm-2 mx-auto text-left">
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "名前", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :name, placeholder:"名前(Name)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "かな", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :kana, placeholder:"かな(Kana)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "郵便番号", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :postcode, placeholder:"郵便番号(Postcode)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "住所", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :address, placeholder:"住所(Address)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "電話番号", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :phonenumber, placeholder:"電話番号(Phonenumber)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "メールアドレス", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.email_field :email, placeholder:"メールアドレス(Email)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "アレルギー", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :allergy, placeholder:"アレルギー(Allergy)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "メッセージ", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_area :message, placeholder:"メッセージ(Message)", class:" form-control" %>
+            </div>
+          </div>
 
-            <%= f.submit "送信する" %>
-          <% end %>
+          <div class="custom-control custom-checkbox text-center my-4">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <label class="custom-control-label" for="customCheck1">お連れ様を登録する</label>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="text-primary"><%= f.label "名前", class:"" %></p>
+              </div>
+              <div class="col-sm-9">
+                <%= f.text_field :name, placeholder:"名前(Name)", class:" form-control" %>
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col-sm-3">
+                <p class="text-primary"><%= f.label "かな", class:"" %></p>
+              </div>
+              <div class="col-sm-9">
+                <%= f.text_field :kana, placeholder:"かな(Kana)", class:" form-control" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-control custom-checkbox text-center my-4">
+            <input type="checkbox" class="custom-control-input" id="customCheck2" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+            <label class="custom-control-label" for="customCheck2">お連れ様を登録する</label>
+          </div>
+          <div class="collapse" id="collapseExample2">
+            <p style="color:white; font-size:200px;">はろ〜、二つ目のボタンは条件分岐で表示させてね〜〜</p>
+          </div>
+          <div class="d-block w-100 mb-4 text-center">
+            <a class="btn btn-sm btn-primary pl-8 pr-8 mx-auto">送信する</a>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
