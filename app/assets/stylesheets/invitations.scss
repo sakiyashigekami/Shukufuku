@@ -14,7 +14,10 @@
     width: 47%;
   }
   .text-primary{
-    color: pink !important;
+    color: #7B3341 !important;
+  }
+  .text-title{
+    color: #C47863 !important;
   }
   .groom{
     .name::before{
@@ -106,7 +109,8 @@
     border-color: transparent !important;
   }
   .bg-info{
-    background-color: orange !important;
+    color: #fff !important;
+    background-color: #7B3341 !important;
   }
   .text-wc{
   }
@@ -130,9 +134,40 @@
   }
   .form{
     .bg-form{
-      background-color: rgba(255,100,100,.5);
+      background-color: rgba(251,232,221,.9);
       background-position:center;
       position: relative;
+      .form-control{
+        color: #fff;
+        background-color: #C47863;
+        opacity: .8;
+      }
+      input::placeholder {
+        color: #fff;
+      }
+
+      /* IE */
+      input:-ms-input-placeholder {
+        color: #fff;
+      }
+
+      /* Edge */
+      input::-ms-input-placeholder {
+        color: #fff;
+      }
+      textarea::placeholder {
+        color: #fff;
+      }
+
+      /* IE */
+      textarea:-ms-input-placeholder {
+        color: #fff;
+      }
+
+      /* Edge */
+      textarea::-ms-input-placeholder {
+        color: #fff;
+      }
     }
     .mt-form{
       position: absolute;
@@ -165,7 +200,7 @@
       display: none;
     }
     .select-must input[type="radio"]:checked.windows + label {
-      color: #3275bc;
+      color: #7B3341;
       // border: 2px solid #3275bc;
       border: none;
       background-color: transparent;
@@ -176,7 +211,7 @@
       padding:20% 0% 10%;
     }
     .select-must input[type="radio"]:checked.osx + label {
-      color: #000;
+      color: #7B3341;
       border: none;
       background-color: transparent;
       background-image: url(../../preview/bg_answer.png);
@@ -186,7 +221,7 @@
       padding:20% 0 10%;
     }
     .select-must label {
-      color: #ddd;
+      color: #000;
       // border: 2px solid #3275bc;
       border: none;
       text-align: center;
@@ -199,6 +234,17 @@
       color: #aaa;
       cursor: pointer;
       width: 100%;
+    }
+  }
+}
+
+#couple_name {
+  .u-form{
+    input{
+      color: #606060;
+      background-color:white;
+      border-color: #82D8D5;
+      border-style:solid;
     }
   }
 }

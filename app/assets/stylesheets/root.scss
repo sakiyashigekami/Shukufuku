@@ -7,10 +7,17 @@ footer {
     margin-bottom: 3%;
     text-align: left;
     a{
-      color: #fff;      
+      color: #fff;
+    }
+    a:hover{
+      color: #606060;
     }
   }
   .logo{
     border-right: 3px solid #fff;
   }
+}
+
+.text-transparent{
+  color: transparent !important;
 }
