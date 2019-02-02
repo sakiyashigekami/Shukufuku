@@ -19,10 +19,9 @@ class AttendancesController < ApplicationController
   end
 
   def create
-    @invitation = Invitation.find_by(id: params[:id])
     @attendance = current_user.attendances.new(attendance_params)
     if @attendance.save
-      redirect_to confirm_url(@attendance)
+      redirect_to confirm_url(atd_id: @attendance.id)
     else
       render "show"
       flash[:danger] = "登録できませんでした"
@@ -32,7 +31,7 @@ class AttendancesController < ApplicationController
   def update
     @attendance = Attendance.find_by(id: params[:id])
     if @attendance.update_attributes(attendance_params)
-      redirect_to attendance_show_url(@attendance)
+      redirect_to confirm_url(atd_id: @attendance.id)
     else
       render 'design'
     end
