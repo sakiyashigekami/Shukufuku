@@ -1,3 +1,23 @@
 // Place all the styles related to the Root controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+footer {
+  li{
+    margin-bottom: 3%;
+    text-align: left;
+    a{
+      color: #fff;
+    }
+    a:hover{
+      color: #606060;
+    }
+  }
+  .logo{
+    border-right: 3px solid #fff;
+  }
+}
+
+.text-transparent{
+  color: transparent !important;
+}

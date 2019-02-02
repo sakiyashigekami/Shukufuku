@@ -1,24 +1,29 @@
 <!-- ========== MAIN ========== -->
-<main id="content" role="main" class="" style="">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-sm-8">
+<main id="content" role="main" class="mx-auto"  style="max-width:1200px;">
+  <div class="text-center">
+    <div class="overflow-hidden">
+      <div class="col-sm-6 float-left">
         <div class="p-4 my-auto align-middle">
-          <img src="/default.jpg" width="" class="w-50">
+          <img src="/default.jpg" width="" class="w-80">
         </div>
       </div>
-      <div class="col-sm-4 text-left pl-0">
+      <div class="col-sm-3 float-left text-left pl-0">
         <h2 class="mt-8">新郎名 & 新婦名</h2>
+        2019/1/19<br>
+        あと何日（カウントダウン日にち）
+      </div>
+      <div class="col-sm-3 float-left text-left pl-0">
         <h4 class="mt-4 mb-2">現在の招待状回答率</h4>
         <div class="js-hr-progress progress m-4" style="height: 25px;">
           <div class="js-hr-progress-bar progress-bar bg-gold" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span class="" style="font-size: 150%;">80%</span></div>
         </div>
-        <h4 class="mt-4 mb-2">招待状回答状況</h4>
+        <h4 class="mt-8 mb-2">招待状回答状況</h4>
         <ul class="text-left" style="">
           <li class="">出席：23人</li>
           <li class="">欠席：3人</li>
           <li class="">未回答：120人</li>
         </ul>
+      </div>
         <!-- <div class="" style="border:3px solid gray;">
           <ul class="row" style="margin:0 15px !important;">
             <li class="col">出席：23人</li>
@@ -49,12 +54,12 @@
       </div>
     </div>
   </div>
-  <div class="text-center">
-    <div class="row">
-      <div class="col-3">
+  <div class="text-center mx-auto">
+    <div class=" overflow-hidden">
+      <div class="col-md-3 col-sm-4 col-xs-6 float-left">
         <% if Invitation.find_by(user_id: current_user) %>
         <%= link_to index_path(user_id: params[:user_id]) do  %>
-          <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
             <img src="/mypage/message.png" width="" class="w-100  step-icon">
             <img src="/mypage/message2.png" width="" class="w-100  step-icon-hover">
             <p class="">招待状一覧</p>
@@ -62,7 +67,7 @@
         <% end %>
       <% else %>
         <%= link_to type_path do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
           <img src="/mypage/message.png" width="" class="w-100  step-icon">
           <img src="/mypage/message2.png" width="" class="w-100  step-icon-hover">
           <p class="">招待状新規作成</p>
@@ -71,10 +76,10 @@
       <% end %>
 
       </div>
-      <div class="col-3">
+      <div class="col-md-3 col-sm-4 col-xs-6 float-left">
         <% if MessageCard.find_by(user_id: current_user) %>
           <%= link_to msg_index_path(user_id: params[:user_id]) do  %>
-            <div class="step-card mypage-card p-4 m-6 mx-auto">
+            <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
               <img src="/mypage/card.png" width="" class="w-100  step-icon">
               <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">
               <p class="">メッセージカード一覧</p>
@@ -82,7 +87,7 @@
           <% end %>
         <% else %>
           <%= link_to new_message_card_path do  %>
-          <div class="step-card mypage-card p-4 m-6 mx-auto">
+          <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
             <img src="/mypage/card.png" width="" class="w-100  step-icon">
             <img src="/mypage/card2.png" width="" class="w-100  step-icon-hover">
             <p class="">メッセージカード新規作成</p>
@@ -90,56 +95,54 @@
           <% end %>
         <% end %>
       </div>
-      <div class="col-3">
+      <div class="col-md-3 col-sm-4 col-xs-6 float-left">
         <%= link_to wedding_gift_path do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
           <img src="/mypage/bank.png" width="" class="w-100  step-icon">
           <img src="/mypage/bank2.png" width="" class="w-100  step-icon-hover">
           <p class="">受取会費確認</p>
         </div>
         <% end %>
       </div>
-      <div class="col-3">
+      <div class="col-md-3 col-sm-4 col-xs-6 float-left">
         <%= link_to list_path(user_id: params[:user_id]) do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
           <img src="/mypage/meibo.png" width="" class="w-100  step-icon">
           <img src="/mypage/meibo2.png" width="" class="w-100  step-icon-hover">
           <p class="">名簿管理</p>
         </div>
         <% end %>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-3">
+      <div class="col-md-3 col-sm-4 col-xs-6 float-left">
         <%= link_to couple_name_path(type_id: 1) do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
           <img src="/mypage/camera.png" width="" class="w-100  step-icon">
           <img src="/mypage/camera2.png" width="" class="w-100  step-icon-hover">
           <p class="">写真管理</p>
         </div>
         <% end %>
       </div>
-      <div class="col-3">
+      <div class="col-md-3 col-sm-4 col-xs-6 float-left">
         <%= link_to couple_name_path(type_id: 2) do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto ">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto ">
           <img src="/mypage/goshugi-bukuro.png" width="" class="w-100  step-icon">
           <img src="/mypage/goshugi-bukuro2.png" width="" class="w-100  step-icon-hover">
           <p class="">オプションサービス</p>
         </div>
         <% end %>
         </div>
-      <!-- <div class="col-3">
+      <!-- <div class="col-md-3 col-sm-4 col-xs-6">
         <%= link_to couple_name_path(type_id: 3) do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
           <img src="/step_icon/3.png" width="" class="w-50 ">
           <p class="">？？？</p>
         </div>
         <% end %>
       </div>
-      <div class="col-3">
+      <div class="col-md-3 col-sm-4 col-xs-6">
         <%= link_to couple_name_path(type_id: 4) do  %>
-        <div class="step-card mypage-card p-4 m-6 mx-auto">
+        <div class="step-card w-100 mypage-card p-4 m-6 mx-auto">
           <img src="/step_icon/4.png" width="" class="w-50 ">
           <p class="">？？？</p>
         </div>

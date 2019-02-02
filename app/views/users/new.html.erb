@@ -4,14 +4,14 @@
 <%= render 'shared/error_messages', model: f.object %>
   <!-- ========== MAIN ========== -->
   <main id="content" role="main" class="" style="">
-    <div class="container text-center">
+    <div id="signup" class="container text-center">
 
       <div class="my-4">
         <h1>新規登録</h1>
       </div>
     <!-- Input -->
       <div class="mb-4">
-        <div class="u-form w-50" style="margin:auto;">
+        <div class="u-form w-50 mx-auto text-primary" style="">
           <%= f.label :email, "メールアドレス", class:"d-block small text-left" %>
           <%= f.email_field :email, class:"w-100 p-2" %>
         </div>
@@ -20,7 +20,7 @@
 
     <!-- Input -->
       <div class="mb-4">
-        <div class="u-form w-50" style="margin:auto;">
+        <div class="u-form w-50 mx-auto text-primary" style="">
           <%= f.label :password, "パスワード", class:"d-block small text-left" %>
           <%= f.password_field :password, placeholder:"英数字8文字以上", class:"w-100 p-2" %>
         </div>
@@ -29,7 +29,7 @@
 
     <!-- Input -->
       <div class="mb-4">
-        <div class="u-form w-50" style="margin:auto;">
+        <div class="u-form w-50 mx-auto text-primary" style="">
         <%= f.label :password_confirmation, "パスワード(確認)", class:"d-block small text-left" %>
         <%= f.password_field :password_confirmation, placeholder:"英数字8文字以上", class:"w-100 p-2" %>
         </div>
@@ -38,7 +38,7 @@
 
     <!-- Checkbox -->
       <div class="js-form-message mb-5">
-        <div class="custom-control custom-checkbox d-flex align-items-center text-muted w-50" style="margin:auto;">
+        <div class="custom-control custom-checkbox d-flex align-items-center text-muted w-50 mx-auto" style="">
           <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required
                    data-msg="Please accept our Terms and Conditions."
                    data-error-class="u-has-error"

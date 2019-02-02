@@ -2,14 +2,14 @@
 <%= render 'shared/error_messages', model: f.object %>
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="" style="">
-  <div class="container text-center">
+  <div id="couple_name" class="container text-center">
     <div class="row">
       <div class="col-4">
         <h2 class="" style="">STEP1</h2>
       </div>
       <div class="col-4">
         <h2 class="mb-0">STEP2</h2>
-        <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-10"></div>
+        <div class="mb-3 text-center" style=""><img src="/icon/bar.png" class="w-20"></div>
         <p class="">お名前の入力</p>
       </div>
       <div class="col-4">
@@ -18,19 +18,37 @@
     </div>
 
     <div class="text-left text-primary">
-      <%= f.label "新郎", class:"d-block font-weight-bold" %>
       <div class="row">
-        <%= f.text_field :groom_last,placeholder:"姓（Last Name）", class:"col-5 u-form--modern u-form__input" %>
-        <div class="col-1"></div>
-        <%= f.text_field :groom_first,placeholder:"名（First Name）", class:"col-5" %>
+        <div class="col-2"></div>
+        <div class="col-4">
+          <%= f.label "新婦", class:"d-block font-weight-bold" %>
+          <div class="u-form w-100 mx-auto text-primary">
+            <%= f.text_field :groom_last,placeholder:"姓（Last Name）", class:"" %>
+          </div>
+        </div>
+        <div class="col-4">
+          <%= f.label "新婦", class:"d-block font-weight-bold text-transparent" %>
+          <div class="u-form w-100 mx-auto text-primary">
+            <%= f.text_field :groom_first,placeholder:"名（First Name）", class:"" %>
+          </div>
+        </div>
       </div>
     </div>
     <div class="text-left mt-6 text-primary">
-      <%= f.label "新婦", class:"d-block font-weight-bold" %>
       <div class="row">
-        <%= f.text_field :bride_last,placeholder:"姓（Last Name）", class:"col-5 u-form--modern u-form__input" %>
-        <div class="col-1"></div>
-        <%= f.text_field :bride_first,placeholder:"名（First Name）", class:"col-5" %>
+        <div class="col-2"></div>
+        <div class="col-4">
+          <%= f.label "新婦", class:"d-block font-weight-bold" %>
+          <div class="u-form w-100 mx-auto text-primary">
+            <%= f.text_field :bride_last,placeholder:"姓（Last Name）", class:"" %>
+          </div>
+        </div>
+        <div class="col-4">
+          <%= f.label "新婦", class:"d-block font-weight-bold text-transparent" %>
+          <div class="u-form w-100 mx-auto text-primary">
+            <%= f.text_field :bride_first,placeholder:"名（First Name）", class:"" %>
+          </div>
+        </div>
       </div>
     </div>
       <%= f.hidden_field :type_id, value: params[:type_id] %>
