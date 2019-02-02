@@ -12,7 +12,7 @@
     <div class="mb-4">
       <div class="u-form w-50 mx-auto text-primary" style="">
         <%= f.label :email, "メールアドレス", class:"d-block small text-left" %>
-        <%= f.email_field :email, class:"w-100 p-2" %>
+        <%= f.email_field :email, placeholder:"info@example.com", class:"w-100 p-2" %>
       </div>
     </div>
   <!-- End Input -->
@@ -34,9 +34,9 @@
     </div>
 
     <%= f.submit "ログイン", class:"btn btn-sm btn-primary pl-7 pr-7" %>
-    <%= link_to "アカウントをお持ちでない方はこちら", signup_path, class:"d-block small mb-4 mt-1" %>
+    <%= link_to "パスワードをお忘れの方はこちらへ", password_resets_new_path, class:"d-block small mb-4 mt-1" %>
     <!-- <%= button_to "初めての方はこちら", signup_path, class:"btn btn-sm btn-outline-primary" %> -->
-    <%= link_to "初めての方はこちら", signup_path, class:"btn btn-sm btn-outline-primary" %>
-  </div>
+    <% end %>
+    <%= link_to "初めての方はこちら", signup_path, :method => :get, class:"btn btn-sm btn-outline-primary" %>
+</div>
 </main>
-<% end %>

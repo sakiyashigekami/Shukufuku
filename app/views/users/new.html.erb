@@ -13,7 +13,7 @@
       <div class="mb-4">
         <div class="u-form w-50 mx-auto text-primary" style="">
           <%= f.label :email, "メールアドレス", class:"d-block small text-left" %>
-          <%= f.email_field :email, class:"w-100 p-2" %>
+          <%= f.email_field :email, placeholder:"info@example.com", class:"w-100 p-2" %>
         </div>
       </div>
     <!-- End Input -->
@@ -45,7 +45,7 @@
                    data-success-class="u-has-success">
           <label class="custom-control-label" for="termsCheckbox">
             <small>
-              <a class="u-link-muted text-center" href="">利用規約に同意する。</a>
+              <%= link_to "利用規約", tos_path %>に同意する。
             </small>
           </label>
         </div>

@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   root "root#top"
 
   get  "signup" => "users#new"
   post  "signup" => "users#create"
+  get "tos" => "users#tos", as: :tos
   get "send_email" => "users#send_email", as: :send_email
   get "mypage/:user_id" => "users#show", as: :mypage
   get "wedding_gift/:user_id" => "users#wedding_gift", as: :wedding_gift
@@ -11,6 +16,8 @@ Rails.application.routes.draw do
   get "login" => "sessions#new"
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
+
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   get ":user_id/invitations/type" => "invitations#type", as: :type
   get "invitations/:id/profile" => "invitations#profile", as: :profile
