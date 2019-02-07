@@ -1,8 +1,6 @@
 <%= link_to "招待状編集TOPへ", invitation_path(id: @invitation) %>
 
 <%= form_for(@attendance_form, url: attendance_form_update_path) do |f| %>
-<%= render 'shared/error_messages', model: f.object %>
-
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" class="" style="">
   <div class="container text-center">

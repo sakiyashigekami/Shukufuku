@@ -15,6 +15,9 @@ class UsersController < ApplicationController
       if @user.save
         @user.send_activation_email
         redirect_to send_email_url
+      else
+        flash[:danger] = "すでに登録されているメールアドレスです。"
+        render "new"
       end
   end
 
