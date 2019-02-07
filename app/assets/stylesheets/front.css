@@ -226,12 +226,14 @@ a > .step-card:hover > .step-icon-hover {
   bg-suggestion
 ------------------------------------*/
 .bg-suggestion{
-  background-image: url('/bg/bg-suggestion-web.png');
+  /* background-image: url('/bg/bg-suggestion-web.png'); */
+  background-color: rgba(0,0,0,.8);
+  border-radius: 10%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   margin:5% 10%;
-  padding: 10% 0;
+  padding: 10% 5%;
 }
 
 /*------------------------------------
@@ -273,6 +275,13 @@ a > .step-card:hover > .step-icon-hover {
     border: solid 3px #82D8D5;
     border-radius: 8px;
 }
+@media (max-width: 768px) {
+  .box26 {
+      margin: 2em 0;
+      padding: 0.5em 1em;
+      border: none;
+  }
+}
 .box26 .box-title {
   position: absolute;
   display: inline-block;
@@ -300,7 +309,6 @@ a > .step-card:hover > .step-icon-hover {
   background-repeat: no-repeat;
   background-size: contain; */
   margin:5% 10%;
-  padding: 10% 0;
 }
 
 /*------------------------------------

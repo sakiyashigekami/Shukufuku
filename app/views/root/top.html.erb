@@ -1,31 +1,32 @@
 <!-- ========== MAIN ========== -->
 <main id="content" role="main" style="">
-  <div class="bg-top fv-size">
+  <div class="bg-top">
     <div class="top-fv" style="position:relative;">
-      <img src="/bg/top-firstview-web.png">
+      <img src="/bg/top-firstview-web.png" class="md-down-hidden">
+      <img src="/bg/top-firstview-mobile.png" class="md-up-hidden">
       <div class="top-header w-100" style="position:absolute; top:3%;">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-5">
             <div class="">
             </div>
           </div>
-          <div class="col-sm-4">
-            <div class="logo w-30 mx-auto">
-              <img src="/logo/logo.png" class="">
+          <div class="col-2">
+            <div class="logo w-80 mx-auto">
+              <img src="/logo/logo.png" class="md-down-hidden">
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-5">
             <div class="type text-center">
               <!-- <a href="#" class="btn btn-lg btn-outline-primary text-gray d-block" style="margin:auto 5% auto 45%;">新郎新婦・幹事様</a>
               <a href="#" class="btn btn-lg btn-outline-primary d-block" style="margin:3% 5% auto 45%;">ご友人・参列者様</a> -->
               <% unless logged_in? %>
-                  <%= link_to "無料で招待状をつくる", signup_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1" %>
-                  <%= link_to "ログイン", login_path, class:"btn btn-sm btn-outline-primary pt-1 pb-1 mr-4" %>
+                  <%= link_to "無料で招待状をつくる", signup_path, class:"btn btn-sm btn-outline-dark py-1 my-1" %>
+                  <%= link_to "ログイン", login_path, class:"btn btn-sm btn-outline-primary py-1 mr-4 my-1" %>
               <% end %>
               <% if logged_in? %>
                 <p>ログインユーザー(開発用): <%= current_user.id %></p>
-                <%= link_to "マイページ", mypage_path(current_user), class:"btn btn-sm btn-outline-primary pt-1 pb-1" %>
-                <%= link_to "ログアウト", logout_path, method: "DELETE", class:"btn btn-sm btn-outline-primary pt-1 pb-1 mr-4" %>
+                <%= link_to "マイページ", mypage_path(current_user), class:"btn btn-sm btn-outline-dark py-1" %>
+                <%= link_to "ログアウト", logout_path, method: "DELETE", class:"btn btn-sm btn-outline-primary py-1 mr-4" %>
               <% end %>
             </div>
           </div>
@@ -80,92 +81,56 @@
     <img src="/top/point-cheer.png" class="w-30">
   </div>
 
-  <div class="merit text-center w-80" style="margin-left:10%;">
+  <div class="merit text-center w-90 mx-auto mt-9" style="">
     <!-- <div class="container"> -->
     <div class="box26">
-      <span class="box-title">電子決済のメリット</span>
+      <span class="box-title md-down-hidden">電子決済のメリット</span>
+      <h2 class="text-primary font-b md-up-hidden">電子決済のメリット</h2>
       <div class="in_box26 m-4 mt-8">
         <div class="row" style="">
-          <div class="merit-text w-50 text-left align-middle my-auto">
-            <img src="/top/merit-1-web.png" class="w-80" style="margin-left:10%;">
-            <h2 class="text-gray mt-4 w-80" style="font-size:24px;margin-left:10%;">
+          <div class="merit-text col-md-6 text-left align-middle my-auto">
+            <img src="/top/merit-1-web.png" class="w-80 mx-auto d-block" style="">
+            <h2 class="text-gray mt-4 w-80 mx-auto" style="font-size:24px;">
               事前にご祝儀が受け取れるので、当日の金銭管理の心配もいりません「お金がないから」といってやりたい式を諦めてしまうことも無くなります。
             </h2>
           </div>
-          <div class="merit-img w-40" style="margin:auto 5%;">
+          <div class="merit-img col-md-6" style="">
             <img src="/top/merit-img-1.png">
           </div>
         </div>
 
         <div class="row mt-9 mb-9" style="">
-          <div class="merit-text w-50 text-left align-middle my-auto">
-            <img src="/top/merit-2-web.png" class="w-80" style="margin-left:10%;">
-            <h2 class="text-gray mt-4 w-80" style="font-size:24px;margin-left:10%;">
+          <div class="merit-text col-md-6 text-left align-middle my-auto">
+            <img src="/top/merit-2-web.png" class="w-80 mx-auto d-block" style="">
+            <h2 class="text-gray mt-4 w-80 mx-auto" style="font-size:24px;">
               ご祝儀や参列者名簿の電子化により、主催者側の業務が軽減されます。事前に名簿を作る時間や、ご祝儀を受け取る時間が短縮されるので受付がスムーズになります。
             </h2>
           </div>
-          <div class="merit-img w-40" style="margin:auto 5%;">
+          <div class="merit-img col-md-6" style="">
             <img src="/top/merit-img-2.png">
           </div>
         </div>
 
         <div class="row" style="">
-          <div class="merit-text w-50 text-left align-middle my-auto">
-            <img src="/top/merit-3-web.png" class="w-80" style="margin-left:10%;">
-            <h2 class="text-gray mt-4 w-80" style="font-size:24px;margin-left:10%;">
+          <div class="merit-text col-md-6 text-left align-middle my-auto">
+            <img src="/top/merit-3-web.png" class="w-80 mx-auto d-block" style="">
+            <h2 class="text-gray mt-4 w-80 mx-auto" style="font-size:24px;">
               クレジットカードなどの電子決済なので、急な出費や友人の結婚の時期が被ってしまった時でも安心です。お金の管理もしやすい他、当日に大金を持ち歩く心配やご祝儀袋を準備する手前もなくなります。
             </h2>
           </div>
-          <div class="merit-img w-40" style="margin:auto 5%;">
+          <div class="merit-img col-md-6" style="">
             <img src="/top/merit-img-3.png">
           </div>
         </div>
       </div>
     </div>
-    <!--  <img src="/bg/bg-merit-web.png" class="bg-merit-img" style="">
-       <div class="row" style="position:absolute; top:6%;">
-        <div class="merit-text w-50 text-left align-middle my-auto">
-          <img src="/top/merit-1-web.png" class="w-60">
-          <h2 class="text-gray mt-9 w-80">
-            事前にご祝儀が受け取れるので、当日の金銭管理の心配もいりません「お金がないから」といってやりたい式を諦めてしまうことも無くなります。
-          </h2>
-        </div>
-        <div class="merit-img w-40" style="margin:auto 5%;">
-          <img src="/top/merit-img-1.png">
-        </div>
-      </div>
-
-      <div class="row mt-9 mb-9" style="position:absolute; top:34%;">
-        <div class="merit-text w-50 text-left align-middle my-auto">
-          <img src="/top/merit-2-web.png" class="w-60">
-          <h2 class="text-gray mt-9 w-80">
-            ご祝儀や参列者名簿の電子化により、主催者側の業務が軽減されます。事前に名簿を作る時間や、ご祝儀を受け取る時間が短縮されるので受付がスムーズになります。
-          </h2>
-        </div>
-        <div class="merit-img w-40" style="margin:auto 5%;">
-          <img src="/top/merit-img-2.png">
-        </div>
-      </div>
-
-      <div class="row" style="position:absolute; top:65%;">
-        <div class="merit-text w-50 text-left align-middle my-auto">
-          <img src="/top/merit-3-web.png" class="w-60">
-          <h2 class="text-gray mt-9 w-80">
-            クレジットカードなどの電子決済なので、急な出費や友人の結婚の時期が被ってしまった時でも安心です。お金の管理もしやすい他、当日に大金を持ち歩く心配やご祝儀袋を準備する手前もなくなります。
-          </h2>
-        </div>
-        <div class="merit-img w-40" style="margin:auto 5%;">
-          <img src="/top/merit-img-3.png">
-        </div>
-      </div> -->
-    <!-- </div> -->
   </div>
 
   <div class="bg-service text-center">
-    <h2 class="mb-9">他にも、3つの機能が!</h2>
+    <h2 class="mt-8">他にも、3つの機能が!</h2>
     <!-- <div class="container"> -->
       <div class="row" style="">
-        <div class="col-sm-4">
+        <div class="col-lg-4 my-4">
           <div class="box">
             <img src="/top/service-1.png" class="w-40">
             <h3 class="mt-4">招待状作成</h3>
@@ -173,7 +138,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-lg-4 my-4">
           <div class="box">
             <img src="/top/service-2.png" class="w-40">
             <h3 class="mt-4">出席者リスト</h3>
@@ -181,7 +146,7 @@
           </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-lg-4 my-4">
           <div class="box">
             <img src="/top/service-3.png" class="w-40">
             <h3 class="mt-4">フォトアルバム</h3>
