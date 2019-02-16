@@ -36,7 +36,11 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find_by(id: params[:id])
   end
 
-  def preview
+  def preview1
+    @attendance = Attendance.new
+  end
+
+  def preview2
     @attendance = Attendance.new
   end
 

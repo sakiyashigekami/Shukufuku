@@ -1,0 +1,241 @@
+<!-- ========== MAIN ========== -->
+<main id="content" role="main" class="preview preview2 text-center" style="">
+  <div>
+    <img src="/preview2/firstview.png">
+  </div>
+
+  <div class="container mt-9">
+    <h1 class="text-title">
+      <img src="/preview2/message.png" alt="" class="w-30 mb-8">
+    </h1>
+    <p>
+      謹啓 早春の候<br>
+      皆様におかれましては<br>
+      益々ご清祥のこととお慶び申し上げます
+    </p>
+    <p>
+      このたび私たちは結婚式を挙げることになりました
+    </p>
+    <p>
+      つきましては 皆様により一層のご指導を賜りたく<br>
+      ささやかではございますが 披露宴を催したく存じます<br>
+      ご多用中 誠に恐縮ではございますが<br>
+      ぜひご出席をお願いいたしたく ご案内申し上げます
+    </p>
+    <img src="/preview2/footer-message.png" alt="" class="footer-message mt-4">
+  </div>
+  <div class="container mt-9">
+    <div class="row">
+      <div class="col-sm-4 offset-sm-2">
+        <div class="groom">
+          <div class="name text-center">
+            <h3 class="">新郎</h3>
+            <img src="/default.jpg" class="w-80 rounded-circle">
+            <p class="mt-4">新郎名</p>
+            <span>sinroumei</span><br>
+            <img src="/preview2/under_name.png" class="w-10 mt-2 mb-4">
+            <p>自己紹介文</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="bride">
+          <div class="name text-center">
+            <h3 class="">新婦</h3>
+            <img src="/default.jpg" class="w-80 rounded-circle">
+            <p class="mt-4">新婦名</p>
+            <span>sinroumei</span><br>
+            <img src="/preview2/under_name.png" class="w-10 mt-2 mb-4">
+            <p>自己紹介文</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container party mt-9">
+    <!-- <div class="d-block">
+      <h2 class="text-title title mb-9">Party</h2>
+    </div> -->
+    <div class="d-block">
+      <!-- <h3 class="subtitle">place</h3> -->
+      <img src="/preview2/subtitle_place.png" class="w-20 d-block mx-auto mb-4">
+    </div>
+    <div class="w-70 mx-auto">
+      <h3 class="my-4">会場名</h3>
+      <table class="table table-hover text-left">
+        <tbody>
+          <tr>
+            <td>会場住所</td>
+            <td>京都市中京区池元町395</td>
+          </tr>
+          <tr>
+            <td>会場 TEL</td>
+            <td>09012345679</td>
+          </tr>
+          <tr>
+            <td>会場 URL</td>
+            <td>https://st-avenir.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-4 row">
+      <div class="col-sm-6">
+        <div class="info">
+          <h6 class="text-wc my-4">
+            <img src="/preview2/wedding-ceremony.png" alt="">
+          </h6>
+          <div class="bg-detail" style="">
+            <h5 class="mt-5 mb-0">2019/12/27 Fri</h5>
+            <h3 class="mb-0">11:00</h3>
+            <h6 class="mb-0">受付開始　10:00</h6>
+          </div>
+          <img src="/preview2/under-detail.png" alt="" class="under-detail">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="info">
+          <h6 class="text-wr my-4">
+            <img src="/preview2/wedding-ceremony.png" alt="" class="">
+          </h6>
+          <div class="bg-detail" style="">
+            <h5 class="mt-5 mb-0">2019/12/27 Fri</h5>
+            <h3 class="mb-0">11:00</h3>
+            <h6 class="mb-0">受付開始　10:00</h6>
+          </div>
+          <img src="/preview2/under-detail.png" alt="" class="under-detail">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form bg-form-img mt-8 py-8">
+    <div class="container">
+      <div class="bg-form pb-4">
+        <h2 class="mt-8 pt-4 title text-primary" style="">
+          <img src="/preview2/form-title.png" alt="" class="w-70">
+        </h2>
+        <div class="overflow-hidden">
+        <%= form_for(@attendance, url: attendances_path, method: "POST") do |f| %>
+          <div class="col-sm-6 mb-4 float-left">
+            <div class="select-must">
+              <%= f.radio_button :name, :アレルギーを必須にする,id:"allergy1", value:"出席", class:"windows" %>
+              <%= f.label :name, for:"allergy1", value:"出席" %>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-4 float-left">
+            <div class="select-must">
+            <%= f.radio_button :name, :アレルギーを必須にする,id:"allergy2", value:"欠席", class:"osx" %>
+            <%= f.label :name, for:"allergy2", value:"欠席" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8 offset-sm-2 mx-auto text-left">
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "名前", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :name, placeholder:"名前(Name)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "かな", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :kana, placeholder:"かな(Kana)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "郵便番号", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :postcode, placeholder:"郵便番号(Postcode)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "住所", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :address, placeholder:"住所(Address)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "電話番号", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :phonenumber, placeholder:"電話番号(Phonenumber)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "メールアドレス", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.email_field :email, placeholder:"メールアドレス(Email)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "アレルギー", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_field :allergy, placeholder:"アレルギー(Allergy)", class:" form-control" %>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-sm-3">
+              <p class="text-primary"><%= f.label "メッセージ", class:"" %></p>
+            </div>
+            <div class="col-sm-9">
+              <%= f.text_area :message, placeholder:"メッセージ(Message)", class:" form-control" %>
+            </div>
+          </div>
+
+          <div class="custom-control custom-checkbox text-center my-4">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <label class="custom-control-label" for="customCheck1">お連れ様を登録する</label>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="text-primary"><%= f.label "名前", class:"" %></p>
+              </div>
+              <div class="col-sm-9">
+                <%= f.text_field :name, placeholder:"名前(Name)", class:" form-control" %>
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col-sm-3">
+                <p class="text-primary"><%= f.label "かな", class:"" %></p>
+              </div>
+              <div class="col-sm-9">
+                <%= f.text_field :kana, placeholder:"かな(Kana)", class:" form-control" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-control custom-checkbox text-center my-4">
+            <input type="checkbox" class="custom-control-input" id="customCheck2" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+            <label class="custom-control-label" for="customCheck2">お連れ様を登録する</label>
+          </div>
+          <div class="collapse" id="collapseExample2">
+            <p style="color:white; font-size:200px;">はろ〜、二つ目のボタンは条件分岐で表示させてね〜〜</p>
+          </div>
+          <div class="d-block w-100 mb-4 text-center">
+            <a class="btn btn-sm btn-primary pl-8 pr-8 mx-auto">送信</a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script type="text/javascript">
+  var obj = document.getElementById("d1");
+  var h = obj.getBoundingClientRect().height;
+</script>
