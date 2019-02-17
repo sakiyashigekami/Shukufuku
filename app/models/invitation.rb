@@ -1,4 +1,4 @@
 class Invitation < ApplicationRecord
   belongs_to :user
-  has_one :attendance_form
+  has_many :attendance_forms
 end
