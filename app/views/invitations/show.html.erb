@@ -79,7 +79,7 @@
     <% end %>
     <div class="mt-4 m-0" style="overflow:hidden;">
       <%= link_to profile_path(id: @invitation) do %>
-      
+
       <div class="inv-card w-49 p-4" style="float:left;">
         <h4 class="mb-0">プロフィール</h4>
       </div>
@@ -106,7 +106,7 @@
       <% end %>
     </div>
     <div>
-      <%= link_to "プレビュー", preview_path(id: @invitation), class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>
+      <%= link_to "プレビュー", preview_path(id: @invitation, design_id: @invitation.design_id), class:"btn btn-sm btn-primary pl-8 pr-8 mb-2 mt-4" %><br>
     </div>
     <div class="w-80 mt-4 m-0 overflow-hidden" style="margin-left:10% !important;">
       <div class="inv-card w-49 p-4 float-left">

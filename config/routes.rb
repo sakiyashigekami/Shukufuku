@@ -23,8 +23,7 @@ Rails.application.routes.draw do
   get "invitations/:id/profile" => "invitations#profile", as: :profile
   get "invitations/:id/date_place" => "invitations#date_place", as: :date_place
   get "invitations/:id/greeting" => "invitations#greeting", as: :greeting
-  get "invitations/:id/preview1" => "invitations#preview1", as: :preview1
-  get "invitations/:id/preview2" => "invitations#preview2", as: :preview2
+  get "invitations/:id/preview/:design_id" => "invitations#preview", as: :preview
   get ":user_id/invitations/couple_name/:type_id" => "invitations#couple_name", as: :couple_name
   get "invitations/design/:id/:type_id" => "invitations#design", as: :design
   get "invitations/:user_id/index" => "invitations#index", as: :index

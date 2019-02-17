@@ -36,12 +36,18 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.find_by(id: params[:id])
   end
 
-  def preview1
+  def preview
     @attendance = Attendance.new
-  end
-
-  def preview2
-    @attendance = Attendance.new
+    @invitation = Invitation.find_by(id: params[:id])
+    if @invitation.design_id == 1
+      render "preview1"
+    elsif @invitation.design_id == 2
+      render "preview2"
+    elsif @invitation.design_id == 3
+      render "preview3"
+    elsif @invitation.design_id == 4
+      render "preview4"
+    end
   end
 
   def show
@@ -86,7 +92,7 @@ class InvitationsController < ApplicationController
 
     def attendance_form_params
       params.require(:invitation).permit(
-        :user_id, :type_id
+        :user_id, :invitation_id, :type_id
       )
     end
 end

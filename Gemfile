@@ -29,7 +29,7 @@ gem 'bootstrap','~> 4.0.0.alpha3'
 # jquery
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
+gem 'rb-readline'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
