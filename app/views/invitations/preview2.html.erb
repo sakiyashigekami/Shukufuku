@@ -29,7 +29,7 @@
       <div class="col-sm-4 offset-sm-2">
         <div class="groom">
           <div class="name text-center">
-            <h3 class="">新郎</h3>
+            <h3 class=""><img src="/preview2/groom.png" alt="" class="w-80"></h3>
             <img src="/default.jpg" class="w-80 rounded-circle">
             <p class="mt-4">新郎名</p>
             <span>sinroumei</span><br>
@@ -41,7 +41,7 @@
       <div class="col-sm-4">
         <div class="bride">
           <div class="name text-center">
-            <h3 class="">新婦</h3>
+            <h3 class=""><img src="/preview2/bride.png" alt="" class="w-80"></h3>
             <img src="/default.jpg" class="w-80 rounded-circle">
             <p class="mt-4">新婦名</p>
             <span>sinroumei</span><br>
@@ -119,13 +119,17 @@
           <div class="col-sm-6 mb-4 float-left">
             <div class="select-must">
               <%= f.radio_button :name, :アレルギーを必須にする,id:"allergy1", value:"出席", class:"windows" %>
-              <%= f.label :name, for:"allergy1", value:"出席" %>
+              <%= f.label :name, for:"allergy1", class:"w-80" do %>
+                <img src="/preview2/presence.png" alt="">
+              <% end %>
             </div>
           </div>
           <div class="col-sm-6 mb-4 float-left">
             <div class="select-must">
             <%= f.radio_button :name, :アレルギーを必須にする,id:"allergy2", value:"欠席", class:"osx" %>
-            <%= f.label :name, for:"allergy2", value:"欠席" %>
+            <%= f.label :name, for:"allergy2", class:"w-80" do %>
+              <img src="/preview2/absence.png" alt="">
+            <% end %>
             </div>
           </div>
         </div>

@@ -13,6 +13,9 @@
   .w-47{
     width: 47%;
   }
+  .p-relative{
+    position: relative;
+  }
 }
 .preview1{
   .text-primary{
@@ -338,22 +341,22 @@
       color: #7B3341;
       // border: 2px solid #3275bc;
       border: none;
+      content: url(../../preview2/presence-click.png);
       background-color: transparent;
-      background-image: url(../../preview2/bg-answer.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position:50% 50%;
-      padding:20% 0% 10%;
+      // background-image: url(../../preview2/presence-click.png);
+      // background-repeat: no-repeat;
+      // background-size: contain;
+      // background-position:50% 50%;
     }
     .select-must input[type="radio"]:checked.osx + label {
       color: #7B3341;
       border: none;
+      content: url(../../preview2/absence-click.png);
       background-color: transparent;
-      background-image: url(../../preview2/bg-answer.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position:50% 50%;
-      padding:20% 0 10%;
+      // background-image: url(../../preview2/absence-click.png);
+      // background-repeat: no-repeat;
+      // background-size: contain;
+      // background-position:50% 50%;
     }
     .select-must label {
       color: #000;
@@ -363,7 +366,6 @@
       display: inline-block;
       width: 100%;
       margin-bottom: 0px;
-      padding:20% 0 10%;
     }
     .select-must label:hover {
       color: #aaa;
